@@ -6,4 +6,3 @@ Theme/index.css
 .vscode
 wp-content
 !wp-content/.gitkeep
-!wp-content/mu-plugins/subdir-loader.php

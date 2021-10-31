@@ -2,3 +2,8 @@
 # backup
 .env
 Theme/index.css
+.wp
+.vscode
+wp-content
+!wp-content/.gitkeep
+!wp-content/mu-plugins/subdir-loader.php

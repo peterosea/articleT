@@ -1,5 +1,7 @@
 @import 'tailwindcss/base';
 
+@import 'functions/*';
+@import 'common/var';
 @import 'common/global';
 
 @import 'tailwindcss/components';

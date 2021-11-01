@@ -22,6 +22,11 @@ mix
   .options({
     processCssUrls: false,
     postCss: [require('tailwindcss')],
+    autoprefixer: {
+      options: {
+        browsers: ['last 6 versions'],
+      },
+    },
   });
 
 mix
@@ -31,10 +36,25 @@ mix
   .autoload({ jquery: ['$', 'window.jQuery'] })
   .extract();
 
-mix
-  .copyDirectory('resources/images', 'public/images')
-  .copyDirectory('resources/fonts', 'public/fonts');
+mix.webpackConfig({
+  module: {
+    rules: [
+      {
+        enforce: 'pre',
+        test: /\.(js|s?[ca]ss)$/,
+        loader: 'import-glob',
+      },
+    ],
+  },
+});
 
-mix
-  .sourceMaps()
-  .version();
+if (!mix.inProduction()) {
+  mix.sourceMaps().version();
+  mix.webpackConfig({
+    devtool: 'inline-source-map',
+  });
+} else {
+  mix
+    .copyDirectory('resources/images', 'public/images')
+    .copyDirectory('resources/fonts', 'public/fonts');
+}

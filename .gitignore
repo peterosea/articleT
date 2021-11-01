@@ -7,3 +7,4 @@ wp-content
 !wp-content/.gitkeep
 traefik/acme/acme.json
 traefik/traefik.log
+mysql

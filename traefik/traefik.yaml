@@ -76,7 +76,7 @@ providers:
 certificatesResolvers:
   leresolver:
     acme:
-      email: certificate-sampyo@beeclover.pro
+      email: certificate-tbstory@beeclover.pro
       storage: /acme/acme.json
       httpChallenge:
         entryPoint: web

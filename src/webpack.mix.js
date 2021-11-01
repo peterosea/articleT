@@ -14,7 +14,7 @@ require('@tinypixelco/laravel-mix-wp-blocks');
 
 mix
   .setPublicPath('./public')
-  .browserSync('talent-bank.demo.beeclover.pro');
+  .browserSync('https://talent-bank.demo.beeclover.pro');
 
 mix
   .sass('resources/styles/app.scss', 'styles')

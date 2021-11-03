@@ -1,0 +1,22 @@
+// 하이라이트 밑줄
+@mixin pointUnderLine {
+  @apply ring-gray-500 ring-opacity-40;
+
+  text-decoration: none;
+  background-position-y: -0%;
+  background-image: linear-gradient(transparent 50%, var(--tw-ring-color) 50%);
+  background-size: auto calc(200% - (var(--h, 15%) * 2));
+  transition: background 500ms ease;
+  display: inline;
+}
+
+.pointUnderLine {
+  @include pointUnderLine;
+}
+
+// 페이지 굵은 밑줄
+.underline.power {
+  text-decoration: underline;
+  text-underline-position: under;
+  text-decoration-thickness: var(--uph, 3px);
+}

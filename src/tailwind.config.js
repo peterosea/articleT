@@ -13,6 +13,7 @@ const colors = {
   squant: '#666666',
   gravelFint: '#bbbbbb',
   blackOut: '#222222',
+  deepSpaceRodeo: '#332878',
 };
 
 module.exports = {

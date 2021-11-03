@@ -17,7 +17,19 @@
   &-nav {
     @apply flex
       items-center
-      gap-x-[96px]
-      text-[24px];
+      gap-x-[84px]
+      text-[24px]
+      leading-snug;
+
+    &-item {
+      --h: 0px;
+      @apply px-[4px];
+      @include pointUnderLine;
+      @apply ring-deepSpaceRodeo ring-opacity-20;
+
+      &:hover {
+        --h: 12px;
+      }
+    }
   }
 }

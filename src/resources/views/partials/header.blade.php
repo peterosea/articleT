@@ -15,25 +15,18 @@
 <header id="header__global" class="header__global">
   <div class="header__global-inner">
     <div class="flex items-center">
-      <div class="header__global-logo">
+      <a href="/" class="header__global-logo">
         <img src="{!! $siteLogo !!}" alt="homepage logo">
+      </a>
+      <div class="hidden sm:block">
+        {!! $gnb !!}
       </div>
-      {!! $gnb !!}
     </div>
-    <div class="flex gap-x-[36px] items-center">
-      <button class="py-[11px] px-[28px] btn-black">뉴스레터 구독</button>
-      <div class="w-[1px] h-[60px] bg-steam"></div>
-      <button class="btn">
-        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48">
-          <g data-name="그룹 3931">
-              <g data-name="타원 7" transform="translate(5 6)" style="stroke:#666;stroke-width:2px;fill:none">
-                  <circle cx="16" cy="16" r="16" style="stroke:none"/>
-                  <circle cx="16" cy="16" r="15" style="fill:none"/>
-              </g>
-              <path data-name="선 10" transform="rotate(-45 55.395 -22.695)" style="stroke-linecap:round;stroke:#666;stroke-width:2px;fill:none" d="M0 0v14.142"/>
-          </g>
-        </svg>
-      </button>
+    <div class="flex gap-x-[17px] sm:gap-x-[36px] items-center">
+      <button class="hidden sm:block py-[11px] px-[28px] btn-black">뉴스레터 구독</button>
+      <div class="hidden sm:block w-[1px] h-[60px] bg-steam"></div>
+      <button class="btn-search">search</button>
+      <button class="block sm:hidden btn-menu">menu</button>
     </div>
   </div>
 </header>

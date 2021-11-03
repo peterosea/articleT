@@ -14,6 +14,7 @@ const colors = {
   gravelFint: '#bbbbbb',
   blackOut: '#222222',
   deepSpaceRodeo: '#332878',
+  dugong: '#707070',
 };
 
 module.exports = {

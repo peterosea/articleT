@@ -45,5 +45,9 @@
   },
   "peerDependencies": {
     "jquery": "^3.5.1"
+  },
+  "dependencies": {
+    "@alpinejs/intersect": "^3.4.2",
+    "alpinejs": "^3.4.2"
   }
 }

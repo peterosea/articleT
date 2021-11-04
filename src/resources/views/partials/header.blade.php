@@ -12,7 +12,7 @@
     </div>
   </div>
 </header>
-<header id="header__global" class="header__global">
+<header id="header__global" class="header__global" x-data="{menuSelected: null, selected: @if(!empty($id)) {!! $id !!} @else null @endif}">
   <div class="header__global-inner">
     <div class="flex items-center">
       <a href="/" class="header__global-logo">
@@ -25,11 +25,29 @@
     <div class="flex gap-x-[17px] sm:gap-x-[36px] items-center">
       <button class="hidden sm:block py-[11px] px-[28px] btn-black">뉴스레터 구독</button>
       <div class="hidden sm:block w-[1px] h-[60px] bg-steam"></div>
-      <button class="btn-search">search</button>
-      <button class="block sm:hidden btn-menu">menu</button>
+      <button class="btn-search" @click.prevent="
+        menuSelected === 'search' ? menuSelected = null : menuSelected = 'search';
+        $nextTick(() => $refs.searchInput.focus());
+        selected = null;
+      ">search</button>
+      <button class="block sm:hidden btn-menu" @click.prevent="menuSelected === 'menu' ? menuSelected = null : menuSelected = 'menu'">menu</button>
     </div>
   </div>
-  <div class="block sm:hidden" x-data="{selected: @if(!empty($id)) {!! $id !!} @else 0 @endif}">
+  <div class="block sm:hidden relative">
     {!! $m_gnb !!}
+    <div class="header__m_global-search"
+      x-show="menuSelected === 'search'"
+      x-cloak
+      @click.away="menuSelected = null"
+      @keydown.escape.window="menuSelected = null"
+      x-transition:enter="transition ease-out duration-300"
+      x-transition:enter-start="opacity-0"
+      x-transition:enter-end="opacity-100"
+      x-transition:leave="transition ease-in duration-300"
+      x-transition:leave-start="opacity-100"
+      x-transition:leave-end="opacity-0"
+    >
+      {!! get_search_form(false) !!}
+    </div>
   </div>
 </header>

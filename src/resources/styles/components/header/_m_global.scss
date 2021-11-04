@@ -2,6 +2,8 @@
 @at-root {
   :root {
     --h-gnb: 60px;
+    --h-m_gnb-nav: 44px;
+    --h-m_search: 60px;
 
     @media (min-width: theme('screens.sm')) {
       --h-gnb: 96px;
@@ -11,12 +13,6 @@
 
 &__m_global {
   &-nav {
-    @at-root {
-      :root {
-        --h-m_gnb-nav: 44px;
-      }
-    }
-
     @apply h-[var(--h-m_gnb-nav)]
       flex
       gap-x-[40px]
@@ -81,5 +77,21 @@
         }
       }
     }
+  }
+
+  &-search {
+    @apply h-[var(--h-m_search)] 
+      px-[16px]
+      flex
+      gap-x-[4px]
+      items-center
+      justify-center
+      bg-white
+      absolute
+      border-black border-b-[1px] border-opacity-30;
+
+    left: 0;
+    top: 0;
+    width: 100%;
   }
 }

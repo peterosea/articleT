@@ -1,0 +1,85 @@
+// GNB
+@at-root {
+  :root {
+    --h-gnb: 60px;
+
+    @media (min-width: theme('screens.sm')) {
+      --h-gnb: 96px;
+    }
+  }
+}
+
+&__m_global {
+  &-nav {
+    @at-root {
+      :root {
+        --h-m_gnb-nav: 44px;
+      }
+    }
+
+    @apply h-[var(--h-m_gnb-nav)]
+      flex
+      gap-x-[40px]
+      text-[16px]
+      leading-snug
+      justify-center
+      relative
+      border-black
+      border-b-[1px]
+      border-opacity-30;
+
+    &-item {
+      @apply h-full flex items-center text-[16px];
+
+      &-parent > .active {
+        position: relative;
+        &::after {
+          @apply border-deepSpaceRodeo border-b-[4px];
+
+          content: '';
+          position: absolute;
+          bottom: 0;
+          width: 0;
+          left: 50%;
+          height: 0;
+          border-left: 4px solid transparent;
+          border-right: 4px solid transparent;
+          transform: translateX(-50%);
+        }
+      }
+    }
+  }
+
+  &-subnav {
+    @apply w-full text-[14px] flex bg-deepSpaceRodeo gap-[40px] justify-center;
+
+    overflow-x: scroll;
+    @include no-scrollbar;
+
+    position: absolute;
+    top: 100%;
+    left: 0;
+
+    > li {
+      @apply h-[var(--h-m_gnb-nav)] flex items-center text-white text-opacity-50;
+
+      &:hover,
+      &.current-menu-item {
+        @apply text-opacity-100;
+        position: relative;
+
+        &::after {
+          @apply bg-white;
+
+          content: '';
+          position: absolute;
+          bottom: 0;
+          left: 50%;
+          height: 4px;
+          width: 100%;
+          transform: translateX(-50%);
+        }
+      }
+    }
+  }
+}

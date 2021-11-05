@@ -3,3 +3,20 @@
   @import 'm_global';
   @import 'top';
 }
+
+.headroom {
+  will-change: transform;
+  transition: transform 200ms linear;
+
+  &--pinned {
+    transform: translateY(0%);
+  }
+
+  &--unpinned {
+    transform: translateY(-100%);
+  }
+
+  &.menu-open {
+    transform: translateY(0%);
+  }
+}

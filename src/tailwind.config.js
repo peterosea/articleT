@@ -18,6 +18,10 @@ const colors = {
   cultured: '#f8f8f8',
   brightGray: '#eeeeee',
   davyGrey: '#555555',
+  jet: '#343434',
+  raisinBlack: '#212121',
+  seaSerpent: '#58bbd5',
+  darkSilver: '#6f6f6f',
 };
 
 module.exports = {
@@ -31,19 +35,15 @@ module.exports = {
       screens: {
         xxl: '1536px',
       },
-      // container: {
-      //   padding: {
-      //     DEFAULT: '2rem',
-      //     sm: '2rem',
-      //     lg: '4rem',
-      //     xl: '5rem',
-      //     '2xl': '7.1875rem',
-      //   },
-      // },
-      // pixel token
       padding: {
         'container-x': 'var(--container-px)',
         'container-y': 'var(--container-py)',
+      },
+      container: {
+        padding: {
+          DEFAULT: '16px',
+          xxl: '80px',
+        },
       },
       colors,
       borderColor: colors,

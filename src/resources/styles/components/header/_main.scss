@@ -11,23 +11,13 @@
 
 &__main {
   @apply bg-white;
-  position: fixed;
-  z-index: 9000;
-  top: var(--bar-wp, 0);
-  left: 0;
-  width: 100%;
 
   &-inner {
     @apply border-b-[1px] border-[#eee];
     @apply h-[var(--h-gnb)]
-      px-[20px]
       flex
       items-center
       justify-between;
-
-    @media (min-width: theme('screens.sm')) {
-      @apply px-[80px];
-    }
   }
 
   @media (min-width: theme('screens.sm')) {

@@ -1,8 +1,11 @@
 .header {
-  @import 'global';
-  @import 'm_global';
+  @import 'main';
+  @import 'm_main';
   @import 'top';
-  @import 'gnc';
+}
+
+.menu {
+  @import 'cover';
 }
 
 .headroom {

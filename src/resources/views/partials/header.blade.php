@@ -13,10 +13,10 @@
       </div>
     </div>
   </header>
-  <header id="header__global" class="header__global" :class="{'menu-open': menuSelected === 'menu'}">
-    <div class="header__global-inner">
+  <header id="header__main" class="header__main" :class="{'menu-open': menuSelected === 'menu'}">
+    <div class="header__main-inner">
       <div class="flex items-center">
-        <a href="/" class="header__global-logo">
+        <a href="/" class="header__main-logo">
           <img src="{!! $siteLogo !!}" alt="homepage logo">
         </a>
         <div class="hidden sm:block">
@@ -45,7 +45,7 @@
       <div :class="{'hidden': menuSelected === 'menu' || menuSelected === 'search'}">
         {!! $m_gnb !!}
       </div>
-      <div class="header__m_global-search"
+      <div class="header__m_main-search"
         x-show="menuSelected === 'search'"
         x-cloak
         @click.away="menuSelected = null"
@@ -56,7 +56,7 @@
     </div>
   </header>
   <div
-    class="header__gnc"
+    class="menu__cover"
     x-show="menuSelected === 'menu'"
     x-cloak
   >

@@ -4,7 +4,7 @@ namespace Wp\Nav\Walker;
 
 use Walker_Nav_Menu;
 
-class M_GNB extends Walker_Nav_Menu
+class MobileMain extends Walker_Nav_Menu
 {
 
   /**
@@ -31,7 +31,7 @@ class M_GNB extends Walker_Nav_Menu
       );
       
       // 자식을 가지고있는 alpinejs가 적용되야하는 element에 클래스 적용
-      $advance_class_names = $depth === 0 ? ' header__m_global-subnav ' : '';
+      $advance_class_names = $depth === 0 ? ' header__m_main-subnav ' : '';
       $class_names = implode($advance_class_names, $classes);
 
       // depth data
@@ -61,7 +61,7 @@ class M_GNB extends Walker_Nav_Menu
       $classes = empty( $item->classes ) ? array() : (array) $item->classes;
 
       // 최상위 부모 메뉴 아이템 클래스 추가
-      $advance_class_names = $depth === 0 ? ' header__m_global-nav-item-parent ' : ' ';
+      $advance_class_names = $depth === 0 ? ' header__m_main-nav-item-parent ' : ' ';
       $class_names = esc_attr( implode( $advance_class_names, apply_filters( 'nav_menu_css_class', array_filter( $classes ), $item ) ) );
 
       // Build HTML.
@@ -74,7 +74,7 @@ EOD;
       $attributes .= ! empty( $item->target )     ? ' target="' . esc_attr( $item->target     ) .'"' : '';
       $attributes .= ! empty( $item->xfn )        ? ' rel="'    . esc_attr( $item->xfn        ) .'"' : '';
       $attributes .= ! empty( $item->url )        ? ' href="'   . esc_attr( $item->url        ) .'"' : '';
-      $attributes .= ' class="menu-link ' . ( $depth > 0 ? 'sub-menu-link header__m_global-nav-item-'.$depth : 'main-menu-link header__m_global-nav-item' ) . '"';
+      $attributes .= ' class="menu-link ' . ( $depth > 0 ? 'sub-menu-link header__m_main-nav-item-'.$depth : 'main-menu-link header__m_main-nav-item' ) . '"';
       
       $this->id = $item->ID;
 

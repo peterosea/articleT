@@ -11,6 +11,6 @@ export default () => {
     }
   }
   $(window).scroll(function () {
-    classAddandRemove('header#header__global');
+    classAddandRemove('header#header__main');
   });
 };

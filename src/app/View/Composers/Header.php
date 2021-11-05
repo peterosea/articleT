@@ -3,10 +3,11 @@
 namespace App\View\Composers;
 
 use Roots\Acorn\View\Composer;
-use Wp\Nav\Walker\TNB;
-use Wp\Nav\Walker\GNB;
-use Wp\Nav\Walker\M_GNB;
-use Wp\Nav\Walker\CoverMenu;
+
+use Wp\Nav\Walker\Top;
+use Wp\Nav\Walker\Main;
+use Wp\Nav\Walker\MobileMain;
+use Wp\Nav\Walker\Cover;
 
 class Header extends Composer
 {
@@ -27,23 +28,23 @@ class Header extends Composer
       return wp_nav_menu([ 
         'menu' => 'top', 'container' => false, 'echo' => false, 'depth' => 1,
         'menu_class' => 'header__top-nav coldiv__s1',
-        'walker' => new TNB(),
+        'walker' => new Top(),
       ]);
     }
 
     public function gnb() {
       return wp_nav_menu([ 
         'menu' => 'main', 'container' => false, 'echo' => false, 'depth' => 2,
-        'menu_class' => 'header__global-nav',
-        'walker' => new GNB(),
+        'menu_class' => 'header__main-nav',
+        'walker' => new Main(),
       ]);
     }
 
     public function m_gnb() {
       return wp_nav_menu([ 
         'menu' => 'main', 'container' => false, 'echo' => false, 'depth' => 2,
-        'menu_class' => 'header__m_global-nav',
-        'walker' => new M_GNB(),
+        'menu_class' => 'header__m_main-nav',
+        'walker' => new MobileMain(),
       ]);
     }
 
@@ -51,7 +52,7 @@ class Header extends Composer
       return wp_nav_menu([ 
         'menu' => 'main', 'container' => false, 'echo' => false, 'depth' => 2,
         'menu_class' => 'header__cover',
-        'walker' => new CoverMenu(),
+        'walker' => new Cover(),
       ]);
     }
 }

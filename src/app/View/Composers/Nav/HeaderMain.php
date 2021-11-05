@@ -1,10 +1,10 @@
 <?php
 
-namespace Wp\Nav\Walker;
+namespace Wp\Nav\Walker\Header;
 
 use Walker_Nav_Menu;
 
-class MobileMain extends Walker_Nav_Menu
+class Main extends Walker_Nav_Menu
 {
 
   /**
@@ -16,8 +16,6 @@ class MobileMain extends Walker_Nav_Menu
    * @param int    $depth  Depth of menu item. Used for padding.
    * @param array  $args   An array of arguments. @see wp_nav_menu()
    */
-  public $id = '';
-
   public function start_lvl(&$output, $depth = 0, $args = array())
   {
       // Depth-dependent classes.
@@ -31,13 +29,19 @@ class MobileMain extends Walker_Nav_Menu
       );
       
       // 자식을 가지고있는 alpinejs가 적용되야하는 element에 클래스 적용
-      $advance_class_names = $depth === 0 ? ' header__m_main-subnav ' : '';
+      $advance_class_names = $depth === 0 ? ' header__main-subnav ' : '';
       $class_names = implode($advance_class_names, $classes);
 
       // depth data
       $dapth_alpinejs = $depth === 0 ? <<<EOD
-            x-show="selected === $this->id"
+            x-show="menuitemOver"
             x-cloak
+            x-transition:enter="transition ease-out duration-100"
+            x-transition:enter-start="opacity-0"
+            x-transition:enter-end="opacity-100"
+            x-transition:leave="transition ease-in duration-75"
+            x-transition:leave-start="opacity-100"
+            x-transition:leave-end="opacity-0"
         EOD : '';
 
       // Build HTML for output.
@@ -61,12 +65,20 @@ class MobileMain extends Walker_Nav_Menu
       $classes = empty( $item->classes ) ? array() : (array) $item->classes;
 
       // 최상위 부모 메뉴 아이템 클래스 추가
-      $advance_class_names = $depth === 0 ? ' header__m_main-nav-item-parent ' : ' ';
+      $advance_class_names = $depth === 0 ? ' header__main-nav-item-parent ' : '';
       $class_names = esc_attr( implode( $advance_class_names, apply_filters( 'nav_menu_css_class', array_filter( $classes ), $item ) ) );
 
+      $alpinejs = '';
+      if (array_search('menu-item-has-children',$classes)) {
+        $alpinejs = <<<EOD
+          x-data="{menuitemOver: false}"
+          @mouseover="menuitemOver = true"
+          @mouseleave="menuitemOver = false"
+EOD;
+      }
       // Build HTML.
       $output .= <<<EOD
-        $indent<li class="$depth_class_names $class_names">
+        $indent<li class="$depth_class_names $class_names" $alpinejs>
 EOD;
 
       // Link attributes.
@@ -74,27 +86,16 @@ EOD;
       $attributes .= ! empty( $item->target )     ? ' target="' . esc_attr( $item->target     ) .'"' : '';
       $attributes .= ! empty( $item->xfn )        ? ' rel="'    . esc_attr( $item->xfn        ) .'"' : '';
       $attributes .= ! empty( $item->url )        ? ' href="'   . esc_attr( $item->url        ) .'"' : '';
-      $attributes .= ' class="menu-link ' . ( $depth > 0 ? 'sub-menu-link header__m_main-nav-item-'.$depth : 'main-menu-link header__m_main-nav-item' ) . '"';
+      $attributes .= ' class="menu-link ' . ( $depth > 0 ? 'sub-menu-link header__main-nav-item-'.$depth : 'main-menu-link header__main-nav-item' ) . '"';
       
-      $this->id = $item->ID;
-
-      $alpinejs = '';
-      if (array_search('menu-item-has-children',$classes)) {
-        $alpinejs = <<<EOD
-          @click.prevent="selected === $item->ID ? selected = 0 : selected = $item->ID"
-          :class="{'active': selected === $item->ID}"
-EOD;
-      }
-
       // Build HTML output and pass through the proper filter.
-      $item_output = sprintf( '%1$s<a%2$s%7$s>%3$s%4$s%5$s</a>%6$s',
+      $item_output = sprintf( '%1$s<a%2$s>%3$s%4$s%5$s</a>%6$s',
           $args->before,
           $attributes,
           $args->link_before,
           apply_filters( 'the_title', $item->title, $item->ID ),
           $args->link_after,
           $args->after,
-          $alpinejs
       );
       $output .= apply_filters( 'walker_nav_menu_start_el', $item_output, $item, $depth, $args );
   }

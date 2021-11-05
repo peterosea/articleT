@@ -1,6 +1,6 @@
 <?php
 
-namespace Wp\Nav\Walker;
+namespace Wp\Nav\Walker\Header;
 
 use Walker_Nav_Menu;
 

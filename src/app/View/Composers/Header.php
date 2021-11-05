@@ -4,10 +4,10 @@ namespace App\View\Composers;
 
 use Roots\Acorn\View\Composer;
 
-use Wp\Nav\Walker\Top;
-use Wp\Nav\Walker\Main;
-use Wp\Nav\Walker\MobileMain;
-use Wp\Nav\Walker\Cover;
+use Wp\Nav\Walker\Header\Top;
+use Wp\Nav\Walker\Header\Main;
+use Wp\Nav\Walker\Header\MobileMain;
+use Wp\Nav\Walker\Header\Cover;
 
 class Header extends Composer
 {

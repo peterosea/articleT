@@ -39,11 +39,12 @@ module.exports = {
         'container-x': 'var(--container-px)',
         'container-y': 'var(--container-py)',
       },
+      margin: {
+        full: 'calc(-1 * var(--container-px))',
+      },
       container: {
         padding: {
-          DEFAULT: '16px',
-          md: '40px',
-          xxl: '80px',
+          DEFAULT: 'var(--container-px)',
         },
       },
       colors,
@@ -80,5 +81,8 @@ module.exports = {
       },
     },
   },
-  plugins: [require('@tailwindcss/typography')],
+  plugins: [
+    require('@tailwindcss/typography'),
+    require('@tailwindcss/aspect-ratio'),
+  ],
 };

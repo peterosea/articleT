@@ -5,12 +5,14 @@
 @import 'common/wp';
 
 @import 'components/btn';
-@import 'components/col';
+@import 'components/listDivider';
 @import 'components/underline';
 @import 'components/icon';
 
+@import 'layouts';
 @import 'components/header';
 @import 'components/footer';
+@import 'components/content';
 
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';

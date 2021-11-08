@@ -2,8 +2,12 @@ name: 🙆‍♂️ 수동 static & build code deploy
 on:
   release:
     types: [published]
+    paths:
+      - "${{ secrets.SRC }}/**/*"
   push:
-    branches: [main]
+    branches: [main, develop]
+    paths:
+      - "${{ secrets.SRC }}/**/*"
   workflow_dispatch:
 
 jobs:

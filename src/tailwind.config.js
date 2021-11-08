@@ -36,15 +36,15 @@ module.exports = {
         xxl: '1536px',
       },
       padding: {
-        'container-x': 'var(--container-px)',
-        'container-y': 'var(--container-py)',
+        'container-x': 'var(--container_px)',
+        'container-y': 'var(--container_py)',
       },
       margin: {
-        full: 'calc(-1 * var(--container-px))',
+        full: 'calc(-1 * var(--container_px))',
       },
       container: {
         padding: {
-          DEFAULT: 'var(--container-px)',
+          DEFAULT: 'var(--container_px)',
         },
       },
       colors,

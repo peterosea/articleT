@@ -11,9 +11,9 @@
 
 &__main {
   @apply bg-white;
+  @apply border-b-[1px] border-[#eee];
 
   &-inner {
-    @apply border-b-[1px] border-[#eee];
     @apply h-[var(--h-gnb)]
       flex
       items-center

@@ -10,9 +10,9 @@ on:
   #     - "${{ secrets.SRC }}/**/*"
   push:
     tags:
-      - "dev/*"
+      - dev/*
     paths:
-      - "${{ secrets.SRC }}/**/*"
+      - ${{ secrets.SRC }}/**/*
   workflow_dispatch:
 
 jobs:

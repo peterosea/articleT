@@ -32,7 +32,7 @@
     <div class="prose text-[14px] sm:text-[18px]">
       {!! $post->post_excerpt !!}
     </div>
-    <div class="hiddn mt-[16px]">
+    <div class="hidden mt-[16px]">
       <a href="{!! $post->permalink !!}" class="underline power" style="--uph: 1px">Read on</a>
     </div>
   </div>

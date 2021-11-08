@@ -63,7 +63,7 @@
       }
 
       > *:not(:last-child)::after {
-        @apply bg-cerebralGrey;
+        @apply bg-brightGray;
 
         content: '';
         width: 100%;

@@ -12,7 +12,7 @@ on:
     tags:
       - dev/*
     paths:
-      - ${{ secrets.SRC }}/**/*
+      - src/**/*
   workflow_dispatch:
 
 jobs:

@@ -3,11 +3,11 @@
 @section('content')
 
 <section>
-  <div class="container mx-auto grid grid-cols-1 sm:grid-cols-[920px,1px,1fr] gap-x-[52px]">
+  <div class="container mx-auto grid grid-cols-1 xxl:grid-cols-[920px,1px,1fr] lg:grid-cols-[1fr,1px,1fr] gap-x-[52px]">
     <div class="sm:py-[100px] mb-[54px] sm:mb-0 flex flex-col justify-between">
       @include('partials.content-hero', ['post' => $heroPost])
       <div>
-        <div class="sm:h-px bg-steam w-full sm:w-[calc(100%+52px+var(--container_px))] mt-[60px] sm:mb-[36px] sm:transform translate-x-[calc(-1*var(--container_px))]"></div>
+        <div class="sm:h-px bg-steam w-full sm:w-[calc(100%+52px+var(--container_px))] mt-[60px] sm:mb-[36px] ml-full"></div>
         <div class="py-[20px] sm:py-0 bg-[#f7f7f7] sm:bg-transparent px-[var(--container_px)] sm:px-0 mx-full sm:mx-0">
           @include('partials.banner.client_announcement')
         </div>
@@ -24,6 +24,11 @@
         @endforeach
       </ul>
     </div>
+  </div>
+</section>
+<section>
+  <div class="container mx-auto grid grid-cols-2">
+
   </div>
 </section>
 @endsection

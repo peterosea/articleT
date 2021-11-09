@@ -3,7 +3,7 @@
 @section('content')
 
 <section>
-  <div class="container mx-auto grid grid-cols-1 xxl:grid-cols-[920px,1px,1fr] lg:grid-cols-[1fr,1px,1fr] gap-x-[52px]">
+  <div class="container mx-auto grid grid-cols-1 desktop:grid-cols-[1fr,1px,735px] lg:grid-cols-[1fr,1px,1fr] gap-x-[52px]">
     <div class="sm:py-[100px] mb-[54px] sm:mb-0 flex flex-col justify-between">
       @include('partials.content-hero', ['post' => $heroPost])
       <div>

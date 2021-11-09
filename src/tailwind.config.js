@@ -34,6 +34,7 @@ module.exports = {
     extend: {
       screens: {
         xxl: '1536px',
+        desktop: '1919px',
       },
       padding: {
         'container-x': 'var(--container_px)',

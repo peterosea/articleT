@@ -1,3 +1,7 @@
+{{--
+  Section Name: 고정, 인기 포스트
+--}}
+
 <section>
   <div class="container mx-auto grid grid-cols-1 desktop:grid-cols-[1fr,1px,735px] lg:grid-cols-[1fr,1px,1fr] gap-x-[52px]">
     <div class="sm:py-[100px] mb-[54px] sm:mb-0 flex flex-col justify-between">

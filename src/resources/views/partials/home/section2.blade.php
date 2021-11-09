@@ -1,5 +1,5 @@
 {{--
-  Template Name: 탤런트뱅크 소개
+  Section Name: 탤런트뱅크 소개
 --}}
 
 <section class="bg-lighthouse">

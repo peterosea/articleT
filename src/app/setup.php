@@ -219,3 +219,9 @@ if (function_exists('acf_add_options_sub_page')) {
   'capability'	=> 'edit_posts',
 ));
 }
+
+add_action('init', function () {
+  add_feed('popularity_post', function () {
+    get_template_part('rss', 'popularity_post');
+  });
+});

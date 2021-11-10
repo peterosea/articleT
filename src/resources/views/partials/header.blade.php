@@ -25,7 +25,7 @@
           </div>
         </div>
         <div class="flex gap-x-[17px] sm:gap-x-[36px] items-center">
-          <button class="hidden sm:block py-[11px] px-[28px] btn-black">
+          <button class="hidden sm:block py-[11px] px-[28px] btn-blackOut">
             뉴스레터 구독
           </button>
           <div class="hidden sm:block w-[1px] h-[60px] bg-steam"></div>

@@ -1,11 +1,14 @@
 &__page {
   &-inner {
     @apply container mx-auto text-white relative overflow-hidden py-[80px];
+    @media (max-width: theme('screens.xxl')) {
+      max-width: none;
+    }
   }
   &-labelWrap {
     --px: 80px;
 
-    @apply absolute z-20 h-full px-[var(--px)] bg-deepSpaceRodeo top-0 left-0 flex items-center justify-center;
+    @apply absolute z-20 h-full px-[var(--px)] bg-blackOut top-0 left-0 flex items-center justify-center;
   }
   &-label {
     @apply text-[36px] relative;

@@ -25,7 +25,9 @@ class Archive extends Composer
     {
         return [
             'title' => $this->title(),
+            'description' => $this->description(),
             'pagination' => $this->pagination(),
+            'labelBg' => $this->labelBg(),
         ];
     }
 
@@ -41,6 +43,25 @@ class Archive extends Composer
         }
 
         return get_the_title();
+    }
+
+    public function description()
+    {
+        if (is_post_type_archive()) {
+          return get_the_post_type_description();
+        }
+    }
+
+    public function labelBg()
+    {
+      if (is_post_type_archive()) {
+        return match (get_post_type()) {
+          'future-lab' => 'bg-seaSerpent',
+          'insight' => 'bg-deepSpaceRodeo',
+          'tb-story' => 'bg-celticBlue',
+          default => null
+        };
+      }
     }
 
     public function arrow($direction) {

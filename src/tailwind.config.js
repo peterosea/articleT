@@ -23,6 +23,7 @@ const colors = {
   seaSerpent: '#58bbd5',
   darkSilver: '#6f6f6f',
   aero: '#6bc5db',
+  celticBlue: '#2c72b8',
 };
 
 module.exports = {
@@ -34,7 +35,7 @@ module.exports = {
   theme: {
     extend: {
       screens: {
-        xxl: '1536px',
+        xxl: '1600px',
         desktop: '1919px',
       },
       padding: {

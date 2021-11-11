@@ -7,6 +7,7 @@
 @section('content')
   @include('partials.banner.header', [
     'label' => 'TalentBank',
+    'labelBg' => null,
     'title' => '기업과 전문가를 연결하여 더 큰 가치를 만들어 내는 곳', 
     'bgImg' => get_theme_file_uri('resources/images/header-01@3x.jpg'),
     'content' => <<<EOD
@@ -166,6 +167,7 @@ EOD,
   </section>
   @include('partials.banner.header', [
     'label' => 'For Client',
+    'labelBg' => null,
     'title' => <<<EOD
     경험이 풍부한 전문인력을 바로 업무에 투입해<br/>
     단기간 고효율의 성과를 달성하세요.
@@ -373,6 +375,7 @@ EOD,
   </section>
   @include('partials.banner.header', [
     'label' => 'For Expert',
+    'labelBg' => null,
     'title' => <<<EOD
       아직도 많은 기업들에겐 당신의 ‘내공’이 필요합니다.
 EOD, 

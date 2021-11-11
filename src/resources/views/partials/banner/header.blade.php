@@ -1,6 +1,6 @@
 <div class="header__page">
   <div class="header__page-inner">
-    <div class="header__page-labelWrap">
+    <div class="header__page-labelWrap {!! $labelBg !!}">
       <div class="header__page-label">
         {!! $label !!}
       </div>
@@ -13,6 +13,10 @@
         </div>
       </div>
     </div>
-    <img class="header__page-bg" src="{!! $bgImg !!}" alt="">
+    @if (is_bool($bgImg))
+      @include('partials.img', ['ex' => 'jpg', 'name' => 'pageheader-'.get_post_type(), 'class' => 'header__page-bg'])
+    @else
+      <img class="header__page-bg" src="{!! $bgImg !!}" alt="">
+    @endif
   </div>
 </div>

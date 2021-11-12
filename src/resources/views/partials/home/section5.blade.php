@@ -8,7 +8,7 @@
     <div id="swipercontainerS5" class="swiper-container mb-[70px]">
       <div class="swiper-wrapper">
         @foreach ($collectionPosts as $post)
-          <div id="cardWrap" class="swiper-slide max-w-[260px] md:w-auto">
+          <div id="cardWrap" class="swiper-slide max-w-[260px] xl:max-w-none md:w-auto">
             @include('partials.card.collection', 
             [
               'title' => $post->post_title,

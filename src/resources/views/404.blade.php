@@ -15,9 +15,9 @@
         페이지가 존재하지 않거나, 사용할 수 없는 페이지입니다.<br/>
         입력하신 주소가 정확한지 다시 한 번 확인해 주세요.
       </div>
-      <div class="flex gap-x-[24px]">
-        <a href="#" class="btn-black px-[100px] py-[24px] font-normal text-[26px]">이전 페이지</a>
-        <a href="#" class="btn-black px-[100px] py-[24px] font-normal text-[26px]">홈페이지</a>
+      <div class="flex flex-wrap gap-[24px] justify-center">
+        <a href="javascript:history.back();" class="btn-black w-[300px] py-[24px] font-normal text-[26px]">이전 페이지</a>
+        <a href="/" class="btn-black w-[300px] py-[24px] font-normal text-[26px]">홈페이지</a>
       </div>
     </div>
   @endif

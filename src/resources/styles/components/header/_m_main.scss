@@ -5,10 +5,10 @@
     --h-m_search: 60px;
     --h-m_gnb-nav: 0px;
 
-    @media (max-width: theme('screens.sm')) {
+    @media (max-width: theme('screens.lg')) {
       --h-m_gnb-nav: 44px;
     }
-    @media (min-width: theme('screens.sm')) {
+    @media (min-width: theme('screens.lg')) {
       --h-gnb: 96px;
     }
   }

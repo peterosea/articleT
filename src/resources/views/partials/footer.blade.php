@@ -1,6 +1,6 @@
 <footer id="footer__main" class="footer__main">
   <div class="footer__main-1">
-    <div class="footer__main-inner grid grid-cols-1 sm:grid-cols-2 gap-x-[40px] container mx-auto xl:max-w-desktop xl:px-[80px]">
+    <div class="footer__main-inner grid grid-cols-1 xl:grid-cols-2 gap-y-[40px] gap-x-[40px] container mx-auto xl:max-w-desktop xl:px-[80px]">
       <div class="flex order-2 sm:order-2">
         {!! wp_nav_menu([
           'menu' => 'footer-1',
@@ -10,7 +10,7 @@
           'menu_class' => 'footer__main-1-nav',
           ]) !!}
       </div>
-      <div class="grid grid-cols-1 sm:grid-cols-[600px,1fr] order-1 sm:order-2">
+      <div class="grid grid-cols-1 sm:grid-cols-[auto,auto] order-1 sm:order-2">
         <div>
           <h2 class="h2">Help & Support</h2>
           <div class="grid grid-cols-3 sm:grid-cols-[123px,1fr] gap-[20px]">
@@ -34,24 +34,24 @@
             </div>
           </div>
         </div>
-        <div class="justify-self-end hidden sm:block">
+        <div class="justify-self-end hidden lg:block self-end xl:self-start">
           <button class="btn-darkSilver text-[14px] font-medium">뉴스레터 구독</button>
         </div>
       </div>
     </div>
   </div>
   <div class="footer__main-2">
-    <div class="footer__main-inner container mx-auto grid grid-cols-1 gap-x-[40px] sm:grid-cols-2 xl:max-w-desktop xl:px-[80px]">
-      <div class="grid gap-y-[20px] sm:gap-y-[24px] mb-[64px] sm:mb-0">
+    <div class="footer__main-inner container mx-auto grid grid-cols-1 gap-x-[40px] lg:grid-cols-2 xl:max-w-desktop xl:px-[80px]">
+      <div class="grid gap-y-[20px] sm:gap-y-[24px] mb-[64px] lg:mb-0">
         {!! wp_nav_menu([
           'menu' => 'footer',
           'container' => false,
           'echo' => false,
           'depth' => 2,
-          'menu_class' => 'footer__main-2-nav order-2 sm:order-1',
+          'menu_class' => 'footer__main-2-nav order-2 lg:order-1',
           ]) !!}
-          <div class="order-3 sm:order-2">Copyright© TalentBank. 2021 ~ All Rights reserved.</div>
-          <div class="order-1 sm:order-3 sm:mt-[4px] mb-[4px] sm:mb-0 flex">
+          <div class="order-3 lg:order-2">Copyright© TalentBank. 2021 ~ All Rights reserved.</div>
+          <div class="order-1 lg:order-3 sm:mt-[4px] mb-[4px] sm:mb-0 flex">
             <a href="/">
               <img src="{!! get_theme_file_uri('resources/images/logo-02.svg') !!}" alt="">
             </a>

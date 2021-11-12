@@ -16,19 +16,19 @@
     </header>
     <header class="header__main" :class="{'menu-open': menuSelected === 'menu'}">
       <div class="header__main-inner container mx-auto">
-        <div class="flex items-center">
+        <div class="flex items-center gap-x-[20px]">
           <a href="/" class="header__main-logo">
             <img src="{!! $siteLogo !!}" alt="homepage logo">
           </a>
-          <div class="hidden sm:block">
+          <div class="hidden lg:block">
             {!! $gnb !!}
           </div>
         </div>
-        <div class="flex gap-x-[17px] sm:gap-x-[36px] items-center">
-          <button class="hidden sm:block py-[11px] px-[28px] btn-blackOut">
+        <div class="flex gap-x-[17px] lg:gap-x-[36px] items-center">
+          <button class="hidden lg:block py-[11px] px-[28px] btn-blackOut">
             뉴스레터 구독
           </button>
-          <div class="hidden sm:block w-[1px] h-[60px] bg-steam"></div>
+          <div class="hidden lg:block w-[1px] h-[60px] bg-steam"></div>
           <button 
             class="btn-search" 
             @click.prevent="
@@ -37,14 +37,14 @@
               selected = null;
           ">search</button>
           <button 
-            class="block sm:hidden btn-menu"
+            class="block lg:hidden btn-menu"
             @click.prevent="
               menuSelected === 'menu' ? menuSelected = null : menuSelected = 'menu';
               selected = null;
           ">menu</button>
         </div>
       </div>
-      <div class="block sm:hidden relative">
+      <div class="block lg:hidden relative">
         <div :class="{'hidden': menuSelected === 'menu' || menuSelected === 'search'}">
           {!! $m_gnb !!}
         </div>

@@ -3,7 +3,7 @@
   :root {
     --h-tnb: 0px;
 
-    @media (min-width: theme('screens.sm')) {
+    @media (min-width: theme('screens.lg')) {
       --h-tnb: 44px;
     }
   }
@@ -15,7 +15,7 @@
   @apply border-steam
     border-b-[1px]
     hidden
-    sm:block
+    lg:block
     bg-lighthouse;
 
   &-inner {

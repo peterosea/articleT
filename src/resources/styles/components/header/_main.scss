@@ -3,7 +3,7 @@
   :root {
     --h-gnb: 60px;
 
-    @media (min-width: theme('screens.sm')) {
+    @media (min-width: theme('screens.lg')) {
       --h-gnb: 96px;
     }
   }
@@ -19,16 +19,15 @@
       items-center
       justify-between;
 
-    @media (min-width: theme('screens.sm')) {
-      @apply border-gravelFint;
-    }
+    @apply border-b border-brightGray;
   }
 
   &-logo {
     @apply h-[24px];
 
-    @media (min-width: theme('screens.sm')) {
-      @apply h-[36px] mr-[144px];
+    @media (min-width: theme('screens.xl')) {
+      margin-right: 124px;
+      height: 36px;
     }
 
     img {
@@ -39,9 +38,13 @@
   &-nav {
     @apply flex
       items-center
-      gap-x-[84px]
       text-[24px]
+      gap-x-[22px]
       leading-snug;
+
+    @media (min-width: theme('screens.xl')) {
+      @apply gap-x-[84px];
+    }
 
     &-item {
       --h: 0px;

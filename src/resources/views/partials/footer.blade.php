@@ -1,6 +1,6 @@
 <footer id="footer__main" class="footer__main">
   <div class="footer__main-1">
-    <div class="footer__main-inner grid grid-cols-1 sm:grid-cols-2 gap-x-[40px] container mx-auto xl:max-w-screen-desktop xl:px-[80px]">
+    <div class="footer__main-inner grid grid-cols-1 sm:grid-cols-2 gap-x-[40px] container mx-auto xl:max-w-desktop xl:px-[80px]">
       <div class="flex order-2 sm:order-2">
         {!! wp_nav_menu([
           'menu' => 'footer-1',
@@ -41,7 +41,7 @@
     </div>
   </div>
   <div class="footer__main-2">
-    <div class="footer__main-inner container mx-auto grid grid-cols-1 gap-x-[40px] sm:grid-cols-2 xl:max-w-screen-desktop xl:px-[80px]">
+    <div class="footer__main-inner container mx-auto grid grid-cols-1 gap-x-[40px] sm:grid-cols-2 xl:max-w-desktop xl:px-[80px]">
       <div class="grid gap-y-[20px] sm:gap-y-[24px] mb-[64px] sm:mb-0">
         {!! wp_nav_menu([
           'menu' => 'footer',

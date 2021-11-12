@@ -1,6 +1,6 @@
 &__page {
   &-inner {
-    @apply container mx-auto text-white relative overflow-hidden py-[80px];
+    @apply container mx-auto xl:max-w-desktop text-white relative overflow-hidden py-[80px];
     @media (max-width: theme('screens.xl')) {
       max-width: none;
     }

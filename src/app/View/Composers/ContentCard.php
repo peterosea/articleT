@@ -15,7 +15,7 @@ class ContentCard extends Composer
      * @var array
      */
     protected static $views = [
-        'partials.content-card2',
+        'partials.content-card',
     ];
 
     /**

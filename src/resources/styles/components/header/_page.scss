@@ -1,14 +1,12 @@
 &__page {
+  --h-pageheader: 280px;
+  @apply h-[var(--h-pageheader)];
+
   &-inner {
-    @apply container mx-auto xl:max-w-desktop text-white relative overflow-hidden py-[80px];
-    @media (max-width: theme('screens.xl')) {
-      max-width: none;
-    }
+    @apply container mx-auto xl:max-w-desktop text-white relative overflow-hidden flex items-center justify-center h-full;
   }
   &-labelWrap {
-    --px: 80px;
-
-    @apply absolute z-20 h-full px-[var(--px)] bg-blackOut top-0 left-0 flex items-center justify-center;
+    @apply absolute z-20 h-full px-[20px] bg-blackOut top-0 left-0 flex items-center justify-center w-[360px];
   }
   &-label {
     @apply text-[36px] relative;
@@ -20,7 +18,7 @@
       position: absolute;
       top: calc(100% + 0.4em);
       display: block;
-      width: calc(100% + 2 * var(--px));
+      width: calc(100% + 2 * 80px);
       height: 4px;
       background-color: #fff;
     }

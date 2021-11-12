@@ -1,9 +1,9 @@
-<div class="content__card">
-  <div class="content__card-meta listDivider__cols2">
-    <time datetime="{!! $date !!}">{!! $date !!}</time>
-    @if ($collection)
+<div class="card__template">
+  <div class="card__template-meta listDivider__cols2">
+    <time datetime="{!! $date !!}"></time>
+    @if ($collection && count($collection) > 0)
       @foreach ($collection as $term)
-        <div class="content__card-meta-term">
+        <div class="card__template-meta-term">
           <a href="{!! $term->link !!}" class="btn-seaSerpent">{!! $term->name !!}</a>
           @if (count($term->children) > 0)
               @foreach ($term->children as $child)
@@ -12,29 +12,27 @@
           @endif
         </div>
       @endforeach
-    @elseif($category)
+    @elseif($category && count($category) > 0)
       @foreach ($category as $term)
-        <div class="content__card-meta-term">
+        <div class="card__template-meta-term">
           <a href="{!! $term->link !!}">{!! $term->name !!}</a>
         </div>
       @endforeach
     @endif
   </div>
-  <div class="content__card-body">
-    <div class="content__card-title">
+  <div class="card__template-body">
+    <div class="card__template-title">
       <a href="{!! $permalink !!}">{!! $title !!}</a>
     </div>
   </div>
-  <div class="content__card-thumbnail">
+  <div class="card__template-thumbnail">
     <img src="{!! $thumbnail !!}">
   </div>
-  <div class="content__card-main col-span-2">
+  <div class="card__template-main">
     <div class="prose">
-      <p class="break-all">
-        {!! $excerpt !!}
-      </p>
+      {!! $excerpt !!}
     </div>
-    <div class="content__card-readmore">
+    <div class="card__template-readmore">
       <a href="{!! $permalink !!}" class="underline power" style="--uph: 1px">Read on</a>
     </div>
   </div>

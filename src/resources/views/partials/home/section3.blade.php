@@ -3,8 +3,8 @@
 --}}
 
 <section>
-  <div class="container mx-auto sm:pt-[100px] py-[50px] sm:pb-[120px]">
-    <h2 class="text-center text-[24px] sm:text-[48px] font-bold mb-[28px] sm:mb-[72px] max:sm:hidden">최신 포스트</h2>
+  <div class="container mx-auto sm:pt-[64px] py-[50px] sm:pb-[74px]">
+    <h2 class="text-center text-[24px] sm:text-[48px] font-bold mb-[28px] sm:mb-[48px] max:sm:hidden">최신 포스트</h2>
     {{-- <div class="flex justify-center">
       <ul id="swiper-recentPost-pagination" class="recentPost__pagination">
         @php($index = 0)
@@ -22,8 +22,16 @@
           <div id="{!! $tag !!}" class="swiper-slide">
             <div class="listDivider__rows1 grid grid-cols-1 lg:grid-cols-3 gap-x-[70px] gap-y-[56px] mt-[28px]" style="--gap-y: 56px">
               @foreach ($posts as $key => $post)
-                <div class="-lg:card__s3 !lg:card__s2 after:block lg:after:hidden">
-                  @include('partials.content-card', ['post' => $post])
+                <div class="-lg:card__s3 !lg:card__s2 lg:after:hidden">
+                  @include('partials.card.template', [
+                    'title' => $post->post_title,
+                    'permalink' => $post->permalink,
+                    'thumbnail' => $post->thumbnail,
+                    'date' => $post->date,
+                    'excerpt' => $post->excerpt,
+                    'collection' => $post->collection,
+                    'category' => $post->category,
+                  ])
                 </div>
                 @if ($key === 2) @break @endif
               @endforeach

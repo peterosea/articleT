@@ -15,7 +15,7 @@ EOD,
     <div class="grid grid-cols-1 lg:grid-cols-3 gap-x-[70px] gap-y-[56px] lg:gap-y-[85px]">
       @while(have_posts()) @php(the_post())
         <div class="!card__s2">
-          @includeFirst(['partials.content-card2', 'partials.content'])
+          @includeFirst(['partials.content-card', 'partials.content'])
         </div>
       @endwhile
     </div>

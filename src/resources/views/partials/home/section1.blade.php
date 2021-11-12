@@ -15,11 +15,19 @@
     </div>
     <div class="hidden sm:block bg-steam"></div>
     <div class="sm:py-[100px] mb-[54px] sm:mb-0">
-      <div class="text-[24px] sm:text-[32px] font-bold mb-[45px] sm:mb-[72px]">인기 포스트</div>
-      <ul class="sm:listDivider__rows1 grid gap-y-[54px] sm:gap-y-[88px]">
+      <div class="text-[24px] sm:text-[28px] font-bold mb-[45px] sm:mb-[50px]">인기 포스트</div>
+      <ul class="sm:listDivider__rows1 grid gap-y-[54px] sm:gap-y-[67px]" style="--gap-y: 67px">
         @foreach ($popularityPosts as $post)
-          <li>
-            @include('partials.content-c2r2', ['post' => $post])
+          <li class="!card__s1">
+            @include('partials.card.template', [
+              'title' => $post->post_title,
+              'permalink' => $post->permalink,
+              'thumbnail' => $post->thumbnail,
+              'date' => $post->date,
+              'excerpt' => $post->excerpt,
+              'collection' => $post->collection,
+              'category' => $post->category,
+            ])
           </li>
         @endforeach
       </ul>

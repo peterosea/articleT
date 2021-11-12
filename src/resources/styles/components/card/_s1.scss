@@ -1,26 +1,31 @@
-@mixin content__card {
-  .content__card {
-    @apply grid grid-cols-[3fr,minmax(150px,2fr)] justify-between gap-x-[10px] gap-y-[20px];
+@mixin card {
+  .card__template {
+    // layout
+    @apply grid grid-cols-[1fr,200px] grid-rows-[auto,auto,auto] gap-x-[40px];
+    &-meta {
+      order: 1;
+    }
+    &-body {
+      order: 3;
+    }
+    &-main {
+      @apply col-span-2;
+      order: 4;
+      padding-top: 26px;
+    }
+    &-thumbnail {
+      @apply row-span-2;
+      order: 2;
+    }
 
     &-meta {
-      // layout
-      @apply col-span-2;
-      // style
       @apply text-carbon;
 
-      order: -2;
       display: flex;
       align-items: center;
       font-size: 14px;
       font-weight: bold;
       line-height: 1;
-
-      @media (min-width: theme('screens.sm')) {
-        font-size: 18px;
-        time {
-          font-size: 20px;
-        }
-      }
 
       .btn-seaSerpent {
         @apply py-[6px] px-[14px];
@@ -37,11 +42,6 @@
     &-title {
       font-size: 20px;
       font-weight: bold;
-      order: -1;
-
-      @media (min-width: theme('screens.sm')) {
-        font-size: 28px;
-      }
     }
 
     &-thumbnail {
@@ -55,17 +55,13 @@
     &-main {
       @apply text-davyGrey;
 
-      @media (min-width: theme('screens.sm')) {
-        font-size: 18px;
-      }
-
       .prose {
         font-size: 14px;
-
-        @media (min-width: theme('screens.sm')) {
-          font-size: 18px;
-        }
       }
+    }
+
+    &-readmore {
+      display: none;
     }
   }
 }

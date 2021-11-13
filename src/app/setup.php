@@ -227,9 +227,8 @@ add_action('init', function () {
 });
 
 add_action( 'pre_get_posts' , function ($query) {
-  if ( ! is_admin() && $query->is_post_type_archive( 'insight' ) && $query->is_main_query() )
+  if ( ! is_admin() && $query->is_main_query() )
   {
-      $query->set( 'post_type', 'insight' ); //set query arg ( key, value )
       $query->set( 'posts_per_page', 15 ); //set query arg ( key, value )
 
       return $query;
@@ -237,7 +236,7 @@ add_action( 'pre_get_posts' , function ($query) {
 } );
 
 // function archive_videos_template( $template )
-// {
+// {  
 //     remove_filter( 'template_include', 'archive_videos_template', 99 );
 
 //     $target_tpl = 'archive-videos_cpt.php';

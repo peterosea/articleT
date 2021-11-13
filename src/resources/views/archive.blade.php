@@ -21,7 +21,7 @@
     'label' => $title,
     'labelBg' => $labelBg,
     'title' => $description, 
-    'bgImg' =>  true,
+    'bgImg' =>  $bgImg,
     'content' => <<<EOD
     #탤런트뱅크서비스소개  #100%활용방법  #뉴스룸 #웨비나
 EOD,

@@ -13,12 +13,12 @@
         </div> --}}
       </div>
     </div>
-    @if (is_bool($bgImg) && get_post_type())
-      @include('partials.img', ['ex' => 'jpg', 'name' => 'pageheader-'.get_post_type(), 'class' => 'header__page-bg'])
+    @if(empty($bgImg))
+      @include('partials.img', ['ex' => 'jpg', 'name' => 'header-03', 'class' => 'header__page-bg'])
     @elseif (is_string($bgImg))
       <img class="header__page-bg" src="{!! $bgImg !!}" alt="">
-    @else
-      @include('partials.img', ['ex' => 'jpg', 'name' => 'header-02', 'class' => 'header__page-bg'])
+    @elseif ($bgImg)
+      {!! $bgImg !!}
     @endif
   </div>
 </div>

@@ -71,8 +71,8 @@ class Archive extends Composer
 
     public function bgImg()
     {
-      return match ((get_queried_object())->slug) {
-        'life' , 'insight', 'tb-story' => view('partials.img', ['ex' => 'jpg', 'name' => 'pageheader-'. (get_queried_object())->slug, 'class' => 'header__page-bg']),
+      return match ((get_queried_object())->name) {
+        'life' , 'insight', 'tb-story' => view('partials.img', ['ex' => 'jpg', 'name' => 'pageheader-'. (get_queried_object())->name, 'class' => 'header__page-bg']),
         default => null
       };
     }

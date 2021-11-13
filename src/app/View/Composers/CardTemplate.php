@@ -30,13 +30,13 @@ class CardTemplate extends Composer
     {
         return [
             'title' => get_the_title(),
-            'date' => get_the_date(),
+            'date' => get_the_date('Y/m/d'),
             'permalink' => get_the_permalink(),
             'thumbnail' => (new Tool())->objectThumbnail(get_post()),
             'excerpt' => (new Tool())->get_excerpt(180, get_the_excerpt()),
             'collection' => $this->get_terms('collection'),
             'category' => $this->get_terms(str_replace('-', '_', get_post_type()) . '_category'),
-            'term' => ($this->get_terms('collection'))[0]->children[0],
+            'term' => $this->get_terms('collection'),
         ];
     }
 
@@ -55,9 +55,11 @@ EOD;
     {
         $post = get_post();
         $terms = get_the_terms($post, $slug);
+        if ($this->view->name() === 'partials.content-collection' && !empty($terms)) {
+          return $terms[0];
+        }
         if ($terms) {
           return (new Hook())->setTaxonomyData($terms);
         }
-        return $terms;
     }
 }

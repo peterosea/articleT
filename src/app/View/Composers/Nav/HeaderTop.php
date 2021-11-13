@@ -36,7 +36,6 @@ EOD;
       $attributes .= ' class="menu-link flex gap-x-[4px] items-center ' . ( $depth > 0 ? 'sub-menu-link' : 'main-menu-link' ) . '"';
 
       // icon
-      // var_dump($item->ID);
       $iconUrl = get_field('icon', $item->ID);
       $iconBgcolor = get_field('bg_color', $item->ID);
       $icon = <<<EOD

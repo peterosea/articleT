@@ -84,6 +84,14 @@
 
         max-width: 820px;
       }
+
+      a {
+        @include pointUnderLine;
+
+        &:hover {
+          --h: 98%;
+        }
+      }
     }
   }
 }

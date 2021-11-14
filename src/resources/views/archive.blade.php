@@ -2,7 +2,7 @@
 @extends('layouts.app')
 
 @section('content')
-@if (! have_posts())
+@if (!have_posts())
   <div class="container mx-auto py-[120px] flex flex-col justify-center items-center text-center">
   <div class="mb-[28px]">
     <img src="{!! get_theme_file_uri('resources/images/not-found.jpg') !!}" alt="" class="max-w-[600px]">

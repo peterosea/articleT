@@ -19,6 +19,7 @@ class CardTemplate extends Composer
     protected static $views = [
         'partials.content-card',
         'partials.content-collection',
+        'partials.content-search',
     ];
 
     /**

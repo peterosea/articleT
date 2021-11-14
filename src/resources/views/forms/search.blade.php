@@ -8,7 +8,7 @@
     
         <input
           type="search"
-          class="px-[20px] sm:px-[32px] text-[16px] sm:text-[20px] pr-[44px] h-[40px] w-full border rounded-full !outline-none focus:border-deepSpaceRodeo"
+          class="px-[20px] sm:px-[32px] text-[16px] sm:text-[20px] pr-[44px] h-[40px] lg:h-[56px] w-full border rounded-full !outline-none focus:border-deepSpaceRodeo"
           placeholder="{!! esc_attr_x('검색어를 입력하세요', 'placeholder', 'sage') !!}"
           value="{{ get_search_query() }}"
           name="s"

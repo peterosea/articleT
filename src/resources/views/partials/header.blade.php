@@ -29,13 +29,23 @@
             뉴스레터 구독
           </a>
           <div class="hidden lg:block w-[1px] h-[60px] bg-steam"></div>
-          <button 
-            class="btn-search" 
-            @click.prevent="
-              menuSelected === 'search' ? menuSelected = null : menuSelected = 'search';
-              $nextTick(() => $refs.searchInput.focus());
-              selected = null;
-          ">search</button>
+          <div class="relative">
+            <button 
+              class="btn-search" 
+              @click.prevent="
+                menuSelected === 'search' ? menuSelected = null : menuSelected = 'search';
+                $nextTick(() => $refs.searchInput.focus());
+                selected = null;
+            ">search</button>
+            <div class="hidden lg:block header__main-search absolute right-[-16px] top-1/2 transfrom -translate-y-1/2 w-[640px]"
+              x-show="menuSelected === 'search'"
+              x-cloak
+              @click.away="menuSelected = null"
+              @keydown.escape.window="menuSelected = null"
+            >
+              {!! get_search_form(false) !!}
+            </div>
+          </div>
           <button 
             class="block lg:hidden btn-menu"
             @click.prevent="

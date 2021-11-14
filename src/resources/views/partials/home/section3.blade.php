@@ -22,7 +22,7 @@
           <div id="{!! $tag !!}" class="swiper-slide">
             <div class="listDivider__rows1 grid grid-cols-1 lg:grid-cols-3 gap-x-[70px] gap-y-[56px] mt-[28px]" style="--gap-y: 56px">
               @foreach ($posts as $key => $post)
-                <div class="-lg:card__s3 !lg:card__s2 lg:after:hidden">
+                <div class="lg:-card__s3 lg:!card__s2 lg:after:hidden">
                   @include('partials.card.template', [
                     'title' => $post->post_title,
                     'permalink' => $post->permalink,

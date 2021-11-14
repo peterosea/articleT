@@ -19,7 +19,7 @@
 
   @each $key, $value in $screens {
     @media (max-width: nth($value, 1)) {
-      .\-#{$key}\:card__#{$class} {
+      .#{$key}\:\-card__#{$class} {
         @include card;
       }
     }
@@ -31,7 +31,7 @@
       }
     }
     @media (min-width: nth($value, 1)) {
-      .\!#{$key}\:card__#{$class} {
+      .#{$key}\:\!card__#{$class} {
         @include card;
       }
     }
@@ -46,3 +46,6 @@
 
 @import 's3';
 @include variants(s3);
+
+@import 's4';
+@include variants(s4);

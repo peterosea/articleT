@@ -66,7 +66,7 @@ EOD;
 EOD;
   }
 
-  public function render($range = 4)
+  public function render($range = 2)
   {
       $showitems = ($range * 2) + 1;
 
@@ -95,7 +95,7 @@ EOD;
           <div class="flex items-center justify-center border-t-[3px] border-carbon pt-[80px]">
             <div class="flex items-center justify-center">
               <div>
-                <nav class="relative z-0 inline-flex gap-x-[12px] rounded-[4px] shadow-sm -space-x-px" aria-label="Pagination">
+                <nav class="relative z-0 inline-flex flex-wrap gap-[12px] rounded-[4px] shadow-sm -space-x-px" aria-label="Pagination">
                   <a href="{$prevlink}" class="relative inline-flex w-[40px] h-[40px] lg:w-[60px] lg:h-[60px] justify-center items-center px-2 py-2 rounded-[4px] border border-cerebralGrey bg-white text-[14px] sm:text-[20px] font-medium text-gray-500 hover:bg-gray-50">
                     <span class="sr-only">Previous</span>
                     <!-- Heroicon name: solid/chevron-left -->

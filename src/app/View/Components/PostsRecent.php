@@ -6,7 +6,7 @@ use Roots\Acorn\View\Component;
 use Wp\Post\Hook;
 use Wp\Post\Tool;
 
-class PostsCollection extends Component
+class PostsRecent extends Component
 {
     public $posts = [];
 
@@ -33,13 +33,7 @@ class PostsCollection extends Component
       foreach(['insight','future-lab','tb-story'] as $postType) {
         $posts = array_merge($posts, get_posts(array(
           'post_type' => $postType,
-          'numberposts' => 5,
-          'tax_query' => array(
-            array(
-                'taxonomy' => 'collection',
-                'operator' => 'EXISTS'
-            )
-         )
+          'numberposts' => 3
         )));
       }
       $posts = (new Hook($posts, ['collection']))::$posts;
@@ -47,7 +41,7 @@ class PostsCollection extends Component
       usort($posts, function($post_a, $post_b) {
           return $post_b->post_date <=> $post_a->post_date;
       });
-      $this->posts = array_slice($posts, 0, 5);
+      $this->posts = array_slice($posts, 0, 3);
     }
 
     /**
@@ -57,6 +51,6 @@ class PostsCollection extends Component
      */
     public function render()
     {
-        return $this->view('components.posts-collection');
+        return $this->view('components.posts-recent');
     }
 }

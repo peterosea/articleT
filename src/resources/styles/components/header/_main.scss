@@ -1,0 +1,82 @@
+// GNB
+@at-root {
+  :root {
+    --h-gnb: 60px;
+
+    @media (min-width: theme('screens.lg')) {
+      --h-gnb: 96px;
+    }
+  }
+}
+
+&__main {
+  @apply bg-white;
+  @apply border-b-[1px] border-[#eee];
+
+  &-inner {
+    @apply h-[var(--h-gnb)]
+      flex
+      items-center
+      justify-between
+      container mx-auto xl:max-w-desktop xl:px-[80px];
+
+    @apply border-b border-brightGray;
+  }
+
+  &-logo {
+    @apply h-[24px];
+
+    @media (min-width: theme('screens.xl')) {
+      margin-right: 124px;
+      height: 36px;
+    }
+
+    img {
+      height: 100%;
+    }
+  }
+
+  &-nav {
+    @apply flex
+      items-center
+      text-[24px]
+      gap-x-[22px]
+      leading-snug;
+
+    @media (min-width: theme('screens.xl')) {
+      @apply gap-x-[84px];
+    }
+
+    &-item {
+      --h: 0px;
+      @apply px-[4px];
+      @include pointUnderLine;
+      @apply ring-deepSpaceRodeo ring-opacity-20;
+
+      &:hover {
+        --h: 12px;
+      }
+
+      &-parent {
+        position: relative;
+      }
+    }
+  }
+
+  &-subnav {
+    @apply w-[166px] text-[18px] grid grid-cols-1 border border-dugong bg-steam gap-[1px];
+
+    position: absolute;
+    top: calc(100% + 16px);
+    left: 0;
+    box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
+
+    > li {
+      @apply h-[58px] flex items-center px-[16px] bg-[#f8f8f8] text-black font-medium;
+
+      &:hover {
+        @apply bg-white text-deepSpaceRodeo;
+      }
+    }
+  }
+}

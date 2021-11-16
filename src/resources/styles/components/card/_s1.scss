@@ -1,0 +1,46 @@
+@mixin card {
+  .card__template {
+    // layout
+    @apply grid grid-cols-[1fr,200px] grid-rows-[auto,auto,auto] gap-x-[40px];
+    &-meta {
+      order: 1;
+    }
+    &-body {
+      order: 3;
+    }
+    &-main {
+      @apply col-span-2;
+      order: 4;
+      padding-top: 26px;
+    }
+    &-thumbnail {
+      @apply row-span-2;
+      order: 2;
+    }
+
+    &-meta {
+      @apply text-carbon;
+
+      display: flex;
+      align-items: center;
+      font-size: 14px;
+      font-weight: bold;
+      line-height: 1;
+
+      .btn-seaSerpent {
+        @apply py-[6px] px-[14px];
+
+        font-size: 12px;
+        font-weight: normal;
+      }
+
+      &-term {
+        @apply flex items-center gap-x-[8px];
+      }
+    }
+
+    &-readmore {
+      display: none;
+    }
+  }
+}

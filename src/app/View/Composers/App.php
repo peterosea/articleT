@@ -24,6 +24,10 @@ class App extends Composer
     {
         return [
             'siteName' => $this->siteName(),
+            'siteLogo' => $this->siteLogo(),
+            'id' => get_the_id(),
+            'newsletterLink' => $this->getLink(719),
+            'collectionLink' => $this->getLink(717),
         ];
     }
 
@@ -35,5 +39,16 @@ class App extends Composer
     public function siteName()
     {
         return get_bloginfo('name', 'display');
+    }
+
+    public function siteLogo()
+    {
+      return get_theme_file_uri('resources/images/logo-01.svg');
+    }
+
+    public function getLink($id)
+    {
+      $post = get_post($id);
+      return get_the_permalink($post);
     }
 }

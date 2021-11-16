@@ -1,15 +1,24 @@
 name: 🙆‍♂️ 수동 static & build code deploy
 on:
-  release:
-    types: [published]
+  # release:
+  #   types: [published]
+  #   paths:
+  #     - "${{ secrets.SRC }}/**/*"
+  # push:
+  #   branches: [main, develop]
+  #   paths:
+  #     - "${{ secrets.SRC }}/**/*"
   push:
-    branches: [main]
+    tags:
+      - dev/*
+    paths:
+      - src/**/*
   workflow_dispatch:
 
 jobs:
   source:
     runs-on: ubuntu-latest
-    name: 📮 Github 소스코드로 업데이트 `git pull origin main`
+    name: 📮 Github 소스코드로 업데이트 `git pull origin develop`
     steps:
       - name: executing remote ssh commands using password
         uses: appleboy/ssh-action@master
@@ -21,9 +30,9 @@ jobs:
           script: |
             cd ${{ secrets.PROJECT_DIR }}
             git fetch origin
-            git checkout main
+            git checkout develop
             git branch | grep 'release/*' | xargs git branch -D
-            git pull origin main
+            git pull origin develop
 
   # secrets.SRC = Theme file name
   # secrets.PROJECT_DIR = PROJECT_DIR pwd로 루트부터 지정된 폴더 경로
@@ -33,32 +42,17 @@ jobs:
     name: 🗳 Theme source build & rsync
     steps:
       - uses: actions/checkout@v2
-      - name: Get yarn cache directory path
-        id: yarn-cache-dir-path
-        working-directory: ${{ env.working-directory }}
-        run: echo "::set-output name=dir::$(yarn cache dir)"
-      - uses: actions/cache@v2
-        id: yarn-cache
-        with:
-          path: |
-            ${{ steps.yarn-cache-dir-path.outputs.dir }}
-            ${{ env.working-directory }}/node_modules/
-          key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
-          restore-keys: |
-            ${{ runner.os }}-yarn-
+
       - name: 🏗 setup-node
         uses: actions/setup-node@v2
         with:
           node-version: "16.x"
-      - name: Install Dependencies
-        if: ${{steps.yarn-cache.outputs.cache-hit}} != 'true'
-        working-directory: ${{ env.working-directory }}
-        run: |
-          cd ${{ secrets.SRC }}
-          yarn install
+
       - name: 🔨 yarn install & build
         run: |
           cd ${{ secrets.SRC }}
+          yarn set version berry
+          yarn install
           yarn build:production
 
       - name: 📂 Sync files to Server

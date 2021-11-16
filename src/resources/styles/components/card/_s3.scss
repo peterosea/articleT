@@ -1,0 +1,28 @@
+@mixin card {
+  .card__template {
+    @apply grid grid-cols-[1fr,150px] justify-between gap-x-[12px] gap-y-[20px];
+
+    &-meta {
+      @apply col-span-2;
+      order: -2;
+    }
+
+    &-title {
+      order: -1;
+    }
+
+    &-main {
+      @apply col-span-2;
+      font-size: 18px;
+      .prose {
+        @media (min-width: theme('screens.sm')) {
+          font-size: 18px;
+        }
+      }
+    }
+
+    &-readmore {
+      display: none;
+    }
+  }
+}

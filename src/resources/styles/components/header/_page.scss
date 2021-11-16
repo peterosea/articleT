@@ -1,0 +1,38 @@
+&__page {
+  --h-pageheader: 280px;
+  @apply h-[var(--h-pageheader)];
+
+  &-inner {
+    @apply container mx-auto xl:max-w-desktop text-white relative overflow-hidden flex items-center justify-center h-full;
+  }
+  &-labelWrap {
+    @apply absolute z-20 h-full px-[20px] bg-blackOut top-0 left-0 flex items-center justify-center w-[360px];
+  }
+  &-label {
+    @apply text-[36px] relative;
+
+    margin-bottom: 0.2em;
+
+    &:after {
+      content: '';
+      position: absolute;
+      top: calc(100% + 0.4em);
+      display: block;
+      width: calc(100% + 2 * 80px);
+      height: 4px;
+      background-color: #fff;
+    }
+  }
+  &-main {
+    @apply relative z-10 flex justify-center;
+  }
+  &-title {
+    @apply text-[28px] mb-[26px];
+  }
+  &-subtitle {
+    @apply text-[16px] opacity-50;
+  }
+  &-bg {
+    @apply absolute w-full h-full object-cover top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2;
+  }
+}

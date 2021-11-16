@@ -1,0 +1,32 @@
+.header {
+  @import 'main';
+  @import 'm_main';
+  @import 'top';
+  @import 'page';
+}
+
+.menu {
+  @import 'cover';
+}
+
+.headroom {
+  position: fixed;
+  z-index: 9000;
+  top: var(--bar-wp, 0);
+  left: 0;
+  width: 100%;
+  will-change: transform;
+  transition: transform 200ms linear;
+
+  &--pinned {
+    transform: translateY(0%);
+  }
+
+  &--unpinned {
+    transform: translateY(-100%);
+  }
+
+  &.menu-open {
+    transform: translateY(0%);
+  }
+}

@@ -1,0 +1,26 @@
+@mixin card {
+  .card__template {
+    // layout
+    @apply grid grid-cols-[minmax(auto,300px),1fr] grid-rows-[auto,auto,auto] gap-x-[40px] gap-y-[36px] auto-rows-min;
+    @apply items-start;
+    &-meta {
+      order: 2;
+    }
+    &-body {
+      order: 3;
+    }
+    &-main {
+      order: 4;
+    }
+    &-thumbnail {
+      @apply row-span-3;
+      order: 1;
+    }
+    &-title {
+      order: 3;
+    }
+    &-readmore {
+      display: none;
+    }
+  }
+}

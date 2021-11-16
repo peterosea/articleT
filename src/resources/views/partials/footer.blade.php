@@ -3,7 +3,7 @@
     <div class="footer__main-inner grid grid-cols-1 xl:grid-cols-2 sm:gap-y-[40px] gap-x-[40px] container mx-auto xl:max-w-desktop xl:px-[80px]">
       <div class="flex order-2 sm:order-2">
         {!! wp_nav_menu([
-          'menu' => 'footer-1',
+          'menu' => 23,
           'container' => false,
           'echo' => false,
           'depth' => 2,
@@ -44,7 +44,7 @@
     <div class="footer__main-inner container mx-auto grid grid-cols-1 gap-x-[40px] lg:grid-cols-2 xl:max-w-desktop xl:px-[80px]">
       <div class="grid gap-y-[20px] sm:gap-y-[24px] mb-[64px] lg:mb-0">
         {!! wp_nav_menu([
-          'menu' => 'footer',
+          'menu' => 11,
           'container' => false,
           'echo' => false,
           'depth' => 2,
@@ -65,7 +65,7 @@
         </div>
         <div class="grid grid-cols-2 sm:grid-cols-1">
           {!! wp_nav_menu([
-            'menu' => 'sns',
+            'menu' => 26,
             'container' => false,
             'echo' => false,
             'depth' => 1,
@@ -78,5 +78,4 @@
       </div>
     </div>
   </div>
-  {{-- @php(dynamic_sidebar('sidebar-footer')) --}}
 </footer>

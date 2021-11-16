@@ -26,7 +26,7 @@ class Header extends Composer
 
     public function tnb() {
       return wp_nav_menu([ 
-        'menu' => 'top', 'container' => false, 'echo' => false, 'depth' => 1,
+        'menu' => 9, 'container' => false, 'echo' => false, 'depth' => 1,
         'menu_class' => 'header__top-nav listDivider__cols1',
         'walker' => new Top(),
       ]);
@@ -34,7 +34,7 @@ class Header extends Composer
 
     public function gnb() {
       return wp_nav_menu([ 
-        'menu' => 'main', 'container' => false, 'echo' => false, 'depth' => 2,
+        'menu' => 10, 'container' => false, 'echo' => false, 'depth' => 2,
         'menu_class' => 'header__main-nav',
         'walker' => new Main(),
       ]);
@@ -42,7 +42,7 @@ class Header extends Composer
 
     public function m_gnb() {
       return wp_nav_menu([ 
-        'menu' => 'main', 'container' => false, 'echo' => false, 'depth' => 2,
+        'menu' => 10, 'container' => false, 'echo' => false, 'depth' => 2,
         'menu_class' => 'header__m_main-nav',
         'walker' => new MobileMain(),
       ]);
@@ -50,7 +50,7 @@ class Header extends Composer
 
     public function gnc() {
       return wp_nav_menu([ 
-        'menu' => 'main', 'container' => false, 'echo' => false, 'depth' => 2,
+        'menu' => 10, 'container' => false, 'echo' => false, 'depth' => 2,
         'menu_class' => 'header__cover',
         'walker' => new Cover(),
       ]);

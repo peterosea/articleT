@@ -8,8 +8,9 @@
     <div class="mb-[70px]">
       <x-PostsCollection />
     </div>
-    <div class="text-center">
+    <div class="text-center mb-[50px]">
       <a href="{!! $collectionLink !!}" class="btn-black mx-auto py-[14px] px-[60px] font-semibold text-[17px]">BROWSE ALL POSTS</a>
     </div>
+    {!! $snsList !!}
   </div>
 </section>

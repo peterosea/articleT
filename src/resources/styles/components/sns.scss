@@ -37,3 +37,20 @@
 .heateorSsspSharing.heateorSsspLinkedinBackground {
   background-color: #e1f2fb;
 }
+
+.nav__sns {
+  @apply flex flex-wrap gap-[45px] justify-center;
+
+  &-icon {
+    @apply flex;
+
+    width: 60px;
+    height: 60px;
+  }
+  &-menu-link {
+    @apply grid gap-y-[9px] items-center justify-center justify-items-center;
+    @apply text-carbon;
+
+    font-size: 14px;
+  }
+}

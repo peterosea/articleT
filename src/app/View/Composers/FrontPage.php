@@ -6,6 +6,7 @@ use Roots\Acorn\View\Composer;
 
 use Wp\Post\Hook;
 use Wp\Post\Tool;
+use Wp\Nav\Walker\Header;
 
 class FrontPage extends Composer
 {
@@ -30,6 +31,7 @@ class FrontPage extends Composer
           'popularityPosts' => $this->popularityPosts(),
           'recentTagsPosts' => $this->recentTagsPosts(),
           'collectionPosts' => $this->collectionPosts(),
+          'snsList' => $this->snsList(),
         ];
     }
 
@@ -128,5 +130,14 @@ class FrontPage extends Composer
           return $post_b->post_date <=> $post_a->post_date;
       });
       return array_slice($posts, 0, 5);
+    }
+
+
+    public function snsList() {
+      return wp_nav_menu([ 
+        'menu' => 33, 'container' => false, 'echo' => false, 'depth' => 1,
+        'menu_class' => 'nav__sns',
+        'walker' => new Header\SNS(),
+      ]);
     }
 }

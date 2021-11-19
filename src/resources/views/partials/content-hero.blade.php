@@ -1,7 +1,7 @@
 <article class="content__hero">
   <div class="content__hero-thumbnail">
     <img src="{!! $post->thumbnail !!}">
-    <a href="" class="content__hero-thumbnail-label btn-deepSpaceRodeo">
+    <a href="{!! $post->postTypeLink !!}" class="content__hero-thumbnail-label btn-deepSpaceRodeo">
       {!! $post->postTypeLabel !!}
     </a>
   </div>

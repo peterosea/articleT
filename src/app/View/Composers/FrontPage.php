@@ -53,6 +53,7 @@ class FrontPage extends Composer
       $post = ((new Hook($posts, $taxonomies))::$posts)[0];
       unset($post->post_content);
       $post_type_obj = get_post_type_object( get_post_type($post->ID) );
+      $post->postTypeLink = get_post_type_archive_link($post_type_obj->name);
       $post->postTypeLabel = $post_type_obj->labels->singular_name;
       return $post;
     }

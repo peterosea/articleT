@@ -23,12 +23,12 @@ services:
     labels:
       - traefik.enable=true
       ## HTTP Routers
-      - traefik.http.routers.svc__tbstory.rule=Host(`tbstory.peterosea.com`)
-      - traefik.http.routers.svc__tbstory.entrypoints=web
-      - traefik.http.routers.svc__tbstory.entrypoints=websecure
-      - traefik.http.routers.svc__tbstory.tls.certresolver=leresolver
+      - traefik.http.routers.svc__wordpress.rule=Host(`${PROJECT_NAME}.peterosea.com`)
+      - traefik.http.routers.svc__wordpress.entrypoints=web
+      - traefik.http.routers.svc__wordpress.entrypoints=websecure
+      - traefik.http.routers.svc__wordpress.tls.certresolver=leresolver
       ## Service
-      - traefik.http.services.svc__tbstory.loadbalancer.server.port=80
+      - traefik.http.services.svc__wordpress.loadbalancer.server.port=80
 
   db:
     image: mariadb
@@ -49,7 +49,7 @@ services:
     labels:
       - traefik.enable=true
       ## HTTP Routers
-      - traefik.http.routers.svc__phpmyadmin.rule=Host(`phpmyadmin.tbstory.beeclover.pro`)
+      - traefik.http.routers.svc__phpmyadmin.rule=Host(`phpmyadmin.${PROJECT_NAME}.beeclover.pro`)
       - traefik.http.routers.svc__phpmyadmin.entrypoints=web
       - traefik.http.routers.svc__phpmyadmin.entrypoints=websecure
       - traefik.http.routers.svc__phpmyadmin.tls.certresolver=leresolver
@@ -84,7 +84,7 @@ services:
     labels:
       - traefik.enable=true
       ## HTTP Routers
-      - traefik.http.routers.svc__traefik.rule=Host(`traefik.tbstory.beeclover.pro`)
+      - traefik.http.routers.svc__traefik.rule=Host(`traefik.${PROJECT_NAME}.beeclover.pro`)
       - traefik.http.routers.svc__traefik.entrypoints=web
       - traefik.http.routers.svc__traefik.entrypoints=websecure
       - traefik.http.routers.svc__traefik.tls.certresolver=leresolver

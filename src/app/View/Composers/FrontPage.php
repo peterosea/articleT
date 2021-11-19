@@ -39,7 +39,6 @@ class FrontPage extends Composer
     {
       return array_map(function($post) {
         $WpTool = new Tool();
-        $post->excerpt = $WpTool::get_excerpt(100, $post->excerpt);
         $post->thumbnail = $WpTool::objectThumbnail($post);
         unset($post->post_content);
         return $post;

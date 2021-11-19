@@ -67,6 +67,7 @@ jobs:
           SERVER_DESTINATION: "${{ secrets.PROJECT_DIR }}/${{ secrets.SRC }}"
 
   alert:
+    if: ${{ github.event.repository.owner.name == 'peterosea' }}
     runs-on: ubuntu-latest
     steps:
       - uses: 8398a7/action-slack@v3

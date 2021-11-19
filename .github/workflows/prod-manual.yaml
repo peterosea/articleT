@@ -2,8 +2,6 @@ name: 🙆‍♂️ 수동 static & build code deploy
 on:
   release:
     types: [published]
-    paths:
-      - "src/**/*"
   push:
     branches: [main]
     paths:
@@ -11,11 +9,12 @@ on:
   workflow_dispatch:
 
 jobs:
-  source:
+  deploy:
+    if: ${{ github.repository == 'peterosea/tbstory' }}
     runs-on: ubuntu-latest
-    name: 📮 Github 소스코드로 업데이트 `git pull upstream main`
+    name: 🚛 소스코드 업데이트 & 빌드파일 배포
     steps:
-      - name: executing remote ssh commands using password
+      - name: 📮 Github 소스코드로 업데이트 `git pull upstream main`
         uses: appleboy/ssh-action@master
         with:
           key: ${{ secrets.DEPLOYSERVER_KEY }}
@@ -29,13 +28,6 @@ jobs:
             git branch | grep 'release/*' | xargs git branch -D
             git pull upstream main
 
-  # secrets.SRC = Theme file name
-  # secrets.PROJECT_DIR = PROJECT_DIR pwd로 루트부터 지정된 폴더 경로
-
-  build:
-    runs-on: ubuntu-latest
-    name: 🗳 Theme source build & rsync
-    steps:
       - uses: actions/checkout@v2
 
       - name: 🏗 setup-node
@@ -61,14 +53,13 @@ jobs:
           ARGS: "-rltgoDzvO --ignore-times"
           SERVER_DESTINATION: "${{ secrets.PROJECT_DIR }}/${{ secrets.SRC }}"
 
-  alert:
-    if: ${{ github.event.repository.owner.name == 'peterosea' }}
-    runs-on: ubuntu-latest
-    steps:
-      - uses: 8398a7/action-slack@v3
+      - name: 🛎 슬랙알림
+        uses: 8398a7/action-slack@v3
         with:
+          job_name: 🚛 소스코드 업데이트 & 빌드파일 배포
           status: ${{ job.status }}
-          fields: repo,message,commit,author,action,eventName,ref,workflow,job,took,pullRequest # selectable (default: repo,message)
+          fields: repo,message,author,workflow,took,job # selectable (default: repo,message)
+          # fields: repo,message,commit,author,action,eventName,ref,workflow,job,took,pullRequest # selectable (default: repo,message)
         env:
           SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }} # required
-        if: always() # Pick up events even if the job fails or is canceled.
+        if: always()

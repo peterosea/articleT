@@ -39,6 +39,10 @@
       }
     }
 
+    &-main .prose {
+      @apply line-clamp-2;
+    }
+
     &-readmore {
       display: none;
     }

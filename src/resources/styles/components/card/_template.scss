@@ -37,6 +37,8 @@
     @apply text-davyGrey;
 
     .prose {
+      @apply line-clamp-3;
+
       font-size: 14px;
     }
   }

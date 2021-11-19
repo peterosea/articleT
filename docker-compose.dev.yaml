@@ -12,10 +12,12 @@ services:
       WORDPRESS_DB_NAME: ${WORDPRESS_DB_NAME}
       WORDPRESS_CONFIG_EXTRA: |
         /* Redis */
-        define('WP_REDIS_HOST', getenv_docker('WORDPRESS_REDIS_HOST', 'redis'));
+        define('WP_REDIS_HOST', getenv_docker('WORDPRESS_REDIS_HOST', 'WORK-${PROJECT_NAME}_redis'));
         define('WP_REDIS_PORT', getenv_docker('WORDPRESS_REDIS_PORT', 6379));
+        define( 'WP_ENVIRONMENT_TYPE', 'local' );
+        define( 'NIUI_HOST', 'https://tbstory.peterosea.com');
     volumes:
-      - ./.wp:/var/www/html
+      - wordpress:/var/www
       - ./wp-content:/var/www/html/wp-content
       - ./src:/var/www/html/wp-content/themes/sage
     deploy:
@@ -43,4 +45,5 @@ networks:
     external:
       name: DB_work
 volumes:
+  wordpress:
   redis:

@@ -4,6 +4,12 @@
 [Keep a Changelog](https://keepachangelog.com/ko/1.0.0/)의 형식을 기본으로 구성됩니다.
 
 
+## [v1.0.1] 2021-11-19
+
+### Added
+
+- 깃헙 액션 상태 슬랙알림 추가 (웹훅)
+
 ## [v1.0.0] 2021-11-16
 
 - https://github.com/beeclover/articleT/discussions/50

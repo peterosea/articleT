@@ -1,24 +1,19 @@
 name: 🙆‍♂️ 수동 static & build code deploy
 on:
-  # release:
-  #   types: [published]
-  #   paths:
-  #     - "src/**/*"
-  # push:
-  #   branches: [main, develop]
-  #   paths:
-  #     - "src/**/*"
-  push:
-    tags:
-      - dev/*
+  release:
+    types: [published]
     paths:
-      - src/**/*
+      - "src/**/*"
+  push:
+    branches: [main]
+    paths:
+      - "src/**/*"
   workflow_dispatch:
 
 jobs:
   source:
     runs-on: ubuntu-latest
-    name: 📮 Github 소스코드로 업데이트 `git pull origin develop`
+    name: 📮 Github 소스코드로 업데이트 `git pull upstream main`
     steps:
       - name: executing remote ssh commands using password
         uses: appleboy/ssh-action@master
@@ -29,10 +24,10 @@ jobs:
           port: ${{ secrets.DEPLOYSERVER_PORT }}
           script: |
             cd ${{ secrets.PROJECT_DIR }}
-            git fetch origin
-            git checkout develop
+            git fetch upstream
+            git checkout main
             git branch | grep 'release/*' | xargs git branch -D
-            git pull origin develop
+            git pull upstream main
 
   # secrets.SRC = Theme file name
   # secrets.PROJECT_DIR = PROJECT_DIR pwd로 루트부터 지정된 폴더 경로

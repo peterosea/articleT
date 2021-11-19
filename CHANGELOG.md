@@ -4,6 +4,13 @@
 [Keep a Changelog](https://keepachangelog.com/ko/1.0.0/)의 형식을 기본으로 구성됩니다.
 
 
+## [v1.0.3] 2021-11-19
+
+### Changed
+
+- live 서버의 docker-compose 맞춤
+  - Ubuntu 18.04LTS에서 adminer가 오류를 일으킴
+
 ## [v1.0.2] 2021-11-19
 
 ### Changed

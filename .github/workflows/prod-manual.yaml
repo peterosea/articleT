@@ -56,8 +56,9 @@ jobs:
       - name: 🛎 슬랙알림
         uses: 8398a7/action-slack@v3
         with:
+          job_name: 🚛 소스코드 업데이트 & 빌드파일 배포
           status: ${{ job.status }}
-          fields: repo,message,author,workflow # selectable (default: repo,message)
+          fields: repo,message,author,workflow,took,job # selectable (default: repo,message)
           # fields: repo,message,commit,author,action,eventName,ref,workflow,job,took,pullRequest # selectable (default: repo,message)
         env:
           SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }} # required

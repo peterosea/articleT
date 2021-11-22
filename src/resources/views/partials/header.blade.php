@@ -16,11 +16,11 @@
     </header>
     <header class="header__main" :class="{'menu-open': menuSelected === 'menu'}">
       <div class="header__main-inner">
-        <div class="flex items-center gap-x-[20px]">
+        <div class="flex items-center gap-x-[20px] h-full">
           <a href="/" class="header__main-logo">
             <img src="{!! $siteLogo !!}" alt="homepage logo">
           </a>
-          <div class="hidden lg:block">
+          <div class="hidden lg:block h-full">
             {!! $gnb !!}
           </div>
         </div>

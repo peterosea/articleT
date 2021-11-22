@@ -27,6 +27,10 @@ body {
   word-break: keep-all;
 }
 
+a:hover {
+  @apply text-deepSpaceRodeo;
+}
+
 .brand {
   @apply text-3xl font-medium text-indigo-500;
 }

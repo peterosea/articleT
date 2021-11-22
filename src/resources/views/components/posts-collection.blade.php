@@ -11,7 +11,7 @@
             'excerpt' => $post->excerpt,
             'thumbnail' => $post->thumbnail,
             'date' => $post->date,
-            'term' => $post->collection[0]->children[0],
+            'term' => $post?->collection[0]?->children[0] ?? $post?->collection[0] ?? null,
           ]
           )
         </div>

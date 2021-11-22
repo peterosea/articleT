@@ -11,7 +11,10 @@
 
 &__main {
   @apply bg-white;
-  @apply border-b-[1px] border-[#eee];
+
+  @media (min-width: theme('screens.lg')) {
+    @apply border-b-[1px] border-[#eee];
+  }
 
   &-inner {
     @apply h-[var(--h-gnb)]
@@ -20,7 +23,20 @@
       justify-between
       container mx-auto xl:max-w-desktop xl:px-[80px];
 
-    @apply border-b border-brightGray;
+    @media (max-width: theme('screens.lg')) {
+      position: relative;
+      &:after {
+        @apply bg-brightGray;
+        content: '';
+        display: block;
+        position: absolute;
+        width: 100vw;
+        height: 1px;
+        left: 50%;
+        bottom: 0;
+        transform: translateX(-50%);
+      }
+    }
   }
 
   &-logo {
@@ -43,6 +59,8 @@
       gap-x-[22px]
       leading-snug;
 
+    height: 100%;
+
     @media (min-width: theme('screens.xl')) {
       @apply gap-x-[84px];
     }
@@ -58,24 +76,53 @@
       }
 
       &-parent {
+        @apply flex items-center;
+
+        height: 100%;
         position: relative;
+
+        &.hover,
+        &.current-menu-item {
+          @apply text-deepSpaceRodeo;
+          &:after {
+            @apply bg-deepSpaceRodeo;
+            content: '';
+            display: block;
+            width: 100%;
+            height: 1px;
+            position: absolute;
+            bottom: -1px;
+          }
+        }
       }
     }
   }
 
   &-subnav {
-    @apply w-[166px] text-[18px] grid grid-cols-1 border border-dugong bg-steam gap-[1px];
+    @apply text-[18px] flex;
 
     position: absolute;
-    top: calc(100% + 16px);
+    top: calc(100% + 1px);
     left: 0;
-    box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
+
+    &:after {
+      @apply bg-white shadow-md;
+
+      content: '';
+      display: block;
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 200vw;
+      height: 100%;
+      z-index: -1;
+    }
 
     > li {
-      @apply h-[58px] flex items-center px-[16px] bg-[#f8f8f8] text-black font-medium;
+      @apply h-[58px] flex items-center px-[16px] text-black font-medium text-[18px];
 
-      &:hover {
-        @apply bg-white text-deepSpaceRodeo;
+      .menu-link {
+        white-space: nowrap;
       }
     }
   }

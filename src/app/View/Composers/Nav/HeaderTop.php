@@ -35,24 +35,14 @@ EOD;
       $attributes .= ! empty( $item->url )        ? ' href="'   . esc_attr( $item->url        ) .'"' : '';
       $attributes .= ' class="menu-link flex gap-x-[4px] items-center ' . ( $depth > 0 ? 'sub-menu-link' : 'main-menu-link' ) . '"';
 
-      // icon
-      $iconUrl = get_field('icon', $item->ID);
-      $iconBgcolor = get_field('bg_color', $item->ID);
-      $icon = <<<EOD
-        <div class="header__top-nav-icon" style="--bgColor: $iconBgcolor">
-          <img class="w-[10px] h-[10px]" src="$iconUrl" />
-        </div>
-EOD;
-
       // Build HTML output and pass through the proper filter.
-      $item_output = sprintf( '%1$s<a%2$s>%7$s%3$s%4$s%5$s</a>%6$s',
+      $item_output = sprintf( '%1$s<a%2$s>%3$s%4$s%5$s</a>%6$s',
           $args->before,
           $attributes,
           $args->link_before,
           apply_filters( 'the_title', $item->title, $item->ID ),
           $args->link_after,
           $args->after,
-          $icon
       );
       $output .= apply_filters( 'walker_nav_menu_start_el', $item_output, $item, $depth, $args );
   }

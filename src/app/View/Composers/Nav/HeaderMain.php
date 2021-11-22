@@ -72,6 +72,7 @@ class Main extends Walker_Nav_Menu
       if (array_search('menu-item-has-children',$classes)) {
         $alpinejs = <<<EOD
           x-data="{menuitemOver: false}"
+          :class="{'hover': menuitemOver}"
           @mouseover="menuitemOver = true"
           @mouseleave="menuitemOver = false"
 EOD;

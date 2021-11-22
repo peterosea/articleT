@@ -1,7 +1,9 @@
 <div class="card__collection">
   <div class="card__collection-thumbnail">
     {!! $thumbnail !!}
-    <a href="{!! $term->link !!}" class="card__collection-term">{!! $term->name !!}</a>
+    @if (!empty($term))
+      <a href="{!! $term->link !!}" class="card__collection-term" @if (!empty($term->color)) style="background-color: {!! $term->color !!}" @endif>{!! $term->name !!}</a>
+    @endif
   </div>
   <div class="card__collection-title">
     <a href="{!! $permalink !!}">{!! $title !!}</a>

@@ -12,7 +12,9 @@ require('@tinypixelco/laravel-mix-wp-blocks');
  |
  */
 
-mix.setPublicPath('./public').browserSync('https://tbstory.demo.beeclover.pro');
+mix
+  .setPublicPath('./public')
+  .browserSync('https://articlet.demo.beeclover.pro');
 
 mix
   .sass('resources/styles/app.scss', 'styles')

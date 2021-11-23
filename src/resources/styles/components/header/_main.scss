@@ -55,7 +55,7 @@
   &-nav {
     @apply flex
       items-center
-      text-[24px]
+      text-[20px]
       gap-x-[22px]
       leading-snug;
 
@@ -70,6 +70,7 @@
       @apply px-[4px];
       @include pointUnderLine;
       @apply ring-deepSpaceRodeo ring-opacity-20;
+      transition: none;
 
       &:hover {
         --h: 12px;

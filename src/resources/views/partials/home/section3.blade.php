@@ -4,7 +4,7 @@
 
 <section class="overflow-hidden">
   <div class="container mx-auto sm:pt-[64px] py-[50px] sm:pb-[74px]">
-    <h2 class="text-center text-[24px] sm:text-[34px] font-bold mb-[28px] sm:mb-[48px] max:sm:hidden">최신 포스트</h2>
+    <h2 class="text-center text-[24px] sm:text-[34px] font-bold mb-[28px] sm:mb-[32px] max:sm:hidden">최신 포스트</h2>
     {{-- <div class="flex justify-center">
       <ul id="swiper-recentPost-pagination" class="recentPost__pagination">
         @php($index = 0)
@@ -20,7 +20,7 @@
       <div class="swiper-wrapper">
         @foreach ($recentTagsPosts as $tag => $posts)
           <div id="{!! $tag !!}" class="swiper-slide">
-            <div class="listDivider__rows1 grid grid-cols-1 lg:grid-cols-3 gap-x-[70px] gap-y-[56px] mt-[28px]" style="--gap-y: 56px">
+            <div class="listDivider__rows1 grid grid-cols-1 lg:grid-cols-3 gap-x-[70px] gap-y-[56px]" style="--gap-y: 56px">
               @foreach ($posts as $key => $post)
                 <div class="lg:-card__s3 lg:!card__s2 lg:after:hidden">
                   @include('partials.card.template', [

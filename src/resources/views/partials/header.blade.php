@@ -29,7 +29,7 @@
             뉴스레터 구독
           </a>
           <div class="hidden lg:block w-[1px] h-[60px] bg-steam"></div>
-          <div class="relative">
+          <div class="relative flex items-center">
             <button 
               class="btn-search" 
               @click.prevent="

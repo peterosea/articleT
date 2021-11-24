@@ -338,7 +338,7 @@ EOD,
               무료 의뢰
             </div>
           </div>
-          <div class="text-[16px] lg:text-[60px] absolute lg:right-0 top-full left-1/2 lg:left-auto lg:top-1/2 transfrom -translate-x-1/2 lg:translate-x-[40px] lg:-translate-y-1/2 icon-label-arrowNext rotate-90"></div>
+          <div class="text-[16px] lg:text-[60px] absolute lg:right-0 top-full left-1/2 lg:left-auto lg:top-1/2 transfrom -translate-x-1/2 lg:translate-x-[40px] lg:-translate-y-1/2 icon-label-arrowNext rotate-90 lg:rotate-0"></div>
           <div class="block lg:hidden underline text-[16px] font-bold">
             Project 무료 의뢰
           </div>
@@ -351,7 +351,7 @@ EOD,
               사전 미팅
             </div>
           </div>
-          <div class="text-[16px] lg:text-[60px] absolute lg:right-0 top-full left-1/2 lg:left-auto lg:top-1/2 transfrom -translate-x-1/2 lg:translate-x-[40px] lg:-translate-y-1/2 icon-label-arrowNext rotate-90"></div>
+          <div class="text-[16px] lg:text-[60px] absolute lg:right-0 top-full left-1/2 lg:left-auto lg:top-1/2 transfrom -translate-x-1/2 lg:translate-x-[40px] lg:-translate-y-1/2 icon-label-arrowNext rotate-90 lg:rotate-0"></div>
           <div class="block lg:hidden underline text-[16px] font-bold">
             BD 배정 및 사전 미팅
           </div>
@@ -363,7 +363,7 @@ EOD,
               전문가 선정
             </div>
           </div>
-          <div class="text-[16px] lg:text-[60px] absolute lg:right-0 top-full left-1/2 lg:left-auto lg:top-1/2 transfrom -translate-x-1/2 lg:translate-x-[40px] lg:-translate-y-1/2 icon-label-arrowNext rotate-90"></div>
+          <div class="text-[16px] lg:text-[60px] absolute lg:right-0 top-full left-1/2 lg:left-auto lg:top-1/2 transfrom -translate-x-1/2 lg:translate-x-[40px] lg:-translate-y-1/2 icon-label-arrowNext rotate-90 lg:rotate-0"></div>
           <div class="block lg:hidden underline text-[16px] font-bold">
             전문가 선정
           </div>
@@ -376,7 +376,7 @@ EOD,
               계약
             </div>
           </div>
-          <div class="text-[16px] lg:text-[60px] absolute lg:right-0 top-full left-1/2 lg:left-auto lg:top-1/2 transfrom -translate-x-1/2 lg:translate-x-[40px] lg:-translate-y-1/2 icon-label-arrowNext rotate-90"></div>
+          <div class="text-[16px] lg:text-[60px] absolute lg:right-0 top-full left-1/2 lg:left-auto lg:top-1/2 transfrom -translate-x-1/2 lg:translate-x-[40px] lg:-translate-y-1/2 icon-label-arrowNext rotate-90 lg:rotate-0"></div>
           <div class="block lg:hidden underline text-[16px] font-bold">
             3자 미팅 및 계약
           </div>
@@ -704,7 +704,7 @@ EOD,
           <div class="text-[19px] font-bold tracking-[-0.56px] lg:text-center">
             회원가입 후 Profile 작성
           </div>
-          <div class="text-[40px] lg:text-[60px] absolute lg:right-0 top-full left-1/2 lg:left-auto lg:top-1/2 transfrom -translate-y-1/2 -translate-x-1/2 lg:translate-x-[40px] lg:-translate-y-1/2 icon-label-circleArrowNext rotate-90 z-10"></div>
+          <div class="text-[40px] lg:text-[60px] absolute lg:right-0 top-full left-1/2 lg:left-auto lg:top-1/2 transfrom -translate-y-1/2 -translate-x-1/2 lg:translate-x-[40px] lg:-translate-y-1/2 icon-label-circleArrowNext rotate-90 lg:rotate-0 z-10"></div>
         </div>
         <div class="border border-cerebralGrey py-[44px] px-[20px] relative rounded-[4px] grid grid-cols-[auto,1fr] lg:grid-cols-1 items-center gap-x-[16px]">
           <div class="flex place-content-center lg:mb-[31px]">
@@ -713,7 +713,7 @@ EOD,
           <div class="text-[19px] font-bold tracking-[-0.56px] lg:text-center">
             서류 심사
           </div>
-          <div class="text-[40px] lg:text-[60px] absolute lg:right-0 top-full left-1/2 lg:left-auto lg:top-1/2 transfrom -translate-y-1/2 -translate-x-1/2 lg:translate-x-[40px] lg:-translate-y-1/2 icon-label-circleArrowNext rotate-90 z-10"></div>
+          <div class="text-[40px] lg:text-[60px] absolute lg:right-0 top-full left-1/2 lg:left-auto lg:top-1/2 transfrom -translate-y-1/2 -translate-x-1/2 lg:translate-x-[40px] lg:-translate-y-1/2 icon-label-circleArrowNext rotate-90 lg:rotate-0 z-10"></div>
         </div>
         <div class="border border-cerebralGrey py-[44px] px-[20px] relative rounded-[4px] grid grid-cols-[auto,1fr] lg:grid-cols-1 items-center gap-x-[16px]">
           <div class="flex place-content-center lg:mb-[31px]">
@@ -722,7 +722,7 @@ EOD,
           <div class="text-[19px] font-bold tracking-[-0.56px] lg:text-center">
             인터뷰
           </div>
-          <div class="text-[40px] lg:text-[60px] absolute lg:right-0 top-full left-1/2 lg:left-auto lg:top-1/2 transfrom -translate-y-1/2 -translate-x-1/2 lg:translate-x-[40px] lg:-translate-y-1/2 icon-label-circleArrowNext rotate-90 z-10"></div>
+          <div class="text-[40px] lg:text-[60px] absolute lg:right-0 top-full left-1/2 lg:left-auto lg:top-1/2 transfrom -translate-y-1/2 -translate-x-1/2 lg:translate-x-[40px] lg:-translate-y-1/2 icon-label-circleArrowNext rotate-90 lg:rotate-0 z-10"></div>
         </div>
         <div class="border border-cerebralGrey py-[44px] px-[20px] relative rounded-[4px] grid grid-cols-[auto,1fr] lg:grid-cols-1 items-center gap-x-[16px]">
           <div class="flex place-content-center lg:mb-[31px]">

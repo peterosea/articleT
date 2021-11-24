@@ -30,6 +30,8 @@
     &-item {
       @apply h-full flex items-center text-[16px];
 
+      white-space: nowrap;
+
       &-parent > .active {
         position: relative;
         &::after {

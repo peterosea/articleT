@@ -13,11 +13,9 @@
         </div> --}}
       </div>
     </div>
-    @if(empty($bgImg))
+    @if(empty($bgImg) || is_null($bgImg))
       @include('partials.img', ['ex' => 'jpg', 'name' => 'header-03', 'class' => 'header__page-bg'])
-    @elseif (is_string($bgImg))
-      <img class="header__page-bg" src="{!! $bgImg !!}" alt="">
-    @elseif ($bgImg)
+    @else
       {!! $bgImg !!}
     @endif
   </div>

@@ -61,7 +61,7 @@ class Archive extends Composer
     {
       if (is_post_type_archive()) {
         return match (get_post_type()) {
-          'future-lab' => 'bg-seaSerpent',
+          'life' => 'bg-seaSerpent',
           'insight' => 'bg-deepSpaceRodeo',
           'tb-story' => 'bg-celticBlue',
           default => null

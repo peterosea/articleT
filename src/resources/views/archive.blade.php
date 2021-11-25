@@ -22,9 +22,7 @@
     'labelBg' => $labelBg,
     'title' => $description, 
     'bgImg' =>  $bgImg,
-    'content' => <<<EOD
-    #탤런트뱅크서비스소개  #100%활용방법  #뉴스룸 #웨비나
-EOD,
+    'content' => $tags ?? '',
   ])
   <div class="container mx-auto py-[40px] sm:py-[100px]">
     <div class="grid grid-cols-1 lg:grid-cols-3 gap-x-[70px] gap-y-[56px] lg:gap-y-[85px]">
@@ -32,6 +30,7 @@ EOD,
         <div class="!card__s2">
           @includeFirst(['partials.content-card', 'partials.content'])
         </div>
+        @php( $tags = get_the_tags( get_the_ID() ) )
       @endwhile
     </div>
   </div>

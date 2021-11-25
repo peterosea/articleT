@@ -5,6 +5,10 @@
 
   @apply text-gravelFint;
 
+  a[href]:hover {
+    text-decoration: underline;
+  }
+
   &-1 {
     @apply bg-jet;
 

@@ -14,9 +14,9 @@
         <div>
           <h2 class="h2">Help & Support</h2>
           <div class="grid grid-cols-3 sm:grid-cols-[123px,1fr] gap-[20px]">
-            <div class="icon-label gap-y-[12px] before:text-[40px] sm:before:text-[20px] sm:text-seaSerpent icon-label-fap">
+            <a href="http://talentbank.co.kr/common/faq" target="_blank" rel="noopener noreferrer" class="icon-label gap-y-[12px] before:text-[40px] sm:before:text-[20px] sm:text-seaSerpent icon-label-fap">
               FAQ
-            </div>
+            </a>
             <div class="hidden sm:block">
               가장 많이 문의 주셨던 사항을 정리했습니다.
             </div>
@@ -52,7 +52,7 @@
           ]) !!}
           <div class="order-3 lg:order-2">Copyright© TalentBank. 2021 ~ All Rights reserved.</div>
           <div class="order-1 lg:order-3 sm:mt-[4px] mb-[4px] sm:mb-0 flex">
-            <a href="/">
+            <a href="http://talentbank.co.kr" target="_blank" rel="noopener noreferrer">
               <img src="{!! get_theme_file_uri('resources/images/logo-02.svg') !!}" alt="">
             </a>
           </div>

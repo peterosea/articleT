@@ -33,6 +33,7 @@ class Archive extends Composer
             'pagination' => (new Pagination())->render(),
             'labelBg' => $this->labelBg(),
             'bgImg' => $this-> bgImg(),
+            'tags' => $this->getTags(),
         ];
     }
 
@@ -75,5 +76,40 @@ class Archive extends Composer
         'life' , 'insight', 'tb-story' => view('partials.img', ['ex' => 'jpg', 'name' => 'pageheader-'. (get_queried_object())->name, 'class' => 'header__page-bg']),
         default => null
       };
+    }
+
+    public function array_map_assoc(callable $f, array $a) {
+      return array_column(array_map($f, array_keys($a), $a), 1, 0);
+    }
+
+    public function getTags()
+    {
+      global $wp_the_query;
+      $result = [];
+      foreach ($wp_the_query->posts as $post) {
+        $tags = get_the_tags($post);
+        if($tags) {
+          $result = array_merge($result, $this->array_map_assoc(function($k, $v) {
+            return [$v->slug, $v];
+          }, $tags));
+        }
+      }
+      if (count($result) > 0) {
+        $dump = '';
+        $index = 0;
+        foreach ($result as $r) {
+          if ($index < 5) {
+            $link = get_term_link($r);
+            $name = $r->name;
+            $dump .= <<<EOD
+              <a href="$link">#$name</a> 
+EOD;
+            $index++;
+          }
+        }
+        return $dump;
+      } else {
+        return null;
+      }
     }
 }

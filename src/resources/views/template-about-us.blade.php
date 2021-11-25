@@ -5,16 +5,18 @@
 @extends('layouts.app')
 
 @section('content')
-  @include('partials.banner.header', [
-    'label' => 'TalentBank',
-    'labelBg' => 'bg-deepSpaceRodeo',
-    'title' => '기업과 전문가를 연결하여 더 큰 가치를 만들어 내는 곳', 
-    'bgUrl' => get_theme_file_uri('resources/images/header-01@3x.jpg'),
-    'content' => <<<EOD
-      탤런트뱅크는 기업이 필요로 하는 비즈니스 전문가를 일 단위(자문, 프로젝트 단위)로 연결하여 실제 업무수행과 함께 <br/>
-      전문가의 경험, 전문지식, 네트워크를 제공하는 전문가 매칭 플랫폼입니다.
+  <div id="Talentbank" class="scrollmargintop">
+    @include('partials.banner.header', [
+      'label' => 'TalentBank',
+      'labelBg' => 'bg-deepSpaceRodeo',
+      'title' => '기업과 전문가를 연결하여 더 큰 가치를 만들어 내는 곳', 
+      'bgUrl' => get_theme_file_uri('resources/images/header-01@3x.jpg'),
+      'content' => <<<EOD
+        탤런트뱅크는 기업이 필요로 하는 비즈니스 전문가를 일 단위(자문, 프로젝트 단위)로 연결하여 실제 업무수행과 함께 <br/>
+        전문가의 경험, 전문지식, 네트워크를 제공하는 전문가 매칭 플랫폼입니다.
 EOD,
-  ])
+    ])
+  </div>
   <section class="pt-[40px] lg:pt-[86px] pb-[52px] lg:pb-[120px]">
     <div class="container mx-auto">
       <div class="text-center">
@@ -161,18 +163,20 @@ EOD,
       </div>
     </div>
   </section>
-  @include('partials.banner.header', [
-    'label' => 'For Client',
-    'labelBg' => 'bg-deepSpaceRodeo',
-    'title' => <<<EOD
-    경험이 풍부한 전문인력을 바로 업무에 투입해<br/>
-    단기간 고효율의 성과를 달성하세요.
-EOD, 
-    'bgUrl' => get_theme_file_uri('resources/images/header-02@3x.jpg'),
-    'content' => <<<EOD
-    탤런트뱅크 전문가와 함께라면 동종 산업 내에서의 경쟁을 넘어, 미래를 선도하는 기업으로 변화할 수 있습니다.
+  <div id="For_Client" class="scrollmargintop">
+    @include('partials.banner.header', [
+      'label' => 'For Client',
+      'labelBg' => 'bg-deepSpaceRodeo',
+      'title' => <<<EOD
+      경험이 풍부한 전문인력을 바로 업무에 투입해<br/>
+      단기간 고효율의 성과를 달성하세요.
+  EOD, 
+      'bgUrl' => get_theme_file_uri('resources/images/header-02@3x.jpg'),
+      'content' => <<<EOD
+      탤런트뱅크 전문가와 함께라면 동종 산업 내에서의 경쟁을 넘어, 미래를 선도하는 기업으로 변화할 수 있습니다.
 EOD,
-  ])
+    ])
+  </div>
   <section>
     <div class="container mx-auto lg:mt-[80px] my-[52px] lg:mb-[100px]">
       <div class="text-center mb-[28px] lg:mb-[56px]">
@@ -400,18 +404,20 @@ EOD,
       </div>
     </div>
   </section>
-  @include('partials.banner.header', [
-    'label' => 'For Expert',
-    'labelBg' => 'bg-deepSpaceRodeo',
-    'title' => <<<EOD
-      아직도 많은 기업들에겐 당신의 ‘내공’이 필요합니다.
+  <div id="For_Expert" class="scrollmargintop">
+    @include('partials.banner.header', [
+      'label' => 'For Expert',
+      'labelBg' => 'bg-deepSpaceRodeo',
+      'title' => <<<EOD
+        아직도 많은 기업들에겐 당신의 ‘내공’이 필요합니다.
 EOD, 
-    'bgUrl' => get_theme_file_uri('resources/images/header-03@3x.jpg'),
-    'content' => <<<EOD
-      다년간 다져온 전문성과 노하우를 꼭 필요로 하는 다양한 기업들에게 전수하며<br/>
-      원하는 만큼의 일과 보수를 받을 수 있습니다.
+      'bgUrl' => get_theme_file_uri('resources/images/header-03@3x.jpg'),
+      'content' => <<<EOD
+        다년간 다져온 전문성과 노하우를 꼭 필요로 하는 다양한 기업들에게 전수하며<br/>
+        원하는 만큼의 일과 보수를 받을 수 있습니다.
 EOD,
   ])
+  </div>
   <section>
     <div class="container mx-auto my-[52px] lg:mt-[90px] lg:mb-[100px]">
       <div class="text-center mb-[56px]">

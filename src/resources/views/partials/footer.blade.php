@@ -79,3 +79,5 @@
     </div>
   </div>
 </footer>
+{{-- <div class="icon-label-google_play"></div>
+<div class="icon-label-app_store"></div> --}}

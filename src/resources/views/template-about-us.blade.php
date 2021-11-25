@@ -283,7 +283,7 @@ EOD,
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-y-[40px] gap-x-[40px] mb-[40px] lg:mb-[88px]">
           <div>
             <div class="aspect-w-16 aspect-h-9 mb-[44px]">
-              <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/njX2bu-_Vw4?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              <iframe width="560" height="315" src="https://www.youtube.com/embed/9A_2Y1K6-8I" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div>
             <div class="flex flex-col items-center text-center">
               <div class="text-[16px] lg:text-[23px] font-mj font-extrabold mb-[28px]">
@@ -298,7 +298,7 @@ EOD,
           </div>
           <div>
             <div class="aspect-w-16 aspect-h-9 mb-[44px]">
-              <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/njX2bu-_Vw4?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              <iframe width="560" height="315" src="https://www.youtube.com/embed/MUhx8CvlSno" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div>
             <div class="flex flex-col items-center text-center">
               <div class="text-[16px] lg:text-[23px] font-mj font-extrabold mb-[28px]">

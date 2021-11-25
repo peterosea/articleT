@@ -1,4 +1,8 @@
-@import 'tailwindcss/base';
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@tailwind screens;
+@tailwind variants;
 
 @import 'functions/*';
 @import 'common/global';
@@ -15,10 +19,6 @@
 @import 'components/content';
 @import 'components/card';
 @import 'components/sns';
-
-@import 'tailwindcss/components';
-@import 'tailwindcss/utilities';
-@tailwind variants;
 @import 'common/tailwindComponents';
 
 @import 'pages/front-page';

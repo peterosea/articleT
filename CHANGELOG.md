@@ -3,6 +3,14 @@
 이 프로젝트에서 주목할만한 모든 변경 사항이이 파일에 문서화됩니다.
 [Keep a Changelog](https://keepachangelog.com/ko/1.0.0/)의 형식을 기본으로 구성됩니다.
 
+## [v1.2.1] 2021-11-29
+
+### Added
+
+- card__collection 제목 2줄 제한
+- single post youtube 임베디드 16/9비율 full 설정
+- single post image 최대 넓이 100%
+
 ## [v1.2.0] 2021-11-25
 
 ### Added

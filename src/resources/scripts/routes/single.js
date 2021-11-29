@@ -21,6 +21,13 @@ export default {
         },
       },
     });
+
+    const youtubue = document.querySelectorAll("iframe[src*='youtube.com']");
+    if (youtubue) {
+      youtubue.forEach((y) => {
+        y.parentElement.classList.add('youtubeifrmae');
+      });
+    }
   },
   finalize() {},
 };

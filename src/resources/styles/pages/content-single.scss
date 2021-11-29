@@ -85,6 +85,15 @@
         max-width: 820px;
       }
 
+      img,
+      figure {
+        max-width: 100%;
+      }
+
+      .youtubeifrmae {
+        @apply aspect-w-16 aspect-h-9;
+      }
+
       a {
         @include pointUnderLine;
 

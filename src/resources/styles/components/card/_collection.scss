@@ -1,4 +1,5 @@
 &__collection {
+  $p: &;
   @apply grid grid-rows-[1fr,60px,auto];
 
   &-meta {
@@ -11,14 +12,18 @@
     line-height: 1;
   }
 
-  &-term {
+  #{$p} &-term {
     @apply py-[7px] px-[12px] btn-seaSerpent transform translate-y-1/2;
-    @apply w-auto h-auto top-auto right-auto rounded-none #{!important};
+    @apply w-auto h-auto top-auto right-auto rounded-none;
 
     font-size: 14px;
   }
 
   &-title {
+    a {
+      @apply line-clamp-2;
+    }
+
     font-size: 18px;
     font-weight: bold;
   }

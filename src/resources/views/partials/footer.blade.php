@@ -26,12 +26,6 @@
             <div class="hidden sm:block">
               AM 9:00 ~ PM 5:00 (토/일/공휴일 휴무)
             </div>
-            <div class="icon-label gap-y-[12px] before:text-[40px] sm:before:text-[20px] sm:text-seaSerpent icon-label-mail">
-              1:1 문의
-            </div>
-            <div class="hidden sm:block">
-              문의사항을 남겨주시면, 신속하게 응대해 드립니다.
-            </div>
           </div>
         </div>
         <div class="justify-self-end hidden lg:block self-end xl:self-start">

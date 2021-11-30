@@ -15,7 +15,7 @@ services:
         define('WP_REDIS_HOST', getenv_docker('WORDPRESS_REDIS_HOST', 'WORK-${PROJECT_NAME}_redis'));
         define('WP_REDIS_PORT', getenv_docker('WORDPRESS_REDIS_PORT', 6379));
         define( 'WP_ENVIRONMENT_TYPE', 'local' );
-        define( 'NIUI_HOST', 'https://tbstory.peterosea.com');
+        define( 'NIUI_HOST', 'https://article.talentbank.co.kr');
     volumes:
       - wordpress:/var/www
       - ./wp-content:/var/www/html/wp-content

@@ -23,7 +23,7 @@ services:
     labels:
       - traefik.enable=true
       ## HTTP Routers
-      - traefik.http.routers.svc__wordpress.rule=Host(`${PROJECT_NAME}.talentbank.co.kr`)
+      - traefik.http.routers.svc__wordpress.rule=Host(`article.talentbank.co.kr`)
       - traefik.http.routers.svc__wordpress.entrypoints=web
       - traefik.http.routers.svc__wordpress.entrypoints=websecure
       - traefik.http.routers.svc__wordpress.tls.certresolver=leresolver

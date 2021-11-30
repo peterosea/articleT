@@ -1,8 +1,4 @@
 @tailwind base;
-@tailwind components;
-@tailwind utilities;
-@tailwind screens;
-@tailwind variants;
 
 @import 'functions/*';
 @import 'common/global';
@@ -25,3 +21,7 @@
 @import 'pages/about-us';
 @import 'pages/content-single';
 @import 'pages/search';
+
+@tailwind components;
+@tailwind utilities;
+@tailwind variants;

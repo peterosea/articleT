@@ -20,7 +20,7 @@ services:
       - wordpress:/var/www/html
       - ./wp-content:/var/www/html/wp-content
       - ./src:/var/www/html/wp-content/themes/sage
-      - ./config/seo/naver6a51e32109199a6fa40879944b3c1cca.html:/var/www/html/naver6a51e32109199a6fa40879944b3c1cca.html
+      - ./config/seo/naver441aa518f2e7c0fe40520e8943e8472b.html:/var/www/html/naver441aa518f2e7c0fe40520e8943e8472b.html
     labels:
       - traefik.enable=true
       ## HTTP Routers

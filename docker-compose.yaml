@@ -20,6 +20,7 @@ services:
       - wordpress:/var/www/html
       - ./wp-content:/var/www/html/wp-content
       - ./src:/var/www/html/wp-content/themes/sage
+      - ./config/seo/naver6a51e32109199a6fa40879944b3c1cca.html:/var/www/html/naver6a51e32109199a6fa40879944b3c1cca.html
     labels:
       - traefik.enable=true
       ## HTTP Routers
@@ -78,9 +79,9 @@ services:
     volumes:
       - /etc/localtime:/etc/localtime:ro
       - /var/run/docker.sock:/var/run/docker.sock:ro
-      - ./traefik/rules:/rules
-      - ./traefik/acme:/acme
-      - ./traefik/traefik.yaml:/etc/traefik/traefik.yaml
+      - ./config/traefik/rules:/rules
+      - ./config/traefik/acme:/acme
+      - ./config/traefik/traefik.yaml:/etc/traefik/traefik.yaml
     labels:
       - traefik.enable=true
       ## HTTP Routers

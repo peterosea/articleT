@@ -90,6 +90,10 @@
         max-width: 100%;
       }
 
+      .aligncenter {
+        @apply mx-auto;
+      }
+
       .youtubeifrmae {
         @apply aspect-w-16 aspect-h-9;
       }

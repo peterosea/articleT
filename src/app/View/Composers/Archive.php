@@ -121,8 +121,8 @@ EOD;
       $term = get_queried_object();
       if ($term instanceof WP_Post_Type) {
         return match ((get_queried_object())->name) {
-          'life' => '#산업트렌드 #소비재 #에너지 #헬스케어 #공공분야 #유통/리테일 #금융서비스 #정보통신기술 #B2B사례 #B2C사례',
-          'insight' => '#전문가인터뷰 #CEO인터뷰 #인사이트 #비즈니스정보 #고용트렌드',
+          'insight' => '#산업트렌드 #소비재 #에너지 #헬스케어 #공공분야 #유통/리테일 #금융서비스 #정보통신기술 #B2B사례 #B2C사례',
+          'life' => '#전문가인터뷰 #CEO인터뷰 #인사이트 #비즈니스정보 #고용트렌드',
           'tb-story' => '#탤런트뱅크서비스소개 #100%활용방법 #뉴스룸 #이벤트',
           default => null
         };

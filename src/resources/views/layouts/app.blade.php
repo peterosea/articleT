@@ -3,3 +3,8 @@
   @yield('content')
 </div>
 @include('partials.footer')
+
+{{-- 
+  tailwind class
+  pl-0
+--}}

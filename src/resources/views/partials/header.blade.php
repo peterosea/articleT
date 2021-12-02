@@ -25,7 +25,7 @@
           </div>
         </div>
         <div class="flex gap-x-[17px] lg:gap-x-[36px] items-center">
-          <a href="{!! $newsletterLink !!}" class="hidden lg:block py-[11px] px-[28px] btn-blackOut">
+          <a href="{!! $newsletterLink !!}" class="hidden lg:block py-[11px] px-[28px] btn-blackOut font-normal">
             뉴스레터 구독
           </a>
           <div class="hidden lg:block w-[1px] h-[60px] bg-steam"></div>

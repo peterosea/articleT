@@ -3,6 +3,13 @@
 이 프로젝트에서 주목할만한 모든 변경 사항이이 파일에 문서화됩니다.
 [Keep a Changelog](https://keepachangelog.com/ko/1.0.0/)의 형식을 기본으로 구성됩니다.
 
+## [v1.2.15] 2021-12-03
+
+### 하자보수
+
+- top menu 스타일 수정
+- [beeclover/articleT#60](https://github.com/beeclover/articleT/issues/60)
+
 ## [v1.2.14] 2021-12-03
 
 - 페이지헤더 딤드 적용 이미지 제거 & 딤드레이어 적용 [beeclover/articleT#58](https://github.com/beeclover/articleT/issues/58)

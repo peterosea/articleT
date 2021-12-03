@@ -68,17 +68,23 @@ class Archive extends Composer
           'life' => 'bg-seaSerpent',
           'insight' => 'bg-deepSpaceRodeo',
           'tb-story' => 'bg-celticBlue',
-          default => null
+          default => 'bg-black'
         };
+      } else {
+        return 'bg-black';
       }
     }
 
     public function bgImg()
     {
-      return match ((get_queried_object())->name) {
-        'life' , 'insight', 'tb-story' => view('partials.img', ['ex' => 'jpg', 'name' => 'pageheader-'. (get_queried_object())->name, 'class' => 'header__page-bg']),
-        default => null
-      };
+      if (is_post_type_archive()) {
+        return match ((get_queried_object())->name) {
+          'life' , 'insight', 'tb-story' => view('partials.img', ['ex' => 'jpg', 'name' => 'pageheader-'. (get_queried_object())->name, 'class' => 'header__page-bg']),
+          default => null
+        };
+      }  else {
+        return view('partials.img', ['ex' => 'jpg', 'name' => 'pageheader-'. get_post_type() , 'class' => 'header__page-bg']);
+      }
     }
 
     public function array_map_assoc(callable $f, array $a) {

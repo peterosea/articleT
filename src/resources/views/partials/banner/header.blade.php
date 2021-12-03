@@ -13,12 +13,17 @@
         </div>
       </div>
     </div>
-    @if(empty($bgImg) || is_null($bgImg))
-      @include('partials.img', ['ex' => 'jpg', 'name' => 'header-03', 'class' => 'header__page-bg'])
-    @elseif(!empty($bgUrl))
-      <img src="{!! $bgUrl !!}" class="header__page-bg" alt="">
-    @else
-      {!! $bgImg !!}
-    @endif
+    <div>
+      @if(empty($bgImg) || is_null($bgImg))
+        @include('partials.img', ['ex' => 'jpg', 'name' => 'header-03', 'class' => 'header__page-bg'])
+      @elseif(!empty($bgUrl))
+        <img src="{!! $bgUrl !!}" class="header__page-bg" alt="">
+      @else
+        {!! $bgImg !!}
+      @endif
+      @isset($dimBg)
+        <div class="{!! $labelBg !!} @if($labelBg === 'bg-black') bg-opacity-60 @else bg-opacity-80 @endif brightness-[0.6] absolute w-full h-full left-0 top-0 right-0 bottom-0"></div>
+      @endisset
+    </div>
   </div>
 </div>

@@ -23,6 +23,7 @@
     'title' => $description, 
     'bgImg' =>  $bgImg,
     'content' => $obTags ?? $tags ?? '',
+    'dimBg' => true
   ])
   <div class="container mx-auto py-[40px] sm:py-[100px]">
     <div class="grid grid-cols-1 lg:grid-cols-3 gap-x-[70px] gap-y-[56px] lg:gap-y-[85px]">

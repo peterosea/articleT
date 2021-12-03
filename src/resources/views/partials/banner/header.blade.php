@@ -1,5 +1,5 @@
 <div class="header__page">
-  <div class="header__page-inner">
+  <div class="header__page-inner relative">
     <div class="header__page-labelWrap {!! $labelBg !!}">
       <div class="header__page-label">
         {!! $label !!}
@@ -13,7 +13,7 @@
         </div>
       </div>
     </div>
-    <div>
+    <div class="absolute w-full h-full left-0 top-0 right-0 bottom-0">
       @if(empty($bgImg) || is_null($bgImg))
         @include('partials.img', ['ex' => 'jpg', 'name' => 'header-03', 'class' => 'header__page-bg'])
       @elseif(!empty($bgUrl))

@@ -7,7 +7,7 @@
     <h2 class="text-center text-[24px] sm:text-[34px] font-bold mb-[28px] lg:mb-[32px]">탤런트뱅크 소개</h2>
     <div class="grid grid-cols-1 lg:grid-cols-2">
       <div class="mx-full lg:mx-0">
-        @include('partials.img', ['ex' => 'jpg', 'name' => 'front-01'])
+        @include('partials.img', ['ex' => 'jpg', 'name' => 'front-01', 'class' => 'w-full'])
       </div>
       <div class="lg:pl-[48px] relative grid">
         <p class="text-[14px] sm:text-[20px] text-carbon leading-loose">

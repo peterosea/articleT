@@ -17,7 +17,7 @@
       <a class="underline power" href="{!! $post->permalink !!}">{!! $post->post_title !!}</a>
     </div>
     <div class="prose">
-      {!! $post->post_excerpt !!}
+      {!! $post->excerpt !!}
     </div>
   </div>
 </article>

@@ -6,13 +6,15 @@ use Roots\Acorn\View\Component;
 
 class SnsShare extends Component
 {
+    public $script;
     /**
      * Create the component instance.
      *
      * @return void
      */
-    public function __construct()
+    public function __construct($script = 'true')
     {
+      $this->script = $script === 'true' ? true : false;
     }
 
     /**

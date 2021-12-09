@@ -57,10 +57,20 @@
     @endif
     <div class="flex items-center justify-center">
       <div class="grid grid-cols-2 gap-x-[17px] items-center">
-        <a href="" class="btn-black lg:w-[240px] text-center font-normal">
-          <div class="icon-label-share">공유하기</div>
-        </a>
-        <a href="" class="btn-black lg:w-[240px] text-center font-normal">목록으로</a>
+        <div 
+        x-data="{ tooltip: false }" 
+        @click.away="tooltip = false"
+        @click="tooltip = !tooltip" class=" cursor-pointer relative">
+          <div class="btn-black lg:w-[240px] text-center font-normal cursor-pointer">
+            <div class="icon-label-share">공유하기</div>
+          </div>
+          <div x-show="tooltip" x-cloak
+            class="absolute top-full left-0 w-full flex items-center justify-center pt-[8px]"
+          >
+            <x-sns-share script="false" />
+          </div>
+        </div>
+        <a href="/{!! get_post_type() !!}" class="btn-black lg:w-[240px] text-center font-normal">목록으로</a>
       </div>
     </div>
     <div class="mt-[52px] lg:mt-[150px] pt-[52px] lg:pt-[106px] border-t border-carbon">

@@ -3,6 +3,16 @@
 이 프로젝트에서 주목할만한 모든 변경 사항이이 파일에 문서화됩니다.
 [Keep a Changelog](https://keepachangelog.com/ko/1.0.0/)의 형식을 기본으로 구성됩니다.
 
+## [v1.2.18] 2021-12-13
+
+### Fixed
+
+- task action 조건 변경
+
+### 하자보수
+
+- [beeclover/articleT#62](https://github.com/beeclover/articleT/issues/62)
+
 ## [v1.2.17] 2021-12-09
 
 ### 하자보수

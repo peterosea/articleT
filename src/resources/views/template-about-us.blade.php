@@ -317,13 +317,13 @@ EOD,
           </div>
         </div>
         <div class="text-center">
-          <a class="inline-block btn-carbon py-[23px] lg:py-[28px] rounded-[12px] font-normal text-[18px] lg:text-[20px] mx-auto max-w-[400px] w-full" href="#" target="_blank" rel="noopener noreferrer">
+          <a class="inline-block btn-carbon py-[23px] lg:py-[28px] rounded-[4px] font-normal text-[18px] lg:text-[20px] mx-auto max-w-[400px] w-full" href="#" target="_blank" rel="noopener noreferrer">
             성공사례 더 알아보기
           </a>
         </div>
       </div>
     </div>
-    <div class="container mx-auto mt-[90px] mb-[120px]">
+    <div class="container mx-auto mt-[90px] mb-[52px] lg:mb-[120px]">
       <div class="text-center mb-[56px]">
         <h3 class="text-[26px] lg:text-[34px] text-black mb-[8px] font-semibold">Project 진행 프로세스</h3>
         <div class="text-[16px] text-davyGrey">
@@ -333,11 +333,11 @@ EOD,
           </p>
         </div>
       </div>
-      <ul class="grid lg:flex flex-wrap gap-x-[60px] justify-center mb-[80px]">
+      <ul class="grid lg:flex flex-wrap gap-x-[60px] justify-center mb-[40px] lg:mb-[80px]">
         <li class="flex gap-[16px] relative items-center mb-[16px] lg:mb-0">
           <div class="text-white bg-[#6b639d] w-[80px] h-[80px] lg:w-[200px] lg:h-[200px] flex rounded-full items-center justify-center text-center">
             <div class="lg:absolute left-1/2 top-[36px] lg:-translate-x-1/2 opacity-75 text-[12px] lg:text-[16px]">STEP 1</div>
-            <div class="hidden lg:block underline text-[24px] font-bold">
+            <div class="hidden lg:block underline text-[20px] font-bold whitespace-nowrap">
               Project<br/>
               무료 의뢰
             </div>
@@ -350,7 +350,7 @@ EOD,
         <li class="flex gap-[16px] relative items-center mb-[16px] lg:mb-0">
           <div class="text-white bg-[#9dc1db] w-[80px] h-[80px] lg:w-[200px] lg:h-[200px] flex rounded-full items-center justify-center text-center">
             <div class="lg:absolute left-1/2 top-[36px] lg:-translate-x-1/2 opacity-75 text-[12px] lg:text-[16px]">STEP 2</div>
-            <div class="hidden lg:block underline text-[24px] font-bold">
+            <div class="hidden lg:block underline text-[20px] font-bold whitespace-nowrap">
               BD 배정 및<br/>
               사전 미팅
             </div>
@@ -363,7 +363,7 @@ EOD,
         <li class="flex gap-[16px] relative items-center mb-[16px] lg:mb-0">
           <div class="text-white bg-[#6b639d] w-[80px] h-[80px] lg:w-[200px] lg:h-[200px] flex rounded-full items-center justify-center text-center">
             <div class="lg:absolute left-1/2 top-[36px] lg:-translate-x-1/2 opacity-75 text-[12px] lg:text-[16px]">STEP 3</div>
-            <div class="hidden lg:block underline text-[24px] font-bold">
+            <div class="hidden lg:block underline text-[20px] font-bold whitespace-nowrap">
               전문가 선정
             </div>
           </div>
@@ -375,7 +375,7 @@ EOD,
         <li class="flex gap-[16px] relative items-center mb-[16px] lg:mb-0">
           <div class="text-white bg-[#9dc1db] w-[80px] h-[80px] lg:w-[200px] lg:h-[200px] flex rounded-full items-center justify-center text-center">
             <div class="lg:absolute left-1/2 top-[36px] lg:-translate-x-1/2 opacity-75 text-[12px] lg:text-[16px]">STEP 4</div>
-            <div class="hidden lg:block underline text-[24px] font-bold">
+            <div class="hidden lg:block underline text-[20px] font-bold whitespace-nowrap">
               3자 미팅 및 <br/>
               계약
             </div>
@@ -388,7 +388,7 @@ EOD,
         <li class="flex gap-[16px] relative items-center mb-[16px] lg:mb-0">
           <div class="text-white bg-[#6b639d] w-[80px] h-[80px] lg:w-[200px] lg:h-[200px] flex rounded-full items-center justify-center text-center">
             <div class="lg:absolute left-1/2 top-[36px] lg:-translate-x-1/2 opacity-75 text-[12px] lg:text-[16px]">STEP 5</div>
-            <div class="hidden lg:block underline text-[24px] font-bold">
+            <div class="hidden lg:block underline text-[20px] font-bold whitespace-nowrap">
               Project 시작
             </div>
           </div>
@@ -398,7 +398,7 @@ EOD,
         </li>
       </ul>
       <div class="text-center">
-        <a class="inline-block btn-carbon py-[23px] lg:py-[28px] rounded-[12px] font-normal text-[18px] lg:text-[20px] mx-auto max-w-[400px] w-full" href="#" target="_blank" rel="noopener noreferrer">
+        <a class="inline-block btn-carbon py-[23px] lg:py-[28px] rounded-[4px] font-normal text-[18px] lg:text-[20px] mx-auto max-w-[400px] w-full" href="#" target="_blank" rel="noopener noreferrer">
           프로젝트 무료 의뢰하기
         </a>
       </div>
@@ -429,7 +429,7 @@ EOD,
         </div>
       </div>
       <div class="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-4 gap-y-[12px] gap-x-[30px]">
-        <div class="border border-cerebralGrey rounded-[4px] p-[16px] lg:p-[24px] grid lg:grid-row-[320px,1fr] grid-cols-2 lg:grid-cols-1 gap-y-[33px] gap-x-[12px]">
+        <div class="border border-cerebralGrey rounded-[4px] p-[16px] lg:p-[24px] lg:pt-[30px] lg:pb-[41px] grid lg:grid-row-[320px,1fr] grid-cols-2 lg:grid-cols-1 gap-y-[24px] gap-x-[12px]">
           @include('partials.img', ['ex' => 'jpg', 'name' => 'about-us-9'])
           <div class="lg:text-center">
             <div class="underline text-[16px] lg:text-[24px] mb-[13px] font-bold">01</div>
@@ -441,7 +441,7 @@ EOD,
             </div>
           </div>
         </div>
-        <div class="border border-cerebralGrey rounded-[4px] p-[16px] lg:p-[24px] grid lg:grid-row-[320px,1fr] grid-cols-2 lg:grid-cols-1 gap-y-[33px] gap-x-[12px]">
+        <div class="border border-cerebralGrey rounded-[4px] p-[16px] lg:p-[24px] lg:pt-[30px] lg:pb-[41px] grid lg:grid-row-[320px,1fr] grid-cols-2 lg:grid-cols-1 gap-y-[24px] gap-x-[12px]">
           @include('partials.img', ['ex' => 'jpg', 'name' => 'about-us-10'])
           <div class="lg:text-center">
             <div class="underline text-[16px] lg:text-[24px] mb-[13px] font-bold">02</div>
@@ -453,7 +453,7 @@ EOD,
             </div>
           </div>
         </div>
-        <div class="border border-cerebralGrey rounded-[4px] p-[16px] lg:p-[24px] grid lg:grid-row-[320px,1fr] grid-cols-2 lg:grid-cols-1 gap-y-[33px] gap-x-[12px]">
+        <div class="border border-cerebralGrey rounded-[4px] p-[16px] lg:p-[24px] lg:pt-[30px] lg:pb-[41px] grid lg:grid-row-[320px,1fr] grid-cols-2 lg:grid-cols-1 gap-y-[24px] gap-x-[12px]">
           @include('partials.img', ['ex' => 'jpg', 'name' => 'about-us-11'])
           <div class="lg:text-center">
             <div class="underline text-[16px] lg:text-[24px] mb-[13px] font-bold">03</div>
@@ -465,7 +465,7 @@ EOD,
             </div>
           </div>
         </div>
-        <div class="border border-cerebralGrey rounded-[4px] p-[16px] lg:p-[24px] grid lg:grid-row-[320px,1fr] grid-cols-2 lg:grid-cols-1 gap-y-[33px] gap-x-[12px]">
+        <div class="border border-cerebralGrey rounded-[4px] p-[16px] lg:p-[24px] lg:pt-[30px] lg:pb-[41px] grid lg:grid-row-[320px,1fr] grid-cols-2 lg:grid-cols-1 gap-y-[24px] gap-x-[12px]">
           @include('partials.img', ['ex' => 'jpg', 'name' => 'about-us-12'])
           <div class="lg:text-center">
             <div class="underline text-[16px] lg:text-[24px] mb-[13px] font-bold">04</div>
@@ -631,7 +631,7 @@ EOD,
         </div>
       </div>
       <div class="text-center">
-        <a class="inline-block btn-carbon bg-transparent border-[2px] border-white py-[23px] lg:py-[28px] rounded-[12px] font-normal text-[18px] lg:text-[20px] mx-auto max-w-[400px] w-full" href="#" target="_blank" rel="noopener noreferrer">
+        <a class="inline-block btn-carbon bg-transparent border-[1px] lg:border-[2px] border-white py-[23px] lg:py-[28px] rounded-[4px] font-normal text-[18px] lg:text-[20px] mx-auto max-w-[400px] w-full" href="#" target="_blank" rel="noopener noreferrer">
           전문가 등록 바로가기
         </a>
       </div>
@@ -702,7 +702,7 @@ EOD,
           </p>
         </div>
       </div>
-      <div class="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-4 gap-x-[34px] mb-[40px] lg:mb-[80px] gap-y-[32px]">
+      <div class="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-4 gap-x-[35px] mb-[40px] lg:mb-[80px] gap-y-[32px]">
         <div class="border border-cerebralGrey py-[44px] px-[20px] relative rounded-[4px] grid grid-cols-[auto,1fr] lg:grid-cols-1 items-center gap-x-[16px]">
           <div class="flex place-content-center lg:mb-[31px]">
             @include('partials.img', ['ex' => 'png', 'name' => 'about-us-18', 'class' => 'max-w-[60px] lg:max-w-[90px]'])
@@ -710,7 +710,7 @@ EOD,
           <div class="text-[19px] font-bold tracking-[-0.56px] lg:text-center">
             회원가입 후 Profile 작성
           </div>
-          <div class="text-[40px] lg:text-[60px] absolute lg:right-0 top-full left-1/2 lg:left-auto lg:top-1/2 transfrom -translate-y-1/2 -translate-x-1/2 lg:translate-x-[40px] lg:-translate-y-1/2 icon-label-circleArrowNext rotate-90 lg:rotate-0 z-10"></div>
+          <div class="text-[40px] lg:text-[44px] absolute lg:right-0 top-full left-1/2 lg:left-auto lg:top-1/2 transfrom -translate-y-1/2 -translate-x-1/2 lg:translate-x-1/2 lg:-translate-y-1/2 icon-label-circleArrowNext rotate-90 lg:rotate-0 z-10"></div>
         </div>
         <div class="border border-cerebralGrey py-[44px] px-[20px] relative rounded-[4px] grid grid-cols-[auto,1fr] lg:grid-cols-1 items-center gap-x-[16px]">
           <div class="flex place-content-center lg:mb-[31px]">
@@ -719,7 +719,7 @@ EOD,
           <div class="text-[19px] font-bold tracking-[-0.56px] lg:text-center">
             서류 심사
           </div>
-          <div class="text-[40px] lg:text-[60px] absolute lg:right-0 top-full left-1/2 lg:left-auto lg:top-1/2 transfrom -translate-y-1/2 -translate-x-1/2 lg:translate-x-[40px] lg:-translate-y-1/2 icon-label-circleArrowNext rotate-90 lg:rotate-0 z-10"></div>
+          <div class="text-[40px] lg:text-[44px] absolute lg:right-0 top-full left-1/2 lg:left-auto lg:top-1/2 transfrom -translate-y-1/2 -translate-x-1/2 lg:translate-x-1/2 lg:-translate-y-1/2 icon-label-circleArrowNext rotate-90 lg:rotate-0 z-10"></div>
         </div>
         <div class="border border-cerebralGrey py-[44px] px-[20px] relative rounded-[4px] grid grid-cols-[auto,1fr] lg:grid-cols-1 items-center gap-x-[16px]">
           <div class="flex place-content-center lg:mb-[31px]">
@@ -728,7 +728,7 @@ EOD,
           <div class="text-[19px] font-bold tracking-[-0.56px] lg:text-center">
             인터뷰
           </div>
-          <div class="text-[40px] lg:text-[60px] absolute lg:right-0 top-full left-1/2 lg:left-auto lg:top-1/2 transfrom -translate-y-1/2 -translate-x-1/2 lg:translate-x-[40px] lg:-translate-y-1/2 icon-label-circleArrowNext rotate-90 lg:rotate-0 z-10"></div>
+          <div class="text-[40px] lg:text-[44px] absolute lg:right-0 top-full left-1/2 lg:left-auto lg:top-1/2 transfrom -translate-y-1/2 -translate-x-1/2 lg:translate-x-1/2 lg:-translate-y-1/2 icon-label-circleArrowNext rotate-90 lg:rotate-0 z-10"></div>
         </div>
         <div class="border border-cerebralGrey py-[44px] px-[20px] relative rounded-[4px] grid grid-cols-[auto,1fr] lg:grid-cols-1 items-center gap-x-[16px]">
           <div class="flex place-content-center lg:mb-[31px]">
@@ -740,7 +740,7 @@ EOD,
         </div>
       </div>
       <div class="text-center">
-        <a class="inline-block btn-carbon py-[23px] lg:py-[28px] rounded-[12px] font-normal text-[18px] lg:text-[20px] mx-auto max-w-[400px] w-full" href="#" target="_blank" rel="noopener noreferrer">
+        <a class="inline-block btn-carbon py-[23px] lg:py-[28px] rounded-[4px] font-normal text-[18px] lg:text-[20px] mx-auto max-w-[400px] w-full" href="#" target="_blank" rel="noopener noreferrer">
           전문가 등록하기
         </a>
       </div>

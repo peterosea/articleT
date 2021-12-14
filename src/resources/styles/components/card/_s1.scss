@@ -1,7 +1,7 @@
 @mixin card {
   .card__template {
     // layout
-    @apply grid grid-cols-[1fr,200px] grid-rows-[auto,auto,auto] gap-x-[40px];
+    @apply grid grid-cols-[1fr,200px] grid-rows-[40px,auto,auto] gap-x-[40px];
     &-meta {
       order: 1;
     }
@@ -17,22 +17,28 @@
       @apply row-span-2;
       order: 2;
     }
+    &-title {
+      @apply line-clamp-2;
+    }
 
     &-meta {
       @apply text-carbon;
 
+      align-self: flex-start;
       display: flex;
-      align-items: center;
       font-size: 14px;
       font-weight: bold;
       line-height: 1;
-      margin-bottom: 20px;
 
       .btn-seaSerpent {
         @apply py-[6px] px-[14px];
 
         font-size: 12px;
         font-weight: normal;
+      }
+
+      time {
+        @apply py-[6px];
       }
 
       &-term {

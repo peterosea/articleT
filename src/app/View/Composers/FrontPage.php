@@ -87,7 +87,7 @@ class FrontPage extends Composer
       ];
       foreach($tags as $key => $tag) {
         $posts = [];
-        foreach(['insight','future-lab','tb-story'] as $postType) {
+        foreach(['insight','life','tb-story'] as $postType) {
           $posts = array_merge($posts, get_posts(array(
             'post_type' => $postType,
             'numberposts' => 10,
@@ -112,7 +112,7 @@ class FrontPage extends Composer
     {
 
       $posts = [];
-      foreach(['insight','future-lab','tb-story'] as $postType) {
+      foreach(['insight','life','tb-story'] as $postType) {
         $posts = array_merge($posts, get_posts(array(
           'post_type' => $postType,
           'numberposts' => 5,

@@ -36,7 +36,7 @@ class Collection extends Composer
     {
       wp_reset_postdata();
       $GLOBALS['wp_query'] = new WP_Query( array ( 
-        'post_type' => ['insight','future-lab','tb-story'],
+        'post_type' => ['insight','life','tb-story'],
         'post_status' => 'publish',
         'posts_per_page' => 15,
         'tax_query' => array(

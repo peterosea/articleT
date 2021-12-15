@@ -29,7 +29,7 @@ class PostsRecent extends Component
     public function __construct()
     {
       $posts = [];
-      foreach(['insight','future-lab','tb-story'] as $postType) {
+      foreach(['insight','life','tb-story'] as $postType) {
         $posts = array_merge($posts, get_posts(array(
           'post_type' => $postType,
           'numberposts' => 3

@@ -39,7 +39,7 @@
           </div>
         @endforeach
       </div>
-      <div class="btn-group hidden lg:block">
+      <div class="btn-group hidden">
         <button id="prev" class="btn absolute left-0 top-[150px] transform -translate-y-1/2 -translate-x-1/2 z-10 filter disabled:brightness-95 disabled:cursor-default">
           <img src="{!! get_theme_file_uri('resources/images/btn-80-prev.svg') !!}" alt="">
         </button>

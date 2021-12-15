@@ -3,6 +3,12 @@
 이 프로젝트에서 주목할만한 모든 변경 사항이이 파일에 문서화됩니다.
 [Keep a Changelog](https://keepachangelog.com/ko/1.0.0/)의 형식을 기본으로 구성됩니다.
 
+## [v1.2.23] 2021-12-15
+
+### Fixed 하자보수
+
+- future-lab 제거 미반영
+
 ## [v1.2.22] 2021-12-15
 
 ### Changed

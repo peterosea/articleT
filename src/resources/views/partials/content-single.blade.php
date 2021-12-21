@@ -32,7 +32,7 @@
       </div>
   
     </header>
-    <div class="entry-thumbnail">
+    <div class="entry-thumbnail max-w-[1456px] mx-auto">
       {!! $thumbnail !!}
     </div>
   </div>
@@ -73,9 +73,9 @@
         <a href="/{!! get_post_type() !!}" class="btn-black lg:w-[240px] text-center font-normal">목록으로</a>
       </div>
     </div>
-    <div class="mt-[52px] lg:mt-[150px] pt-[52px] lg:pt-[106px] border-t border-carbon">
-      <div class="text-[24px] lg:text-[48px] font-bold text-center mb-[28px] lg:mb-[50px]">뉴스룸 더보기</div>
-      <div class="mb-[70px]">
+    <div class="mt-[52px] lg:mt-[150px] pt-[52px] lg:pt-[80px] border-t border-carbon">
+      <div class="text-[24px] lg:text-[48px] font-bold text-center mb-[28px] lg:mb-[50px] leading-none">컬렉션</div>
+      <div>
         <x-PostsCollection />
       </div>
     </div>

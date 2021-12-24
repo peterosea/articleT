@@ -1,6 +1,8 @@
 <div class="card__collection">
   <div class="card__collection-thumbnail">
-    {!! $thumbnail !!}
+    <a href="{!! $permalink !!}">
+      {!! $thumbnail !!}
+    </a>
     @if (!empty($term))
       <a href="{!! $term->link !!}" class="card__collection-term" @if (!empty($term->color)) style="background-color: {!! $term->color !!}" @endif>{!! $term->name !!}</a>
     @endif
@@ -10,7 +12,7 @@
   </div>
   <div class="card__collection-footer">
     <div class="card__collection-meta">
-      <time datetime="{!! $date !!}" data-format="YYYY.MM.DD"></time>
+      <time datetime="{!! $date !!}"></time>
     </div>
     <div class="card__collection-readmore">
       <a href="{!! $permalink !!}">

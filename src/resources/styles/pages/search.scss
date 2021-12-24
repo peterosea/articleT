@@ -1,6 +1,7 @@
 .search {
   .relevanssi-query-term {
-    --h: 99.9%;
+    @apply font-bold text-deepSpaceRodeo ring-deepSpaceRodeo ring-opacity-20;
+    --h: 50%;
     background-repeat: repeat;
   }
 }

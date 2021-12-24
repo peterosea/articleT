@@ -34,7 +34,7 @@ class CardTemplate extends Composer
             'date' => get_the_date('Y/m/d'),
             'permalink' => get_the_permalink(),
             'thumbnail' => (new Tool())->objectThumbnail(get_post()),
-            'excerpt' => (new Tool())->get_excerpt(180, get_the_excerpt()),
+            'excerpt' => get_the_excerpt(),
             'collection' => $this->get_terms('collection'),
             'category' => $this->get_terms(str_replace('-', '_', get_post_type()) . '_category'),
             'term' => $this->get_terms('collection'),

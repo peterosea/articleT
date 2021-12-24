@@ -76,6 +76,31 @@
         transform: translateY(-50%);
       }
     }
+    &__rows2 {
+      --gap-y: 56px;
+      display: grid;
+      row-gap: var(--gap-y);
+
+      @media (min-width: theme('screens.lg')) {
+        --gap-y: 121px;
+      }
+
+      > * {
+        position: relative;
+      }
+
+      > *:not(:last-child)::after {
+        @apply bg-brightGray;
+
+        content: '';
+        width: 100%;
+        height: 1px;
+        position: absolute;
+        left: 0;
+        bottom: calc(-1 * var(--gap-y, 0) / 2);
+        transform: translateY(-50%);
+      }
+    }
 
     &__middle {
       position: relative;

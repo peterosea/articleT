@@ -24,14 +24,14 @@
             {!! $gnb !!}
           </div>
         </div>
-        <div class="flex gap-x-[17px] lg:gap-x-[36px] items-center">
+        <div class="flex gap-x-[17px] lg:gap-x-[25px] items-center">
           <a href="{!! $newsletterLink !!}" class="hidden lg:block py-[11px] px-[28px] btn-blackOut font-normal">
             뉴스레터 구독
           </a>
           <div class="hidden lg:block w-[1px] h-[60px] bg-steam"></div>
-          <div class="relative flex items-center">
+          <div class="relative flex items-center lg:pr-[12px]">
             <button 
-              class="btn-search" 
+              class="btn-search"
               @click.prevent="
                 menuSelected === 'search' ? menuSelected = null : menuSelected = 'search';
                 $nextTick(() => $refs.searchInput.focus());

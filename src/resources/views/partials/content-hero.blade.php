@@ -1,6 +1,8 @@
 <article class="content__hero">
   <div class="content__hero-thumbnail">
-    <img src="{!! $post->thumbnail !!}">
+    <a href="{!! $post->permalink !!}">
+      <img src="{!! $post->thumbnail !!}" class="w-full h-full object-cover">
+    </a>
     <a href="{!! $post->postTypeLink !!}" class="content__hero-thumbnail-label btn-deepSpaceRodeo">
       {!! $post->postTypeLabel !!}
     </a>

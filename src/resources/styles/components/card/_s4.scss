@@ -1,16 +1,26 @@
 @mixin card {
   .card__template {
     // layout
-    @apply grid grid-cols-[minmax(auto,300px),1fr] grid-rows-[auto,auto,auto] gap-x-[40px] gap-y-[36px] auto-rows-min;
+    @apply grid grid-cols-[minmax(auto,300px),1fr] gap-x-[40px] grid-rows-[36px,60px,auto] auto-rows-min;
     @apply items-start;
+
+    @media (min-width: theme('screens.lg')) {
+      @apply grid-rows-[36px,30px,auto];
+    }
     &-meta {
       order: 2;
+
+      time {
+        @apply py-[6px];
+      }
     }
     &-body {
       order: 3;
     }
     &-main {
       order: 4;
+      padding-top: 16px;
+      align-self: flex-end;
     }
     &-thumbnail {
       @apply row-span-3;

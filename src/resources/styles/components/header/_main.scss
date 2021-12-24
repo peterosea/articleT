@@ -132,4 +132,10 @@
       }
     }
   }
+
+  .btn-search {
+    @media (min-width: theme('screens.lg')) {
+      background-position: left 50%;
+    }
+  }
 }

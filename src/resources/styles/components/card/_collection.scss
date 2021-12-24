@@ -10,6 +10,10 @@
     font-size: 12px;
     font-weight: bold;
     line-height: 1;
+
+    time {
+      @apply text-[color:#707070] font-light;
+    }
   }
 
   #{$p} &-term {
@@ -40,6 +44,9 @@
 
     img {
       object-fit: cover;
+      width: 100%;
+      height: 100%;
+      position: absolute;
     }
   }
 

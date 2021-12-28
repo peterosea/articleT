@@ -3,6 +3,12 @@
 이 프로젝트에서 주목할만한 모든 변경 사항이이 파일에 문서화됩니다.
 [Keep a Changelog](https://keepachangelog.com/ko/1.0.0/)의 형식을 기본으로 구성됩니다.
 
+## [v1.3.5] 2021-12-28
+
+### Changed
+
+- hero card 제목 밑줄 제거 html 코드에 클래스로 부여된 것 제거 누락
+
 ## [v1.3.4] 2021-12-28
 
 ### Changed

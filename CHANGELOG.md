@@ -3,6 +3,13 @@
 이 프로젝트에서 주목할만한 모든 변경 사항이이 파일에 문서화됩니다.
 [Keep a Changelog](https://keepachangelog.com/ko/1.0.0/)의 형식을 기본으로 구성됩니다.
 
+## [v1.3.3] 2021-12-28
+
+### 하자보수
+
+- card template 제목 최대 2줄
+- hero card template 날짜 스타일 추가 누락
+
 ## [v1.3.2] 2021-12-24
 
 - [beeclover/articleT#67](https://github.com/beeclover/articleT/issues/67)

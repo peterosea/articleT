@@ -25,6 +25,8 @@
   }
 
   &-title {
+    @apply line-clamp-2;
+
     font-size: 20px;
     font-weight: bold;
   }

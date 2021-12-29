@@ -3,6 +3,12 @@
 이 프로젝트에서 주목할만한 모든 변경 사항이이 파일에 문서화됩니다.
 [Keep a Changelog](https://keepachangelog.com/ko/1.0.0/)의 형식을 기본으로 구성됩니다.
 
+## [v1.3.8] 2021-12-29
+
+### 하자보수 fixed
+
+- tb-stroy 의 카테고리명이 `-`이 들어갈 수 없어서 `tb_story_category`로 설정되어있어서 tb-story는 스킵되는 문제
+
 ## [v1.3.7] 2021-12-29
 
 ### 하자보수 fixed

@@ -1,7 +1,7 @@
 @mixin card {
   .card__template {
     // layout
-    @apply grid grid-rows-[auto,auto,60px,auto,auto];
+    @apply grid grid-rows-[auto,36px,60px,auto,auto];
     &-meta {
       margin-bottom: 8px;
     }

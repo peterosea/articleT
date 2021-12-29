@@ -71,7 +71,8 @@ class Hook {
   {
       return array_map(function ($post) use ($taxonomy, $type) {
         $postType = get_post_type($post);
-        if (strpos($taxonomy, str_replace("-", "_", $postType)) === false) {
+        
+        if (strpos($taxonomy, str_replace("-", "_", $postType)) === false && $taxonomy !== 'collection') {
           return;
         };
         $terms = get_the_terms($post, $taxonomy);

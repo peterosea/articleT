@@ -47,10 +47,9 @@ class FrontPage extends Composer
 
     public function heroPost()
     {
-      $taxonomies = ['category' => ['insight_category', 'life_category', 'tb_story_category']];
       $posts = get_field('main-hero_post', 'option');
 
-      $post = ((new Hook($posts, $taxonomies))::$posts)[0];
+      $post = ((new Hook($posts))::$posts)[0];
       unset($post->post_content);
       $post_type_obj = get_post_type_object( get_post_type($post->ID) );
       $post->postTypeLink = get_post_type_archive_link($post_type_obj->name);
@@ -60,23 +59,13 @@ class FrontPage extends Composer
 
     public function popularityPosts()
     {
-      $taxonomies = [
-        'category' => ['insight_category', 'life_category', 'tb_story_category'],
-        'collection',
-      ];
-
       $posts = get_field('main-popularity_post', 'option');
-      $posts = (new Hook($posts, $taxonomies))::$posts;
+      $posts = (new Hook($posts))::$posts;
       return $this->postsAsPostDataSet($posts);
     }
 
     public function recentTagsPosts()
     {
-      $taxonomies = [
-        'category' => ['insight_category', 'life_category', 'tb_story_category'],
-        'collection',
-      ];
-
       /**
        * tags의 키값을들 쿼리할 태그들로 가져오기
        */
@@ -95,7 +84,7 @@ class FrontPage extends Composer
             'orderby' => 'date'
           )));
         }
-        $posts = (new Hook($posts, $taxonomies))::$posts;
+        $posts = (new Hook($posts))::$posts;
         $posts = $this->postsAsPostDataSet($posts);
   
         usort($posts, function($post_a, $post_b) {

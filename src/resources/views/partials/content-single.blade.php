@@ -1,5 +1,5 @@
 <article @php(post_class('entry-root'))>
-  <div class="container mx-auto xl:max-w-desktop xl:px-[80px]">
+  <div class="container mx-auto">
     <header class="entry-header">
       <div class="entry-category">
         @isset($taxonomy)
@@ -32,7 +32,7 @@
       </div>
   
     </header>
-    <div class="entry-thumbnail max-w-[1456px] mx-auto">
+    <div class="entry-thumbnail mx-auto">
       {!! $thumbnail !!}
     </div>
   </div>
@@ -43,7 +43,7 @@
     </div>
   </div>
 
-  <footer class="container mx-auto xl:max-w-desktop xl:px-[80px] entry-footer">
+  <footer class="container mx-auto entry-footer">
     @if ($attached)
       <div class="grid lg:grid-cols-[200px,1fr] gap-y-[21px] gap-x-[20px] py-[28px] lg:py-[80px] border-t border-b border-cerebralGrey mb-[28px] lg:mb-[60px]">
         <div class="icon-label text-[20px] font-bold icon-label-file">첨부파일</div>

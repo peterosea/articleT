@@ -5,7 +5,7 @@ namespace Wp\Post;
 
 class Hook {
   public static $posts;
-  public $taxonomies = ['category' => ['insight_category', 'future_lab_category', 'tb_story_category'], 'collection'];
+  public $taxonomies = ['category' => ['insight_category', 'life_category', 'tb_story_category'], 'collection'];
 
   /**
    * Create the component instance.

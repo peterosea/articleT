@@ -47,7 +47,7 @@ class FrontPage extends Composer
 
     public function heroPost()
     {
-      $taxonomies = ['category' => ['insight_category', 'future_lab_category', 'tb_story_category']];
+      $taxonomies = ['category' => ['insight_category', 'life_category', 'tb_story_category']];
       $posts = get_field('main-hero_post', 'option');
 
       $post = ((new Hook($posts, $taxonomies))::$posts)[0];
@@ -61,7 +61,7 @@ class FrontPage extends Composer
     public function popularityPosts()
     {
       $taxonomies = [
-        'category' => ['insight_category', 'future_lab_category', 'tb_story_category'],
+        'category' => ['insight_category', 'life_category', 'tb_story_category'],
         'collection',
       ];
 
@@ -73,7 +73,7 @@ class FrontPage extends Composer
     public function recentTagsPosts()
     {
       $taxonomies = [
-        'category' => ['insight_category', 'future_lab_category', 'tb_story_category'],
+        'category' => ['insight_category', 'life_category', 'tb_story_category'],
         'collection',
       ];
 

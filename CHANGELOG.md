@@ -3,6 +3,16 @@
 이 프로젝트에서 주목할만한 모든 변경 사항이이 파일에 문서화됩니다.
 [Keep a Changelog](https://keepachangelog.com/ko/1.0.0/)의 형식을 기본으로 구성됩니다.
 
+## [v1.3.9] 2021-12-29
+
+### 하자보수 fixed
+
+- collection도 예외처리가 되는 로직
+
+### 하자보수 Changed
+
+- card s2 메타, 제목 높이값 고정
+
 ## [v1.3.8] 2021-12-29
 
 ### 하자보수 fixed

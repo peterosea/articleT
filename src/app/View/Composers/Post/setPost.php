@@ -70,6 +70,10 @@ class Hook {
   public function setPostTaxonomy($taxonomy, $type)
   {
       return array_map(function ($post) use ($taxonomy, $type) {
+        $postType = get_post_type($post);
+        if (strpos($taxonomy, $postType) === false) {
+          return;
+        };
         $terms = get_the_terms($post, $taxonomy);
         $post->{$type} = !is_wp_error($terms) && !empty($terms) ? $this->setTaxonomyData($terms) : [];
       }, self::$posts);

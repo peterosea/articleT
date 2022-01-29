@@ -6,3 +6,5 @@
 wp-content
 !wp-content/.gitkeep
 mysql
+template-test.blade.php
+Test.php

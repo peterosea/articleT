@@ -23,10 +23,10 @@
   },
   "devDependencies": {
     "@alpinejs/intersect": "^3.5.0",
-    "@tailwindcss/aspect-ratio": "^0.3.0",
-    "@tailwindcss/forms": "^0.3.4",
-    "@tailwindcss/line-clamp": "^0.2.2",
-    "@tailwindcss/typography": "^0.4.1",
+    "@tailwindcss/aspect-ratio": "^0.4.0",
+    "@tailwindcss/forms": "^0.4.0",
+    "@tailwindcss/line-clamp": "^0.3.1",
+    "@tailwindcss/typography": "^0.5.1",
     "@tinypixelco/laravel-mix-wp-blocks": "^1.1.0",
     "@wordpress/babel-preset-default": "^6.1.0",
     "@wordpress/browserslist-config": "^4.0.0",
@@ -49,7 +49,7 @@
     "stylelint": "^13.13.1",
     "stylelint-config-standard": "^22.0.0",
     "swiper": "^7.2.0",
-    "tailwindcss": "^2.2.19"
+    "tailwindcss": "^3.0.18"
   },
   "peerDependencies": {
     "jquery": "^3.5.1"

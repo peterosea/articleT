@@ -15,7 +15,7 @@
   }
 }
 
-@variants {
+@layer utilities {
   .icon-label {
     &-google_play {
       @include icon;

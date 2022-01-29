@@ -1,5 +1,5 @@
 {{--
-  Template Name: 컬렉션
+  Template Name: 최신글
 --}}
 
 @extends('layouts.app')

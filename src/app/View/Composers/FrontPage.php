@@ -149,7 +149,6 @@ class FrontPage extends Composer
                 $tool = new Tool();
                 $thumbnail_path = $tool->return_image_path($thumbnail_id);
 
-                var_dump($thumbnail_path);
                 $post->isBlackText = $tool->get_avg_luminance($thumbnail_path);
 
                 $post->thumbnail_uri = get_the_post_thumbnail_url($post);

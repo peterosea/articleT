@@ -38,6 +38,13 @@ EOD;
         return false;
     }
 
+    /**
+     * 이미지 파일의 평균 휘도를 구한다.
+     *
+     * @param mixed $filename
+     * @param int $num_samples
+     * @return void|bool
+     */
     public function get_avg_luminance($filename, $num_samples = 10)
     {
         if (strpos($filename, 'png')) {

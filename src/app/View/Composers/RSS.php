@@ -24,24 +24,24 @@ class RSS extends Composer
     public function override()
     {
         return [
-          'posts' => $this->getPost(),
+            'posts' => $this->getPost(),
         ];
     }
 
     public function getPost()
     {
-      $posts = get_field('main-popularity_post', 'option');
-      array_push($posts, get_field('main-hero_post', 'option')[0]);
-      $ids = [];
-      foreach ($posts as $post) {
-        $ids[] = $post->ID;
-      }
+        $posts = get_field('main-popularity_post', 'option');
+        array_push($posts, get_field('main-hero_post', 'option')[0]);
+        $ids = [];
+        foreach ($posts as $post) {
+            $ids[] = $post->ID;
+        }
 
-      if (count($ids) > 0) {
-        return new WP_Query([
-          'post_type' => 'any',
-          'post__in' => $ids
-        ]);
-      }
+        if (count($ids) > 0) {
+            return new WP_Query([
+                'post_type' => 'any',
+                'post__in' => $ids
+            ]);
+        }
     }
 }

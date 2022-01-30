@@ -33,34 +33,34 @@ class SinglePost extends Composer
 
     public function thumbnail()
     {
-      return get_the_post_thumbnail();
+        return get_the_post_thumbnail();
     }
 
     public function attached()
     {
-      $attached = get_field('attachedGroup');
-      return $attached;
+        $attached = get_field('attachedGroup');
+        return $attached;
     }
 
     public function category()
     {
-      $post = get_post();
-      if (!empty($taxonomies = get_the_terms($post->ID, str_replace('-','_',get_post_type()).'_category'))) {
-        foreach($taxonomies as $term) {
-          $term->link = get_term_link($term);
+        $post = get_post();
+        if (!empty($taxonomies = get_the_terms($post->ID, str_replace('-', '_', get_post_type()) . '_category'))) {
+            foreach ($taxonomies as $term) {
+                $term->link = get_term_link($term);
+            }
+            return array_slice($taxonomies, 0, 1)[0];
         }
-        return array_slice($taxonomies, 0, 1)[0];
-      }
     }
 
     public function collection()
     {
-      $post = get_post();
-      if (!empty($taxonomies = get_the_terms($post->ID, 'collection'))) {
-        foreach($taxonomies as $term) {
-          $term->link = get_term_link($term);
+        $post = get_post();
+        if (!empty($taxonomies = get_the_terms($post->ID, 'collection'))) {
+            foreach ($taxonomies as $term) {
+                $term->link = get_term_link($term);
+            }
+            return array_slice($taxonomies, 0, 1)[0];
         }
-        return array_slice($taxonomies, 0, 1)[0];
-      }
     }
 }

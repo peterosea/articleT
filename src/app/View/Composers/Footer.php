@@ -3,6 +3,7 @@
 namespace App\View\Composers;
 
 use Roots\Acorn\View\Composer;
+
 class Footer extends Composer
 {
     protected static $views = [
@@ -10,9 +11,6 @@ class Footer extends Composer
     ];
     public function with()
     {
-        return [
-        ];
+        return [];
     }
 }
-
-

@@ -43,13 +43,13 @@ class CardTemplate extends Composer
 
     public function get_the_thumbnail()
     {
-      if ($thumbnail_url = get_the_post_thumbnail_url()) {
-        return <<<EOD
+        if ($thumbnail_url = get_the_post_thumbnail_url()) {
+            return <<<EOD
           <img src="$thumbnail_url" class="object-cover">
 EOD;
-      } else {
-        return view('partials.img', ['ex' => 'jpg', 'name' => 'no-image', 'class' => 'object-contain']);
-      }
+        } else {
+            return view('partials.img', ['ex' => 'jpg', 'name' => 'no-image', 'class' => 'object-contain']);
+        }
     }
 
     public function get_terms($slug)
@@ -57,10 +57,10 @@ EOD;
         $post = get_post();
         $terms = get_the_terms($post, $slug);
         if ($this->view->name() === 'partials.content-collection' && !empty($terms)) {
-          return $terms[0];
+            return $terms[0];
         }
         if ($terms) {
-          return (new Hook())->setTaxonomyData($terms);
+            return (new Hook())->setTaxonomyData($terms);
         }
     }
 }

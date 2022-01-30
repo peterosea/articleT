@@ -12,12 +12,12 @@ class PostsRecent extends Component
 
     public function postsAsPostDataSet($posts)
     {
-      return array_map(function($post) {
-        $WpTool = new Tool();
-        $post->thumbnail = $WpTool::objectThumbnail($post);
-        unset($post->post_content);
-        return $post;
-      }, $posts);
+        return array_map(function ($post) {
+            $WpTool = new Tool();
+            $post->thumbnail = $WpTool::objectThumbnail($post);
+            unset($post->post_content);
+            return $post;
+        }, $posts);
     }
     /**
      * Create the component instance.
@@ -28,19 +28,19 @@ class PostsRecent extends Component
      */
     public function __construct()
     {
-      $posts = [];
-      foreach(['insight','life','tb-story'] as $postType) {
-        $posts = array_merge($posts, get_posts(array(
-          'post_type' => $postType,
-          'numberposts' => 3
-        )));
-      }
-      $posts = (new Hook($posts, ['collection']))::$posts;
-      $posts = $this->postsAsPostDataSet($posts);
-      usort($posts, function($post_a, $post_b) {
-          return $post_b->post_date <=> $post_a->post_date;
-      });
-      $this->posts = array_slice($posts, 0, 3);
+        $posts = [];
+        foreach (['insight', 'life', 'tb-story'] as $postType) {
+            $posts = array_merge($posts, get_posts(array(
+                'post_type' => $postType,
+                'numberposts' => 3
+            )));
+        }
+        $posts = (new Hook($posts, ['collection']))::$posts;
+        $posts = $this->postsAsPostDataSet($posts);
+        usort($posts, function ($post_a, $post_b) {
+            return $post_b->post_date <=> $post_a->post_date;
+        });
+        $this->posts = array_slice($posts, 0, 3);
     }
 
     /**

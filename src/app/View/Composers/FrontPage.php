@@ -27,6 +27,7 @@ class FrontPage extends Composer
     public function override()
     {
         return [
+            'popularityPosts' => $this->popularityPosts(),
             'snsList' => $this->snsList(),
             'bannerMain' => $this->bannerMain(),
             'hashtagPosts' => $this->hashtagPosts,
@@ -37,6 +38,13 @@ class FrontPage extends Composer
     public function __construct()
     {
         $this->getHashPosts();
+    }
+
+    public function popularityPosts()
+    {
+        $posts = get_field('main-popularity_post', 'option');
+        $posts = (new Hook($posts))::$posts;
+        return $this->postsAsPostDataSet($posts);
     }
 
     public function postsAsPostDataSet($posts)

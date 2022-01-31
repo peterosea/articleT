@@ -1,20 +1,19 @@
 @mixin card {
   .card__template {
     // layout
-    @apply grid grid-cols-[1fr,200px] grid-rows-[36px,60px,auto] gap-x-[40px];
+    @apply grid grid-cols-[360px,1fr] grid-rows-[auto,1fr,36px] gap-x-[40px] gap-y-[15px];
     &-meta {
-      order: 1;
+      order: 4;
     }
     &-body {
-      order: 3;
+      order: 2;
     }
     &-main {
-      order: 4;
-      padding-top: 16px;
+      order: 3;
     }
     &-thumbnail {
       @apply row-span-3;
-      order: 2;
+      order: 1;
     }
     &-title {
       @apply line-clamp-2;
@@ -37,7 +36,7 @@
       }
 
       time {
-        @apply py-[6px];
+        display: none;
       }
 
       &-term {

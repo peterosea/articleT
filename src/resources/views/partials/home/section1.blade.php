@@ -8,7 +8,7 @@
       <div class="swiper-slide">
         <div class="container mx-auto min-h-[400px] flex items-center relative z-10 py-[80px]">
           <div class="px-[50px]">
-            <h1 class="@if($post->isBlackText) text-[color:#242424] @else text-white @endif text-[48px] leading-[68px] mb-[16px]">
+            <h1 class="@if($post->isBlackText) text-[color:#242424] @else text-white @endif text-[48px] font-bold leading-[68px] mb-[16px]">
               {!! $post->banner_title !!}
             </h1>
             <p class="text-[20px] @if($post->isBlackText) text-[color:#3b3b3b] @else text-white @endif mb-[33px]">

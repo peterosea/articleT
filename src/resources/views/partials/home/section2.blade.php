@@ -38,10 +38,10 @@
         @endforeach
       </div>
       <div class="btn-group">
-        <button id="prev" class="btn absolute left-0 top-1/2 transform -translate-y-1/2 -translate-x-1/2 xl:-translate-x-full z-10 filter disabled:brightness-95 disabled:cursor-default">
+        <button id="prev" class="btn absolute left-0 top-1/2 transform -translate-y-1/2 -translate-x-1/2 xl:-translate-x-[calc(100%+20px)] z-10 filter disabled:brightness-95 disabled:cursor-default">
           <img src="{!! get_theme_file_uri('resources/images/btn-80-prew.svg') !!}" alt="">
         </button>
-        <button id="next" class="btn absolute right-0 top-1/2 transform -translate-y-1/2 translate-x-1/2 xl:translate-x-full z-10 filter disabled:brightness-95 disabled:cursor-default">
+        <button id="next" class="btn absolute right-0 top-1/2 transform -translate-y-1/2 translate-x-1/2 xl:translate-x-[calc(100%+20px)] z-10 filter disabled:brightness-95 disabled:cursor-default">
           <img src="{!! get_theme_file_uri('resources/images/btn-80-next.svg') !!}" alt="">
         </button>
       </div>

@@ -27,7 +27,7 @@ class App extends Composer
             'siteLogo' => $this->siteLogo(),
             'id' => get_the_id(),
             'newsletterLink' => $this->getLink(719),
-            'collectionLink' => $this->getLink(717),
+            'hashtagLink' => $this->getLink(717),
         ];
     }
 

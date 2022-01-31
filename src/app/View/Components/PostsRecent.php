@@ -35,7 +35,7 @@ class PostsRecent extends Component
                 'numberposts' => 3
             )));
         }
-        $posts = (new Hook($posts, ['collection']))::$posts;
+        $posts = (new Hook($posts, ['hashtag']))::$posts;
         $posts = $this->postsAsPostDataSet($posts);
         usort($posts, function ($post_a, $post_b) {
             return $post_b->post_date <=> $post_a->post_date;

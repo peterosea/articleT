@@ -6,7 +6,7 @@ use Roots\Acorn\View\Component;
 use Wp\Post\Hook;
 use Wp\Post\Tool;
 
-class PostsCollection extends Component
+class PostsHashtag extends Component
 {
     public $posts = [];
 
@@ -35,13 +35,13 @@ class PostsCollection extends Component
                 'numberposts' => 5,
                 'tax_query' => array(
                     array(
-                        'taxonomy' => 'collection',
+                        'taxonomy' => 'hashtag',
                         'operator' => 'EXISTS'
                     )
                 )
             )));
         }
-        $posts = (new Hook($posts, ['collection']))::$posts;
+        $posts = (new Hook($posts, ['hashtag']))::$posts;
         $posts = $this->postsAsPostDataSet($posts);
         usort($posts, function ($post_a, $post_b) {
             return $post_b->post_date <=> $post_a->post_date;
@@ -56,6 +56,6 @@ class PostsCollection extends Component
      */
     public function render()
     {
-        return $this->view('components.posts-collection');
+        return $this->view('components.posts-hashtag');
     }
 }

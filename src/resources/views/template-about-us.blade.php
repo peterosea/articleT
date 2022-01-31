@@ -9,7 +9,7 @@
     @include('partials.banner.header', [
       'label' => 'TalentBank',
       'labelBg' => 'bg-deepSpaceRodeo',
-      'title' => '기업과 전문가를 연결하여 더 큰 가치를 만들어 내는 곳', 
+      'title' => '기업과 전문가를 연결하여 더 큰 가치를 만들어 내는 곳',
       'bgUrl' => get_theme_file_uri('resources/images/header-01@3x.jpg'),
       'content' => <<<EOD
         탤런트뱅크는 기업이 필요로 하는 비즈니스 전문가를 일 단위(자문, 프로젝트 단위)로 연결하여 실제 업무수행과 함께 <br/>
@@ -28,15 +28,15 @@ EOD,
           <p>
             탤런트뱅크 전문가는 컨설턴트와 다릅니다.
             <br/>
-            컨설팅 회사가 제시하는 전략 방향과 프로세스 수립 자체보다 경험을 통한 실제 사업 및 프로젝트 이행 노하우와 
+            컨설팅 회사가 제시하는 전략 방향과 프로세스 수립 자체보다 경험을 통한 실제 사업 및 프로젝트 이행 노하우와
             <br/>
-            구체적 이슈 해결 능력을 갖춘 인재가 현장에서 직접 문제를 해결합니다. 
+            구체적 이슈 해결 능력을 갖춘 인재가 현장에서 직접 문제를 해결합니다.
             <br/>
             뿐만 아니라 프로젝트를 통해 기업에 확장된 사고와 전문지식을 직접 전수할 수 있습니다.
           </p>
         </div>
       </div>
-      
+
       <div class="divier w-full h-[2px] bg-carbon mt-[87px] mb-[93px]"></div>
 
       <div class="mb-[90px]">
@@ -79,7 +79,7 @@ EOD,
               </div>
               <div class="col-span-2 lg:col-span-1 lg:text-center leading-normal text-[14px] tracking-[-0.28px] text-davyGrey lg:text-carbon">
                 <p class="mb-[14px]">
-                  프로젝트를 의뢰하면, 전문가 출신 BD가 배정되어 사전 면담을 통해 기업의 상황을 체크하고 꼭 필요한 전문가를 매칭해 드립니다. 
+                  프로젝트를 의뢰하면, 전문가 출신 BD가 배정되어 사전 면담을 통해 기업의 상황을 체크하고 꼭 필요한 전문가를 매칭해 드립니다.
                 </p>
                 <p>
                   단기 자문, 프로젝트, 헤드헌팅, Functional Work 등 기업이 원하는 기간과 조건으로 확실하게 비즈니스 문제 해결을 지원합니다.
@@ -105,7 +105,7 @@ EOD,
           </div>
         </div>
       </div>
-      
+
       <div>
         <div class="text-center mb-[56px]">
           <h3 class="text-[34px] text-black font-semibold">탤런트뱅크 성과</h3>
@@ -137,7 +137,7 @@ EOD,
               </div>
               <div class="text-center leading-normal text-[14px] text-carbon tracking-[-0.28px]">
                   <p>
-                  기업 고객 5곳 중 3개 기업은 TalentBank 전문가에 대한 
+                  기업 고객 5곳 중 3개 기업은 TalentBank 전문가에 대한
                   만족도가 높아 <span class="font-semibold pointUnderLine ring-aero ring-opacity-20" style="--h: 50%">Project를 추가로 의뢰</span>합니다.
                 </p>
               </div>
@@ -170,7 +170,7 @@ EOD,
       'title' => <<<EOD
       경험이 풍부한 전문인력을 바로 업무에 투입해<br/>
       단기간 고효율의 성과를 달성하세요.
-  EOD, 
+  EOD,
       'bgUrl' => get_theme_file_uri('resources/images/header-02@3x.jpg'),
       'content' => <<<EOD
       탤런트뱅크 전문가와 함께라면 동종 산업 내에서의 경쟁을 넘어, 미래를 선도하는 기업으로 변화할 수 있습니다.
@@ -410,7 +410,7 @@ EOD,
       'labelBg' => 'bg-deepSpaceRodeo',
       'title' => <<<EOD
         아직도 많은 기업들에겐 당신의 ‘내공’이 필요합니다.
-EOD, 
+EOD,
       'bgUrl' => get_theme_file_uri('resources/images/header-03@3x.jpg'),
       'content' => <<<EOD
         다년간 다져온 전문성과 노하우를 꼭 필요로 하는 다양한 기업들에게 전수하며<br/>
@@ -434,7 +434,7 @@ EOD,
           <div class="lg:text-center">
             <div class="underline text-[16px] lg:text-[24px] mb-[13px] font-bold">01</div>
             <div class="text-carbon text-[13px] lg:text-[16px] mb-[8px] lg:mb-0">
-              ‘퇴직’ 개념 없이 내 전문성으로 
+              ‘퇴직’ 개념 없이 내 전문성으로
             </div>
             <div class="text-[18px] lg:text-[22px] text-black font-bold lg:tracking-[-1.4px]">
               평생 일하고 싶은 분
@@ -446,7 +446,7 @@ EOD,
           <div class="lg:text-center">
             <div class="underline text-[16px] lg:text-[24px] mb-[13px] font-bold">02</div>
             <div class="text-carbon text-[13px] lg:text-[16px] mb-[8px] lg:mb-0">
-              대기업 팀장, 중소기업 임원 이상의 
+              대기업 팀장, 중소기업 임원 이상의
             </div>
             <div class="text-[18px] lg:text-[22px] text-black font-bold lg:tracking-[-1.4px]">
               비즈니스 베테랑
@@ -495,9 +495,9 @@ EOD,
               <div>
                 <div class="text-deepSpaceRodeo font-bold mb-[11px] text-[14px] lg:text-[16px]">기업고객의 니즈</div>
                 <div class="text-[12px] lg:text-[13px] text-carbon tracking-[-0.26px] leading-relaxed">
-                  서울 소재 외식업체이며, 그동안 해왔던 캡티브 마켓 
-                  중심의 식자재 사업에서 외부 식자재 사업으로 적극 
-                  전개하려고 함. 시장분석 및 유통 거래선 발굴, 
+                  서울 소재 외식업체이며, 그동안 해왔던 캡티브 마켓
+                  중심의 식자재 사업에서 외부 식자재 사업으로 적극
+                  전개하려고 함. 시장분석 및 유통 거래선 발굴,
                   개척(B2B,B2C)전문가 필요
                 </div>
               </div>
@@ -531,9 +531,9 @@ EOD,
               <div>
                 <div class="text-deepSpaceRodeo font-bold mb-[11px] text-[14px] lg:text-[16px]">기업고객의 니즈</div>
                 <div class="text-[12px] lg:text-[13px] text-carbon tracking-[-0.26px] leading-relaxed">
-                  글로벌 기업으로부터 한국 내 H/W 제품 사업 관련하여 
-                  제휴를 제안 받은 상황으로 사업에 필요한 시장 및 
-                  경쟁사 조사, SWOT분석, 사업 타당성 검토가 가능한 
+                  글로벌 기업으로부터 한국 내 H/W 제품 사업 관련하여
+                  제휴를 제안 받은 상황으로 사업에 필요한 시장 및
+                  경쟁사 조사, SWOT분석, 사업 타당성 검토가 가능한
                   전문가 요청
                 </div>
               </div>
@@ -544,7 +544,7 @@ EOD,
                     넷마블, 한빛소프트 출신 20년 경력<br/>
                     게임 사업 전문가 매칭
                   </span><br/>
-                  게임 산업에 대한 글로벌/국내 트렌드 및 시장규모, 
+                  게임 산업에 대한 글로벌/국내 트렌드 및 시장규모,
                   향후 전망 자문 및 사업화 전략 보고서 제공
                 </div>
               </div>
@@ -625,7 +625,7 @@ EOD,
         </div>
       </div>
       <div class="text-center">
-        <a href="https://article.talentbank.co.kr/collection/archive/expert-interview/" target="_blank" rel="noopener noreferrer" class="inline-block btn-carbon bg-transparent border-[1px] lg:border-[2px] border-white py-[23px] lg:py-[28px] rounded-[4px] font-normal text-[18px] lg:text-[20px] mx-auto max-w-[400px] w-full" href="#" target="_blank" rel="noopener noreferrer">
+        <a href="https://article.talentbank.co.kr/hashtag/archive/expert-interview/" target="_blank" rel="noopener noreferrer" class="inline-block btn-carbon bg-transparent border-[1px] lg:border-[2px] border-white py-[23px] lg:py-[28px] rounded-[4px] font-normal text-[18px] lg:text-[20px] mx-auto max-w-[400px] w-full" href="#" target="_blank" rel="noopener noreferrer">
           전문가 등록 바로가기
         </a>
       </div>
@@ -679,7 +679,7 @@ EOD,
               휴넷 CEO 이용권 증정
             </div>
             <div class="text-davyGrey text-[13px] lg:text-[14px]">
-              대면 인터뷰 참여시 25만원 상당의<br/> 
+              대면 인터뷰 참여시 25만원 상당의<br/>
               경영/리더십/트렌드 콘텐츠 이용권을 무료로 드립니다.
             </div>
           </div>

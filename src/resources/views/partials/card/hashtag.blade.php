@@ -1,20 +1,20 @@
-<div class="card__collection">
-  <div class="card__collection-thumbnail">
+<div class="card__hashtag">
+  <div class="card__hashtag-thumbnail">
     <a href="{!! $permalink !!}">
       {!! $thumbnail !!}
     </a>
     @if (!empty($term))
-      <a href="{!! $term->link !!}" class="card__collection-term" @if (!empty($term->color)) style="background-color: {!! $term->color !!}" @endif>{!! $term->name !!}</a>
+      <a href="{!! $term->link !!}" class="card__hashtag-term" @if (!empty($term->color)) style="background-color: {!! $term->color !!}" @endif>{!! $term->name !!}</a>
     @endif
   </div>
-  <div class="card__collection-title">
+  <div class="card__hashtag-title">
     <a href="{!! $permalink !!}">{!! $title !!}</a>
   </div>
-  <div class="card__collection-footer">
-    <div class="card__collection-meta">
+  <div class="card__hashtag-footer">
+    <div class="card__hashtag-meta">
       <time datetime="{!! $date !!}"></time>
     </div>
-    <div class="card__collection-readmore">
+    <div class="card__hashtag-readmore">
       <a href="{!! $permalink !!}">
         <span class="sr-only">Read more</span>
         <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="59.871" height="15.501" viewBox="0 0 59.871 15.501">

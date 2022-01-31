@@ -1,8 +1,8 @@
 <div class="card__template">
   <div class="card__template-meta listDivider__cols2">
     <time datetime="{!! $date !!}"></time>
-    @if (!empty($collection) && count($collection) > 0)
-      @foreach ($collection as $term)
+    @if (!empty($hashtag) && count($hashtag) > 0)
+      @foreach ($hashtag as $term)
         <div class="card__template-meta-term">
           <a href="{!! $term->link !!}" class="btn-seaSerpent" @if (!empty($term->color)) style="background-color: {!! $term->color !!}" @endif>{!! $term->name !!}</a>
           @if (!empty($term->children) && count($term->children) > 0)

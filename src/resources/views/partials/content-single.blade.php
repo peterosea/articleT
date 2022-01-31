@@ -13,12 +13,12 @@
       <div class="entry-meta">
         <div class="listDivider__cols2 font-bold">
           <time datetime="{!! get_the_date('Y/m/d') !!}"></time>
-          @isset($collection)
-            <a href="{!! $collection->link !!}">{!! $collection->name !!}</a>
+          @isset($hashtag)
+            <a href="{!! $hashtag->link !!}">{!! $hashtag->name !!}</a>
           @endisset
         </div>
       </div>
-      
+
       <h1 class="entry-title">
         {!! $title !!}
       </h1>
@@ -30,7 +30,7 @@
           @endforeach
         @endif
       </div>
-  
+
     </header>
     <div class="entry-thumbnail mx-auto">
       {!! $thumbnail !!}
@@ -57,8 +57,8 @@
     @endif
     <div class="flex items-center justify-center">
       <div class="grid grid-cols-2 gap-x-[17px] items-center">
-        <div 
-        x-data="{ tooltip: false }" 
+        <div
+        x-data="{ tooltip: false }"
         @click.away="tooltip = false"
         @click="tooltip = !tooltip" class=" cursor-pointer relative">
           <div class="btn-black lg:w-[240px] text-center font-normal cursor-pointer">
@@ -76,7 +76,7 @@
     <div class="mt-[52px] lg:mt-[150px] pt-[52px] lg:pt-[80px] border-t border-carbon">
       <div class="text-[24px] lg:text-[48px] font-bold text-center mb-[28px] lg:mb-[50px] leading-none">컬렉션</div>
       <div>
-        <x-PostsCollection />
+        <x-PostsHashtag />
       </div>
     </div>
   </footer>

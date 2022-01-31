@@ -18,7 +18,7 @@ class CardTemplate extends Composer
      */
     protected static $views = [
         'partials.content-card',
-        'partials.content-collection',
+        'partials.content-hashtag',
         'partials.content-search',
     ];
 
@@ -35,9 +35,9 @@ class CardTemplate extends Composer
             'permalink' => get_the_permalink(),
             'thumbnail' => (new Tool())->objectThumbnail(get_post()),
             'excerpt' => get_the_excerpt(),
-            'collection' => $this->get_terms('collection'),
+            'hashtag' => $this->get_terms('hashtag'),
             'category' => $this->get_terms(str_replace('-', '_', get_post_type()) . '_category'),
-            'term' => $this->get_terms('collection'),
+            'term' => $this->get_terms('hashtag'),
         ];
     }
 
@@ -56,7 +56,7 @@ EOD;
     {
         $post = get_post();
         $terms = get_the_terms($post, $slug);
-        if ($this->view->name() === 'partials.content-collection' && !empty($terms)) {
+        if ($this->view->name() === 'partials.content-hashtag' && !empty($terms)) {
             return $terms[0];
         }
         if ($terms) {

@@ -9,8 +9,8 @@
   </div>
   <div class="content__hero-meta listDivider__cols2">
     <time datetime="{!! $post->date !!}"></time>
-    @if (!empty($post->collection) && count($post->collection) > 0)
-      @foreach ($post->collection as $term)
+    @if (!empty($post->hashtag) && count($post->hashtag) > 0)
+      @foreach ($post->hashtag as $term)
         <div class="content__hero-meta-term">
           <a href="{!! $term->link !!}" class="btn-seaSerpent" @if (!empty($term->color)) style="background-color: {!! $term->color !!}" @endif>{!! $term->name !!}</a>
           @if (!empty($term->children) && count($term->children) > 0)

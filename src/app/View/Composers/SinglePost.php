@@ -27,7 +27,7 @@ class SinglePost extends Composer
             'thumbnail' => $this->thumbnail(),
             'attached' => $this->attached(),
             'taxonomy' => $this->category(),
-            'collection' => $this->collection(),
+            'hashtag' => $this->hashtag(),
         ];
     }
 
@@ -53,10 +53,10 @@ class SinglePost extends Composer
         }
     }
 
-    public function collection()
+    public function hashtag()
     {
         $post = get_post();
-        if (!empty($taxonomies = get_the_terms($post->ID, 'collection'))) {
+        if (!empty($taxonomies = get_the_terms($post->ID, 'hashtag'))) {
             foreach ($taxonomies as $term) {
                 $term->link = get_term_link($term);
             }

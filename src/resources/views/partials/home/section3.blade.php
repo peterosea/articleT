@@ -29,7 +29,7 @@
                     'thumbnail' => $post->thumbnail,
                     'date' => $post->date,
                     'excerpt' => $post->excerpt,
-                    'collection' => $post->collection,
+                    'hashtag' => $post->hashtag,
                     'category' => $post->category,
                   ])
                 </div>

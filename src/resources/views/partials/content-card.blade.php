@@ -4,6 +4,6 @@
   'thumbnail' => $thumbnail,
   'date' => $date,
   'excerpt' => $excerpt,
-  'collection' => $collection,
+  'hashtag' => $hashtag,
   'category' => $category,
 ])

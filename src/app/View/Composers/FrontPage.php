@@ -28,7 +28,7 @@ class FrontPage extends Composer
     {
         return [
             'recentTagsPosts' => $this->recentTagsPosts(),
-            'collectionPosts' => $this->collectionPosts(),
+            'hashtagPosts' => $this->hashtagPosts(),
             'snsList' => $this->snsList(),
             'bannerMain' => $this->bannerMain(),
         ];
@@ -77,7 +77,7 @@ class FrontPage extends Composer
         return $tags;
     }
 
-    public function collectionPosts()
+    public function hashtagPosts()
     {
 
         $posts = [];
@@ -87,13 +87,13 @@ class FrontPage extends Composer
                 'numberposts' => 5,
                 'tax_query' => array(
                     array(
-                        'taxonomy' => 'collection',
+                        'taxonomy' => 'hashtag',
                         'operator' => 'EXISTS'
                     )
                 )
             )));
         }
-        $posts = (new Hook($posts, ['collection']))::$posts;
+        $posts = (new Hook($posts, ['hashtag']))::$posts;
         $posts = $this->postsAsPostDataSet($posts);
         usort($posts, function ($post_a, $post_b) {
             return $post_b->post_date <=> $post_a->post_date;

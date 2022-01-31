@@ -6,7 +6,7 @@ namespace Wp\Post;
 class Hook
 {
     public static $posts;
-    public $taxonomies = ['category' => ['insight_category', 'life_category', 'tb_story_category'], 'collection'];
+    public $taxonomies = ['category' => ['insight_category', 'life_category', 'tb_story_category'], 'hashtag'];
 
     /**
      * Create the component instance.
@@ -73,7 +73,7 @@ class Hook
         return array_map(function ($post) use ($taxonomy, $type) {
             $postType = get_post_type($post);
 
-            if (strpos($taxonomy, str_replace("-", "_", $postType)) === false && $taxonomy !== 'collection') {
+            if (strpos($taxonomy, str_replace("-", "_", $postType)) === false && $taxonomy !== 'hashtag') {
                 return;
             };
             $terms = get_the_terms($post, $taxonomy);

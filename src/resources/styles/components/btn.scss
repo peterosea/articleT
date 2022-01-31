@@ -7,9 +7,21 @@
 }
 
 @layer components {
+  .btn-gray {
+    @extend %basebtn;
+    @apply py-2
+      px-4
+      bg-[#f4f5f7]
+      text-dugong
+      font-normal
+      rounded-full
+      focus:outline-none
+      focus:ring-2;
+  }
+
   .btn-black {
     @extend %basebtn;
-    @apply py-2 
+    @apply py-2
       px-4
       bg-black
       text-white
@@ -25,7 +37,7 @@
 
   .btn-blackOut {
     @extend %basebtn;
-    @apply py-2 
+    @apply py-2
       px-4
       bg-blackOut
       text-white
@@ -43,7 +55,7 @@
 
   .btn-carbon {
     @extend %basebtn;
-    @apply py-2 
+    @apply py-2
       px-4
       bg-carbon
       text-white
@@ -58,7 +70,7 @@
 
   .btn-deepSpaceRodeo {
     @extend %basebtn;
-    @apply py-2 
+    @apply py-2
       px-4
       bg-deepSpaceRodeo
       text-white
@@ -72,7 +84,7 @@
 
   .btn-seaSerpent {
     @extend %basebtn;
-    @apply py-2 
+    @apply py-2
       px-4
       bg-seaSerpent
       text-white

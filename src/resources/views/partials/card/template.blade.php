@@ -4,10 +4,10 @@
     @if (!empty($hashtag) && count($hashtag) > 0)
       @foreach ($hashtag as $term)
         <div class="card__template-meta-term">
-          <a href="{!! $term->link !!}" class="btn-seaSerpent" @if (!empty($term->color)) style="background-color: {!! $term->color !!}" @endif>{!! $term->name !!}</a>
+          <a href="{!! $term->link !!}" class="btn-gray">{!! $term->name !!}</a>
           @if (!empty($term->children) && count($term->children) > 0)
               @foreach ($term->children as $child)
-                  <a href="{!! $child->link !!}">{!! $child->name !!}</a>
+                  <a href="{!! $child->link !!}" class="btn-gray">{!! $child->name !!}</a>
               @endforeach
           @endif
         </div>

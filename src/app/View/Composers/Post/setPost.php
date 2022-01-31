@@ -50,18 +50,12 @@ class Hook
     {
         $terms = array_map(function ($term) {
             $term->link = get_term_link($term);
-            if ($color = get_field('color', $term->taxonomy . "_" . $term->term_id)) {
-                $term->color = $color;
-            }
             return $term;
         }, $terms);
         $termsHierarchy = array();
         $this->find_parent_terms_hierarchically($terms, $termsHierarchy);
         $terms = array_map(function ($term) {
             $term->link = get_term_link($term);
-            if ($color = get_field('color', $term->taxonomy . "_" . $term->term_id)) {
-                $term->color = $color;
-            }
             return $term;
         }, $termsHierarchy);
 

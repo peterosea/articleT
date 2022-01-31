@@ -28,10 +28,16 @@ class FrontPage extends Composer
     {
         return [
             'recentTagsPosts' => $this->recentTagsPosts(),
-            'hashtagPosts' => $this->hashtagPosts(),
             'snsList' => $this->snsList(),
             'bannerMain' => $this->bannerMain(),
+            'hashtagPosts' => $this->hashtagPosts,
+            'hashtagPostPagination' => $this->hashtagPostPagination,
         ];
+    }
+
+    public function __construct()
+    {
+        $this->getHashPosts();
     }
 
     public function postsAsPostDataSet($posts)
@@ -77,29 +83,29 @@ class FrontPage extends Composer
         return $tags;
     }
 
-    public function hashtagPosts()
-    {
+    // public function hashtagPosts()
+    // {
 
-        $posts = [];
-        foreach (['insight', 'life', 'tb-story'] as $postType) {
-            $posts = array_merge($posts, get_posts(array(
-                'post_type' => $postType,
-                'numberposts' => 5,
-                'tax_query' => array(
-                    array(
-                        'taxonomy' => 'hashtag',
-                        'operator' => 'EXISTS'
-                    )
-                )
-            )));
-        }
-        $posts = (new Hook($posts, ['hashtag']))::$posts;
-        $posts = $this->postsAsPostDataSet($posts);
-        usort($posts, function ($post_a, $post_b) {
-            return $post_b->post_date <=> $post_a->post_date;
-        });
-        return array_slice($posts, 0, 5);
-    }
+    //     $posts = [];
+    //     foreach (['insight', 'life', 'tb-story'] as $postType) {
+    //         $posts = array_merge($posts, get_posts(array(
+    //             'post_type' => $postType,
+    //             'numberposts' => 5,
+    //             'tax_query' => array(
+    //                 array(
+    //                     'taxonomy' => 'hashtag',
+    //                     'operator' => 'EXISTS'
+    //                 )
+    //             )
+    //         )));
+    //     }
+    //     $posts = (new Hook($posts, ['hashtag']))::$posts;
+    //     $posts = $this->postsAsPostDataSet($posts);
+    //     usort($posts, function ($post_a, $post_b) {
+    //         return $post_b->post_date <=> $post_a->post_date;
+    //     });
+    //     return array_slice($posts, 0, 5);
+    // }
 
 
     public function snsList()
@@ -157,5 +163,36 @@ class FrontPage extends Composer
 
 
         return $posts;
+    }
+
+    public $hashtagPostPagination = array();
+    public $hashtagPosts = array();
+
+    public function getHashPosts()
+    {
+        $hashtags = get_field('main-hashtag', 'option');
+        foreach ($hashtags as $hashtag) {
+            $posts = get_posts(array(
+                'post_type' => ['insight', 'life', 'tb-story'],
+                'numberposts' => 6,
+                'tax_query' => array(
+                    array(
+                        'taxonomy' => 'hashtag',
+                        'field' => 'slug',
+                        'terms' => $hashtag->slug,
+                    )
+                )
+            ));
+
+            $posts = (new Hook($posts, ['hashtag']))::$posts;
+            if (count($posts) > 5) {
+                $this->hashtagPostPagination[$hashtag->slug] = $hashtag;
+                usort($posts, function ($post_a, $post_b) {
+                    return $post_b->post_date <=> $post_a->post_date;
+                });
+                $posts = $this->postsAsPostDataSet($posts);
+                $this->hashtagPosts[$hashtag->slug] = $posts;
+            }
+        }
     }
 }

@@ -17,7 +17,6 @@
 @import 'components/sns';
 @import 'common/tailwindComponents';
 
-@import 'pages/front-page';
 @import 'pages/about-us';
 @import 'pages/content-single';
 @import 'pages/search';
@@ -25,3 +24,5 @@
 @tailwind components;
 @tailwind utilities;
 @tailwind variants;
+
+@import 'pages/front-page';

@@ -10,3 +10,32 @@
     left: -48px;
   }
 }
+
+.hashtagPost__pagination {
+  @apply listDivider__cols2;
+
+  justify-content: center;
+  column-gap: 96px;
+  margin-bottom: 54px;
+  font-size: 40px;
+
+  .btn {
+    font-weight: bold;
+    color: #aaaaaa;
+
+    &.active {
+      color: #000;
+    }
+  }
+
+
+  > *:after {
+    left: -48px;
+  }
+}
+
+.container {
+  @media (min-width: theme('screens.xxl')) {
+    max-width: 1300px;
+  }
+}

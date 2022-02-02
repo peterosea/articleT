@@ -1,4 +1,4 @@
-@includeFirst(['partials.card.hashtag', 'partials.content'], [
+@includeFirst(['partials.card.template', 'partials.content'], [
   'title' => $title,
   'permalink' => $permalink,
   'thumbnail' => $thumbnail,

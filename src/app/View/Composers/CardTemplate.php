@@ -56,9 +56,6 @@ EOD;
     {
         $post = get_post();
         $terms = get_the_terms($post, $slug);
-        if ($this->view->name() === 'partials.content-hashtag' && !empty($terms)) {
-            return $terms[0];
-        }
         if ($terms) {
             return (new Hook())->setTaxonomyData($terms);
         }

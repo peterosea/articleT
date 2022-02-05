@@ -1,0 +1,51 @@
+@mixin card {
+  .card__template {
+    // layout
+    @apply grid grid-cols-[110px,1fr] grid-rows-[auto,1fr,auto] gap-x-[20px] gap-y-[12px];
+    &-meta {
+      @apply col-span-2;
+      order: 4;
+      padding-top: 18px;
+    }
+    &-body {
+      order: 2;
+    }
+    &-main {
+      order: 3;
+    }
+    &-thumbnail {
+      @apply row-span-2;
+      order: 1;
+    }
+    &-title {
+      @apply line-clamp-2;
+      font-size: 18px;
+    }
+
+    &-meta {
+      @apply text-carbon;
+
+      align-self: flex-start;
+      display: flex;
+      font-size: 14px;
+      font-weight: bold;
+      line-height: 1;
+
+      time {
+        display: none;
+      }
+
+      &-term {
+        @apply flex items-center gap-x-[8px];
+      }
+    }
+
+    &-main .prose {
+      @apply line-clamp-2;
+    }
+
+    &-readmore {
+      display: none;
+    }
+  }
+}

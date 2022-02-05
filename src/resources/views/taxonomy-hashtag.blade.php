@@ -17,16 +17,16 @@
   </div>
 </div>
 @else
-  <div class="container mx-auto pt-[80px]">
-    <h1 class="text-center text-[52px] text-deepSpaceRodeo font-bold">
+  <div class="container mx-auto pt-[40px] lg:pt-[80px]">
+    <h1 class="text-center text-[26px] lg:text-[52px] text-deepSpaceRodeo font-bold">
       {!! $title !!}
     </h1>
-    <div class="w-full h-[2px] bg-squant mt-[80px]"></div>
+    <div class="w-full h-[2px] bg-squant mt-[40px] lg:mt-[80px]"></div>
   </div>
   <div class="container mx-auto py-[40px] sm:py-[100px] sm:pt-[80px]">
     <div class="grid gap-y-[56px] lg:gap-y-[62px]">
       @while(have_posts()) @php(the_post())
-        <div class="!card__s6">
+        <div class="lg:-card__s7 lg:!card__s6">
           @includeFirst(['partials.content-card', 'partials.content'])
         </div>
         @php( $tags = get_the_tags( get_the_ID() ) )

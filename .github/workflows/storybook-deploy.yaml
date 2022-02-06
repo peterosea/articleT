@@ -27,4 +27,9 @@ jobs:
           cd storybook
           yarn set version berry
           yarn install
+          yarn build
+
+      - name: 🚛 deploy
+        run: |
+          cd storybook
           yarn deploy

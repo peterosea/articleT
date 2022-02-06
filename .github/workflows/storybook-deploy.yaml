@@ -24,7 +24,7 @@ jobs:
 
       - name: 🔨 yarn install & build
         run: |
-          cd storybook
+          cd spa/storybook
           yarn set version berry
           yarn install
           yarn build
@@ -33,4 +33,4 @@ jobs:
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.TOKEN }}
-          publish_dir: ./storybook/storybook-static
+          publish_dir: ./spa/storybook/storybook-static

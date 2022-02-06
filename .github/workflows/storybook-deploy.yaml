@@ -2,8 +2,9 @@ name: 🐙 Deploy - GitHub Pages
 
 on:
   push:
-    branches:
-      - develop
+    branches: [develop]
+    paths:
+      - "spa/**/*"
 
 jobs:
   deploy:

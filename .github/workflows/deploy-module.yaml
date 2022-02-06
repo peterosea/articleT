@@ -26,8 +26,8 @@ jobs:
 
       - name: Create Release
         env:
-          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
-          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.TOKEN }}
+          NPM_TOKEN: ${{ secrets.TOKEN }}
           YARN_ENABLE_IMMUTABLE_INSTALLS: false
         run: |
           cd spa/ui

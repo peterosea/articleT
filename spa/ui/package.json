@@ -1,0 +1,38 @@
+{
+  "name": "@beeclover/articlet",
+  "version": "0.0.1",
+  "description": "",
+  "main": "./build/index.js",
+  "author": "Hansanghyeon",
+  "license": "ISC",
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^21.0.1",
+    "@rollup/plugin-image": "^2.1.1",
+    "@rollup/plugin-node-resolve": "^13.1.3",
+    "@types/react": "^17.0.38",
+    "auto": "^10.32.6",
+    "node-sass": "^7.0.1",
+    "postcss": "^8.4.6",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "rollup": "^2.63.0",
+    "rollup-plugin-peer-deps-external": "^2.2.4",
+    "rollup-plugin-postcss": "^4.0.2",
+    "rollup-plugin-typescript2": "^0.31.1",
+    "rollup-watch": "^4.3.1",
+    "typescript": "^4.5.4"
+  },
+  "scripts": {
+    "build": "rollup -c",
+    "start": "rollup -c -w",
+    "release": "auto shipit --base-branch=main"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Hansanghyeon/practice-storybook-designSystem.git"
+  },
+  "packageManager": "yarn@3.1.1"
+}

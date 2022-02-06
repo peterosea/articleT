@@ -1,0 +1,11 @@
+import React from 'react';
+
+import { Button } from 'ui';
+
+export default {
+  title: 'Test/Button',
+  component: Button,
+};
+
+export const Template = () => <Button />;
+

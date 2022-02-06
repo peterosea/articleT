@@ -1,0 +1,29 @@
+name: 🐙 Deploy - GitHub Pages
+
+on:
+  push:
+    branches:
+      - develop
+
+jobs:
+  deploy:
+    runs-on: ubuntu-20.04
+    concurrency:
+      group: ${{ github.workflow }}-${{ github.ref }}
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          submodules: true # Fetch Hugo themes (true OR recursive)
+          fetch-depth: 0 # Fetch all history for .GitInfo and .Lastmod
+
+      - name: 🏗 setup-node
+        uses: actions/setup-node@v2
+        with:
+          node-version: "16.x"
+
+      - name: 🔨 yarn install & build
+        run: |
+          cd storybook
+          yarn set version berry
+          yarn install
+          yarn deploy

@@ -25,7 +25,7 @@
   "scripts": {
     "build": "rollup -c",
     "start": "rollup -c -w",
-    "release": "auto shipit --base-branch=main"
+    "release": "auto shipit --base-branch=develop"
   },
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/"

@@ -9,6 +9,7 @@ use Wp\Post\Tool;
 class PostsHashtag extends Component
 {
     public $posts = [];
+    public $enoughPost = false;
 
     public function postsAsPostDataSet($posts)
     {
@@ -56,8 +57,10 @@ class PostsHashtag extends Component
 
         /**
          * 해당 태그에 게시물이 5개 이하라면 다른 연관된 태그를 찾아서 게시물을 추가한다.
+         *
+         * var $enoughPost : 게시물 채우기
          */
-        if (count($posts) < 5) {
+        if (count($posts) < 5 && $this->enoughPost) {
             $enoughPostCount = 5 - count($posts);
             $taxQuery['operator'] = 'NOT IN';
             $posts = array_merge($posts, get_posts(array(

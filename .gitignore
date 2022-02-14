@@ -1,10 +1,4 @@
 # .wordpress
 # backup
 .env
-.wp
-.vscode
-wp-content
-!wp-content/.gitkeep
-mysql
-template-test.blade.php
-Test.php
+node_modules

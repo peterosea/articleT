@@ -8,7 +8,6 @@ on:
 
 jobs:
   deploy:
-    if: ${{ github.repository == 'peterosea/articlet' }}
     runs-on: ubuntu-latest
     name: 🚛 소스코드 업데이트 & 빌드파일 배포
     steps:

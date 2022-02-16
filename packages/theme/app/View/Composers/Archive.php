@@ -6,6 +6,7 @@ use Roots\Acorn\View\Composer;
 
 use Wp\Archive\UI\Pagination;
 use WP_Post_Type;
+use WP_Query;
 
 use function Roots\view;
 
@@ -67,7 +68,7 @@ class Archive extends Composer
         if (is_post_type_archive()) {
             return match (get_post_type()) {
                 'life' => 'bg-seaSerpent',
-                'insight' => 'bg-deepSpaceRodeo',
+                'insight' => 'bg-primary',
                 'tb-story' => 'bg-celticBlue',
                 default => 'bg-black'
             };

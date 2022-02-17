@@ -8,7 +8,7 @@ const colorReset = {
 const colors = {
   // deepSpaceRodeo: '#332878',
   primary: '#0064b2',
-  secondary: '#cdce00',
+  secondary: '#49bdec',
   lighthouse: '#f4f4f4',
   basaltGrey: '#999999',
   cerebralGrey: '#cccccc',

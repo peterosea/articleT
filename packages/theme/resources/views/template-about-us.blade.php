@@ -318,7 +318,7 @@ EOD,
         </div>
         <div class="text-center">
           <a href="https://www.talentbank.co.kr/menu/projectCaseInfo?caseTypeCode=ALL" target="_blank" rel="noopener noreferrer" class="inline-block btn-carbon py-[23px] lg:py-[28px] rounded-[4px] font-normal text-[18px] lg:text-[20px] mx-auto max-w-[400px] w-full" href="#" target="_blank" rel="noopener noreferrer">
-            성공사례 더 알아보기
+            성공사례 연결
           </a>
         </div>
       </div>
@@ -399,7 +399,7 @@ EOD,
       </ul>
       <div class="text-center">
         <a href="https://www.talentbank.co.kr/client/project/projectRegStart" target="_blank" rel="noopener noreferrer" class="inline-block btn-carbon py-[23px] lg:py-[28px] rounded-[4px] font-normal text-[18px] lg:text-[20px] mx-auto max-w-[400px] w-full" href="#" target="_blank" rel="noopener noreferrer">
-          프로젝트 무료 의뢰하기
+          프로젝트 의뢰
         </a>
       </div>
     </div>
@@ -625,8 +625,8 @@ EOD,
         </div>
       </div>
       <div class="text-center">
-        <a href="https://article.talentbank.co.kr/hashtag/archive/expert-interview/" target="_blank" rel="noopener noreferrer" class="inline-block btn-carbon bg-transparent border-[1px] lg:border-[2px] border-white py-[23px] lg:py-[28px] rounded-[4px] font-normal text-[18px] lg:text-[20px] mx-auto max-w-[400px] w-full" href="#" target="_blank" rel="noopener noreferrer">
-          전문가 등록 바로가기
+        <a href="/hashtag/expert-interview/" target="_blank" rel="noopener noreferrer" class="inline-block btn-carbon bg-transparent border-[1px] lg:border-[2px] border-white py-[23px] lg:py-[28px] rounded-[4px] font-normal text-[18px] lg:text-[20px] mx-auto max-w-[400px] w-full" href="#" target="_blank" rel="noopener noreferrer">
+          전문가 인터뷰 확인
         </a>
       </div>
     </div>
@@ -735,7 +735,7 @@ EOD,
       </div>
       <div class="text-center">
         <a href="https://www.talentbank.co.kr/login/joinForm1?serviceTypeCode=SVC_TY003" target="_blank" rel="noopener noreferrer" class="inline-block btn-carbon py-[23px] lg:py-[28px] rounded-[4px] font-normal text-[18px] lg:text-[20px] mx-auto max-w-[400px] w-full" href="#" target="_blank" rel="noopener noreferrer">
-          전문가 등록하기
+          전문가 등록
         </a>
       </div>
     </div>

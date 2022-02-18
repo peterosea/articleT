@@ -3,7 +3,7 @@
     // layout
     @apply grid grid-rows-[auto,auto,auto,1fr,auto];
     &-meta {
-      @apply order-last;
+      @apply order-last items-end;
 
       time {
         display: none;

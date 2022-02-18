@@ -1,4 +1,4 @@
-<div class="card__template">
+<div class="card__template @if(!empty($class)) {!! implode($class) !!} @endif">
   <div class="card__template-meta">
     <time datetime="{!! $date !!}"></time>
     @if (!empty($hashtag) && count($hashtag) > 0)

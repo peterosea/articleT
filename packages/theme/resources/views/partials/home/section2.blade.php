@@ -50,6 +50,7 @@
                     'excerpt' => $post->excerpt,
                     'hashtag' => $post->hashtag,
                     'category' => $post->category,
+                    'class' => ['h-full']
                   ])
                 </div>
               @endforeach

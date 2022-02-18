@@ -60,7 +60,7 @@ class SinglePost extends Composer
             foreach ($taxonomies as $term) {
                 $term->link = get_term_link($term);
             }
-            return array_slice($taxonomies, 0, 1)[0];
+            return $taxonomies;
         }
     }
 }

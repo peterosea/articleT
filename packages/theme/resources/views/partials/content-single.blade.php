@@ -13,9 +13,6 @@
       <div class="entry-meta">
         <div class="listDivider__cols2 font-bold">
           <time datetime="{!! get_the_date('Y/m/d') !!}"></time>
-          @isset($hashtag)
-            <a href="{!! $hashtag->link !!}">{!! $hashtag->name !!}</a>
-          @endisset
         </div>
       </div>
 
@@ -24,11 +21,11 @@
       </h1>
 
       <div class="entry-tags text-primary">
-        @if(has_tag())
-          @foreach(get_the_tags() as $tag)
-          <a href="{!! get_term_link($tag) !!}">#{!! $tag->name !!}</a>
+        @isset($hashtag)
+          @foreach ($hashtag as $ht)
+            <a href="{!! $ht->link !!}">{!! $ht->name !!}</a>
           @endforeach
-        @endif
+        @endisset
       </div>
 
     </header>
@@ -75,13 +72,13 @@
     </div>
     <div class="mt-[52px] lg:mt-[150px] pt-[52px] lg:pt-[80px] border-t border-carbon">
       @isset($hashtag)
-        <a href="{!! $hashtag->link !!}" class="block text-[24px] lg:text-[48px] font-bold text-center mb-[28px] lg:mb-[50px] leading-none">{!! $hashtag->name !!}</a>
+        <a href="{!! $hashtag[0]->link !!}" class="block text-[24px] lg:text-[48px] font-bold text-center mb-[28px] lg:mb-[50px] leading-none">{!! $hashtag[0]->name !!}</a>
       @else
         <div class="block text-[24px] lg:text-[48px] font-bold text-center mb-[28px] lg:mb-[50px] leading-none">최신 포스트</div>
       @endisset
       <div>
         @isset($hashtag)
-          <x-PostsHashtag termid="{!! $hashtag->term_id !!}" />
+          <x-PostsHashtag termid="{!! $hashtag[0]->term_id !!}" />
         @else
           <x-PostsHashtag />
         @endisset

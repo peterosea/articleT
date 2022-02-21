@@ -1,0 +1,99 @@
+version: "3.8"
+
+services:
+  wordpress:
+    env_file:
+      - ./.env
+    container_name: WP__${PROJECT_NAME}
+    image: ghcr.io/hansanghyeon/wordpress-redis:5.8.2-php8.0-apache-redis
+    restart: always
+    environment:
+      WORDPRESS_DB_HOST: db
+      WORDPRESS_DB_USER: root
+      WORDPRESS_DB_PASSWORD: ${WORDPRESS_DB_PASSWORD}
+      WORDPRESS_DB_NAME: wp
+      WORDPRESS_CONFIG_EXTRA: |
+        /* Redis */
+        define('WP_REDIS_HOST', getenv_docker('WORDPRESS_REDIS_HOST', 'redis'));
+        define('WP_REDIS_PORT', getenv_docker('WORDPRESS_REDIS_PORT', 6379));
+    volumes:
+      - wordpress:/var/www/html
+      - ./wp-content:/var/www/html/wp-content
+      - ../../packages/theme:/var/www/html/wp-content/themes/sage
+      - ./config/seo/naver441aa518f2e7c0fe40520e8943e8472b.html:/var/www/html/naver441aa518f2e7c0fe40520e8943e8472b.html
+      - ./config/seo/googlee65576a4948e959b.html:/var/www/html/googlee65576a4948e959b.html
+      - ./config/seo/x8xhnp11ujyfybkgn4o9js26xwsuf7.html:/var/www/html/x8xhnp11ujyfybkgn4o9js26xwsuf7.html
+    labels:
+      - traefik.enable=true
+      ## HTTP Routers
+      - traefik.http.routers.svc__wordpress.rule=Host(`article.talentbank.co.kr`)
+      - traefik.http.routers.svc__wordpress.entrypoints=web
+      - traefik.http.routers.svc__wordpress.entrypoints=websecure
+      - traefik.http.routers.svc__wordpress.tls.certresolver=leresolver
+      ## Service
+      - traefik.http.services.svc__wordpress.loadbalancer.server.port=80
+
+  db:
+    image: mariadb
+    container_name: DB__work
+    restart: always
+    ports:
+      - 3306
+    environment:
+      MYSQL_DATABASE: wp
+      MARIADB_ROOT_PASSWORD: ${WORDPRESS_DB_PASSWORD}
+    volumes:
+      - ./mysql:/var/lib/mysql
+
+  phpmyadmin:
+    image: phpmyadmin
+    container_name: DB__phpmyadmin
+    restart: always
+    labels:
+      - traefik.enable=true
+      ## HTTP Routers
+      - traefik.http.routers.svc__phpmyadmin.rule=Host(`phpmyadmin.${PROJECT_NAME}.beeclover.pro`)
+      - traefik.http.routers.svc__phpmyadmin.entrypoints=web
+      - traefik.http.routers.svc__phpmyadmin.entrypoints=websecure
+      - traefik.http.routers.svc__phpmyadmin.tls.certresolver=leresolver
+      ## Service
+      - traefik.http.services.svc__phpmyadmin.loadbalancer.server.port=80
+
+  redis:
+    container_name: DB__redis
+    image: redis:latest
+    volumes:
+      - redis:/data
+
+  traefik:
+    image: traefik:v2.4
+    container_name: DO__traefik
+    restart: unless-stopped
+    ports:
+      - target: 80
+        published: 80
+        protocol: tcp
+        mode: host
+      - target: 443
+        published: 443
+        protocol: tcp
+        mode: host
+    volumes:
+      - /etc/localtime:/etc/localtime:ro
+      - /var/run/docker.sock:/var/run/docker.sock:ro
+      - ./config/traefik/rules:/rules
+      - ./config/traefik/acme:/acme
+      - ./config/traefik/traefik.yaml:/etc/traefik/traefik.yaml
+    labels:
+      - traefik.enable=true
+      ## HTTP Routers
+      - traefik.http.routers.svc__traefik.rule=Host(`traefik.${PROJECT_NAME}.beeclover.pro`)
+      - traefik.http.routers.svc__traefik.entrypoints=web
+      - traefik.http.routers.svc__traefik.entrypoints=websecure
+      - traefik.http.routers.svc__traefik.tls.certresolver=leresolver
+      ## Service
+      - traefik.http.services.svc__traefik.loadbalancer.server.port=8080
+
+volumes:
+  wordpress:
+  redis:

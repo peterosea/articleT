@@ -1,0 +1,44 @@
+// TNB
+@at-root {
+  :root {
+    --h-tnb: 0px;
+
+    @media (min-width: theme('screens.lg')) {
+      --h-tnb: 46px;
+    }
+  }
+}
+
+&__top {
+  $p: &;
+
+  @apply hidden lg:block bg-white;
+
+  &-inner {
+    @apply h-[var(--h-tnb)] flex items-center justify-between
+    container mx-auto;
+  }
+
+  &-nav {
+    @apply flex h-full;
+
+    &-item {
+      @apply px-[28px] text-dugong font-normal;
+
+      font-size: 14px;
+      display: flex;
+      align-items: center;
+      position: relative;
+
+      &:hover #{$p}-nav-icon {
+        background-color: var(--bgColor);
+      }
+    }
+
+    &-icon {
+      @apply w-[16px] h-[16px] flex items-center justify-center rounded-full bg-basaltGrey;
+
+      transition: background-color 0.2s ease-in-out;
+    }
+  }
+}

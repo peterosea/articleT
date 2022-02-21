@@ -1,0 +1,60 @@
+:root {
+  --container-px: 16px;
+  @media (min-width: theme('screens.md')) {
+    --container-px: 20px;
+  }
+}
+
+body {
+  @apply font-sans;
+
+  &.overflow-hidden {
+    touch-action: none;
+    overflow: hidden;
+  }
+  &.lg\:overflow-hidden {
+    @media (min-width: theme('screens.lg')) {
+      touch-action: none;
+      overflow: hidden;
+    }
+  }
+}
+
+* {
+  word-break: keep-all;
+}
+
+.brand {
+  @apply text-3xl font-medium text-indigo-500;
+}
+
+[x-cloak] {
+  display: none !important;
+}
+
+@mixin no-scrollbar {
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+[no-scrollbar] {
+  @include no-scrollbar;
+}
+
+[no-times] {
+  &::-ms-clear,
+  &::-ms-reveal {
+    display: none;
+    width: 0;
+    height: 0;
+  }
+
+  /* clears the 'X' from Chrome */
+  &::-webkit-search-decoration,
+  &::-webkit-search-cancel-button,
+  &::-webkit-search-results-button,
+  &::-webkit-search-results-decoration {
+    display: none;
+  }
+}

@@ -1,0 +1,45 @@
+&__template {
+  &-meta {
+    @apply text-carbon flex items-center gap-[8px] flex-wrap;
+
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 1;
+
+    .btn-seaSerpent {
+      @apply py-[6px] px-[14px];
+
+      font-size: 12px;
+      font-weight: normal;
+    }
+
+    a {
+      white-space: nowrap;
+    }
+  }
+
+  &-title {
+    @apply line-clamp-2;
+
+    font-size: 20px;
+    font-weight: bold;
+  }
+
+  &-thumbnail {
+    @apply aspect-w-16 aspect-h-9 rounded-[4px] overflow-hidden;
+
+    img {
+      object-fit: cover;
+    }
+  }
+
+  &-main {
+    @apply text-davyGrey;
+
+    .prose {
+      @apply line-clamp-3;
+
+      font-size: 14px;
+    }
+  }
+}

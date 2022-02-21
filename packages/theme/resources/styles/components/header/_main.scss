@@ -1,0 +1,148 @@
+// GNB
+@at-root {
+  :root {
+    --h-gnb: 60px;
+  }
+  @media (min-width: 1024px) {
+    :root {
+      --h-gnb: 65px;
+    }
+  }
+}
+
+&__main {
+  @apply bg-white;
+
+  @media (min-width: theme('screens.lg')) {
+    @apply border-b-[1px] border-[#eee];
+  }
+
+  a:hover {
+    @apply text-raisinBlack;
+  }
+
+  &-inner {
+    @apply h-[var(--h-gnb)]
+      flex
+      items-center
+      justify-between
+      container mx-auto;
+
+    @media (max-width: theme('screens.lg')) {
+      position: relative;
+      &:after {
+        @apply bg-brightGray;
+        content: '';
+        display: block;
+        position: absolute;
+        width: 100vw;
+        height: 1px;
+        left: 50%;
+        bottom: 0;
+        transform: translateX(-50%);
+      }
+    }
+  }
+
+  &-logo {
+    @apply h-[24px];
+
+    @media (min-width: theme('screens.xl')) {
+      margin-right: 55px;
+    }
+
+    img {
+      height: 100%;
+    }
+  }
+
+  &-nav {
+    --gap-x: 32px;
+    @apply flex
+      items-center
+      gap-x-[22px]
+      leading-snug;
+
+    height: 100%;
+
+    @media (min-width: theme('screens.xl')) {
+      @apply gap-x-[var(--gap-x)];
+    }
+
+    &-item {
+      --h: 0px;
+      @apply px-[4px];
+      transition: none;
+      white-space: nowrap;
+      line-height: 24px;
+
+      &:hover {
+        --h: 12px;
+      }
+
+      &-parent {
+        @apply flex items-center;
+
+        height: 100%;
+        position: relative;
+
+        @mixin active {
+          &:after {
+            @apply bg-current;
+            content: '';
+            display: block;
+            width: calc(100% + var(--gap-x));
+            height: 2px;
+            position: absolute;
+            bottom: -1px;
+            left: 50%;
+            transform: translateX(-50%);
+          }
+        }
+        &.current-menu-item {
+          @apply text-raisinBlack font-medium;
+          @include active;
+        }
+        &.hover {
+          @apply text-raisinBlack;
+          @include active;
+        }
+      }
+    }
+  }
+
+  &-subnav {
+    @apply text-[18px] flex gap-x-[60px];
+
+    position: absolute;
+    top: calc(100% + 1px);
+    left: 0;
+
+    &:after {
+      @apply bg-white shadow-md;
+
+      content: '';
+      display: block;
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 200vw;
+      height: 100%;
+      z-index: -1;
+    }
+
+    > li {
+      @apply h-[82px] flex items-center text-black font-medium text-[18px];
+
+      .menu-link {
+        white-space: nowrap;
+      }
+    }
+  }
+
+  .btn-search {
+    @media (min-width: theme('screens.lg')) {
+      background-position: left 50%;
+    }
+  }
+}

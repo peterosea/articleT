@@ -1,8 +1,4 @@
 # .wordpress
 # backup
 .env
-.wp
-.vscode
-wp-content
-!wp-content/.gitkeep
-mysql
+node_modules

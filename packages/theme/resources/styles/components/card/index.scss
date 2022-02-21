@@ -1,0 +1,60 @@
+.card {
+  @import 'template';
+  @import 'hashtag';
+}
+
+@mixin card {
+}
+@mixin customVariants($class) {
+  $screens: (
+    sm: theme('screens.sm') theme('screens.md'),
+    md: theme('screens.md') theme('screens.lg'),
+    lg: theme('screens.lg') theme('screens.xl'),
+    xl: theme('screens.xl'),
+  );
+
+  .\!card__#{$class} {
+    @include card;
+  }
+
+  @each $key, $value in $screens {
+    @media (max-width: nth($value, 1)) {
+      .#{$key}\:\-card__#{$class} {
+        @include card;
+      }
+    }
+    @if $key != xl {
+      @media (min-width: nth($value, 1)) and (max-width: nth($value, 2)) {
+        .#{$key}\:card__#{$class} {
+          @include card;
+        }
+      }
+    }
+    @media (min-width: nth($value, 1)) {
+      .#{$key}\:\!card__#{$class} {
+        @include card;
+      }
+    }
+  }
+}
+
+@import 's1';
+@include customVariants(s1);
+
+@import 's2';
+@include customVariants(s2);
+
+@import 's3';
+@include customVariants(s3);
+
+@import 's4';
+@include customVariants(s4);
+
+@import 's5';
+@include customVariants(s5);
+
+@import 's6';
+@include customVariants(s6);
+
+@import 's7';
+@include customVariants(s7);

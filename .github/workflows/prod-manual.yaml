@@ -4,19 +4,13 @@ on:
     types: [published]
   push:
     branches: [main]
-<<<<<<< HEAD
-=======
     paths:
       - "packages/theme/**/*"
->>>>>>> release/v2.0.0
   workflow_dispatch:
 
 jobs:
   deploy:
-<<<<<<< HEAD
-=======
     if: ${{ github.repository == 'peterosea/aritcleT' }}
->>>>>>> release/v2.0.0
     runs-on: ubuntu-latest
     name: 🚛 소스코드 업데이트 & 빌드파일 배포
     steps:

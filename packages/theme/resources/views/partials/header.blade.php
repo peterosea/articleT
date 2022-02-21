@@ -7,7 +7,7 @@
     </header>
     <header class="header__main" :class="{'menu-open sm:pr-[15px]': menuSelected === 'menu' || widget}">
       <div class="header__main-inner">
-        <div class="flex items-center gap-x-[20px] h-full">
+        <div class="flex items-center gap-x-[81px] h-full">
           <a class="homepage logo" href="https://www.talentbank.co.kr/" target="_blank" rel="noopener noreferrer">
             <img src="{!! $siteLogo !!}" alt="homepage logo">
           </a>

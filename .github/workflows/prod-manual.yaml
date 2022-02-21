@@ -5,7 +5,7 @@ on:
   push:
     branches: [main]
     paths:
-      - "src/**/*"
+      - "packages/theme/**/*"
   workflow_dispatch:
 
 jobs:
@@ -37,10 +37,9 @@ jobs:
 
       - name: 🔨 yarn install & build
         run: |
-          cd ${{ secrets.SRC }}
           yarn set version berry
-          yarn install
-          yarn build:production
+          yarn workspace theme install
+          yarn workspace theme build:production
 
       - name: 📂 Sync files to Server
         uses: AEnterprise/rsync-deploy@v1.0
@@ -49,9 +48,9 @@ jobs:
           SERVER_PORT: ${{ secrets.DEPLOYSERVER_RSYNC_PORT }}
           SERVER_IP: ${{ secrets.DEPLOYSERVER_HOST }}
           USERNAME: ${{ secrets.DEPLOYSERVER_USERNAME }}
-          FOLDER: "./${{ secrets.SRC }}/public"
+          FOLDER: "./packages/theme/public"
           ARGS: "-rltgoDzvO --ignore-times"
-          SERVER_DESTINATION: "${{ secrets.PROJECT_DIR }}/${{ secrets.SRC }}"
+          SERVER_DESTINATION: "${{ secrets.PROJECT_DIR }}/packages/theme"
 
       - name: 🛎 슬랙알림
         uses: 8398a7/action-slack@v3

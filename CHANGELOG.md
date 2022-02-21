@@ -3,6 +3,12 @@
 이 프로젝트에서 주목할만한 모든 변경 사항이이 파일에 문서화됩니다.
 [Keep a Changelog](https://keepachangelog.com/ko/1.0.0/)의 형식을 기본으로 구성됩니다.
 
+## [v2.0.0] 2022-02-21
+
+- Milestone
+  - [Issues · beeclover/articleT](https://github.com/beeclover/articleT/issues?q=milestone%3Av2.0.0+)
+  - [v2.0.0 Milestone](https://github.com/beeclover/articleT/milestone/3)
+
 ## [v1.3.10] 2021-12-29
 
 ### 하자보수 Fixed

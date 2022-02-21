@@ -2,7 +2,7 @@
   Section Name: 고정, 인기 포스트
 --}}
 
-<section id="swiper-hero" class="overflow-hidden">
+<section id="swiper-hero" class="overflow-hidden relative">
   <div class="swiper-wrapper">
     @foreach ($bannerMain as $post)
       <div class="swiper-slide">

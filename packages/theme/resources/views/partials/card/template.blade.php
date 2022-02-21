@@ -10,12 +10,6 @@
             @endforeach
         @endif
       @endforeach
-    @elseif(!empty($category) && count($category) > 0)
-      @foreach ($category as $term)
-        <div class="card__template-meta-term">
-          <a href="{!! $term->link !!}" class="btn-gray">{!! $term->name !!}</a>
-        </div>
-      @endforeach
     @endif
   </div>
   <div class="card__template-body">

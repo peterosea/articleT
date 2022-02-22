@@ -3,6 +3,10 @@
 이 프로젝트에서 주목할만한 모든 변경 사항이이 파일에 문서화됩니다.
 [Keep a Changelog](https://keepachangelog.com/ko/1.0.0/)의 형식을 기본으로 구성됩니다.
 
+## [v2.1.0] 2022-02-22
+
+- [클라이언트 개선점 정리 v01 · Issue #107 · beeclover/articleT](https://github.com/beeclover/articleT/issues/107)
+
 ## [v2.0.2] 2022-02-21
 
 ### Fixed

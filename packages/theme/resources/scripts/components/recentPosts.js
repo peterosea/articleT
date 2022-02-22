@@ -27,6 +27,7 @@ function recentPosts() {
     spaceBetween: 8,
     touchEventsTarget: 'wrapper',
     allowTouchMove: true,
+    threshold: 18,
   });
 }
 

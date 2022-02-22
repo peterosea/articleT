@@ -43,6 +43,7 @@ export default () => {
       spaceBetween: 20,
       touchEventsTarget: 'wrapper',
       slidesPerView: 1,
+      threshold: 18,
       pagination: {
         el: childTargetEl.querySelector('[id*=swiper-hashtagChildPost-pagination]'),
         clickable: true,

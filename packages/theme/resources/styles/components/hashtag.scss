@@ -12,4 +12,10 @@
   &:before {
     content: '#';
   }
+
+  &-inline {
+    &:before {
+      content: '#';
+    }
+  }
 }

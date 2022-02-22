@@ -23,7 +23,7 @@
       <div class="entry-tags text-primary">
         @isset($hashtag)
           @foreach ($hashtag as $ht)
-            <a href="{!! $ht->link !!}">{!! $ht->name !!}</a>
+            <a href="{!! $ht->link !!}" class="hashtag-inline">{!! $ht->name !!}</a>
           @endforeach
         @endisset
       </div>

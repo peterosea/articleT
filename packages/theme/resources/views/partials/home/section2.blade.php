@@ -9,7 +9,7 @@
         @php($index = 0)
         @foreach ($hashtagPostNavigation as $t)
           <li>
-            <button id="bullet" class="btn @if($index === 0) active @endif" data-slide-to="{!! $index !!}">#{!! $t->name !!}</button>
+            <button id="bullet" class="btn @if($index === 0) active @endif hashtag-inline" data-slide-to="{!! $index !!}">{!! $t->name !!}</button>
           </li>
           @php($index++)
         @endforeach

@@ -109,7 +109,7 @@ class Archive extends Composer
                     $link = get_term_link($r);
                     $name = $r->name;
                     $dump .= <<<EOD
-              <a href="$link">#$name</a>
+              <a href="$link" class="hashtag-inline">#$name</a>
 EOD;
                     $index++;
                 }

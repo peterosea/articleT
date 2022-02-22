@@ -5,7 +5,7 @@
     </a>
   </div>
   <div class="card__hashtag-title">
-    <a href="{!! $permalink !!}" class="hashtag-inline">{!! $title !!}</a>
+    <a href="{!! $permalink !!}">{!! $title !!}</a>
   </div>
   <div class="card__hashtag-footer">
     <div class="card__hashtag-meta card__hashtag-swiper swiper-container">

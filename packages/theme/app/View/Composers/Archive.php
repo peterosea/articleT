@@ -65,16 +65,11 @@ class Archive extends Composer
 
     public function labelBg()
     {
-        if (is_post_type_archive()) {
-            return match (get_post_type()) {
-                'life' => 'bg-seaSerpent',
-                'insight' => 'bg-primary',
-                'tb-story' => 'bg-celticBlue',
-                default => 'bg-black'
-            };
-        } else {
-            return 'bg-black';
-        }
+        return match (get_post_type()) {
+            'life' => 'bg-secondary',
+            'insight' => 'bg-primary',
+            default => 'bg-black'
+        };
     }
 
     public function bgImg()

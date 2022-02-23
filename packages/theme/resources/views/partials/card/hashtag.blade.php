@@ -13,12 +13,12 @@
         @if (!empty($hashtag) && count($hashtag) > 0)
           @foreach ($hashtag as $term)
             <div class="swiper-slide card__hashtag-meta-term">
-              <a href="{!! $term->link !!}" class="btn-gray">{!! $term->name !!}</a>
+              <a href="{!! $term->link !!}" class="hashtag">{!! $term->name !!}</a>
             </div>
             @if (!empty($term->children) && count($term->children) > 0)
                 @foreach ($term->children as $child)
                   <div class="swiper-slide card__hashtag-meta-term">
-                    <a href="{!! $child->link !!}" class="btn-gray">{!! $child->name !!}</a>
+                    <a href="{!! $child->link !!}" class="hashtag">{!! $child->name !!}</a>
                   </div>
                 @endforeach
             @endif

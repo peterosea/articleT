@@ -1,2 +1,5 @@
 
 .icon-search:before { content: '\e802'; } /* '' */
+.icon-contact:before { content: '\e80b'; } /* '' */
+.icon-phone:before { content: '\e80c'; } /* '' */
+.icon-faq:before { content: '\e80d'; } /* '' */

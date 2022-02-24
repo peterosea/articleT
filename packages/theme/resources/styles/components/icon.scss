@@ -88,31 +88,51 @@
 
     &-award1 {
       @include icon;
+      position: relative;
+
+      padding-left: calc(1.8em + 8px);
 
       &:before {
         background-image: url("data:image/svg+xml,%3Csvg style='color: %23bebebe' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' width='88.716px' height='135.21px' viewBox='0 0 88.716 135.21' enable-background='new 0 0 88.716 135.21' xml:space='preserve'%3E%3Cpath fill='currentColor' d='M0,97.512v-46.81h21.556c0,0,9.929,0.517,17.982,6.173c5.898,4.151,10.607,11.718,10.607,20.539v20.098	H32.808V79.288c0,0,0.067-4.427-4.555-8.643c-2.559-2.334-6.056-3.909-10.912-4.48v31.346H0z'%3E%3C/path%3E%3Cpolygon fill='currentColor' points='0.252,135.21 0.252,107.803 11.084,107.803 16.128,126.44 16.216,126.44 21.563,107.803 32.045,107.803 32.045,135.21 25.489,135.21 25.489,114.067 25.398,114.067 19.201,135.21 12.783,135.21 6.898,114.067 6.805,114.067 6.805,135.21 '%3E%3C/polygon%3E%3Cpolygon fill='currentColor' points='81.317,107.8 88.716,107.8 79.712,120.1 88.716,135.21 81.14,135.21 73.424,121.164 73.334,121.164 73.334,135.21 66.603,135.21 66.603,107.8 73.334,107.8 73.334,119.535 73.424,119.535 '%3E%3C/polygon%3E%3Cpolygon fill='currentColor' points='53.847,129.134 53.819,129.134 54.465,131.229 '%3E%3C/polygon%3E%3Cpolygon fill='currentColor' points='62.724,135.21 53.98,107.803 45.107,107.803 36.193,135.21 42.833,135.21 44.063,131.136 46.669,122.35 49.077,113.073 49.171,113.073 51.481,121.503 53.823,129.134 53.847,129.134 54.465,131.229 54.465,131.243 55.634,135.21 '%3E%3C/polygon%3E%3Cpath fill='currentColor' d='M54.465,131.229v0.007V131.229z'%3E%3C/path%3E%3Cpath fill='currentColor' d='M74.65,62.243c0.073-8.796,0.231-27.098-17.177-38.632c-16.108-10.681-40.271-9.928-46.457-9.525v28.438	h7.731V24.44c0,0,44.986-1.659,44.986,37.11v35.958h10.858c0.018-9.357,0.051-27.76,0.051-33.762L74.65,62.243z'%3E%3C/path%3E%3Cpath fill='currentColor' d='M88.105,50.702c0,0,0-14.59-10.446-28.663c-6.764-9.105-19.601-17.64-35.984-19.958	C22.503-0.632,7.033,0.086,7.033,0.086H0v42.44h7.708V11.063l1.488-0.151c1.232-0.131,30.598-2.989,50.104,9.938	C78.204,33.378,78.039,52.892,77.958,62.27l-0.01,1.478c0,5.999-0.03,24.401-0.047,33.765h10.204V50.702z'%3E%3C/path%3E%3C/svg%3E");
         width: 1.8em;
         height: 1.8em;
         background-position: 2px center;
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
       }
     }
     &-award2 {
       @include icon;
+      position: relative;
+
+      padding-left: calc(1.8em + 8px);
 
       &:before {
         background-image: url("data:image/svg+xml,%3Csvg class='i-footer2' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' width='147.583px' height='124.471px' viewBox='0 0 147.583 124.471' enable-background='new 0 0 147.583 124.471' xml:space='preserve'%3E%3Cpolygon fill-rule='evenodd' clip-rule='evenodd' fill='%23BEBEBE' points='0,0 0,124.471 35.801,124.471 35.801,46.554 70.385,81.945 70.385,35.391 35.801,0 0,0 '%3E%3C/polygon%3E%3Cpolygon fill-rule='evenodd' clip-rule='evenodd' fill='%23BEBEBE' points='111.788,0 77.203,35.391 77.203,81.945 111.788,46.554 111.788,124.471 147.583,124.471 147.583,0 111.788,0'%3E%3C/polygon%3E%3C/svg%3E");
         width: 1.4em;
         height: 1.4em;
-        margin-right: 0.4em;
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
       }
     }
     &-award3 {
       @include icon;
+      position: relative;
+
+      padding-left: calc(1.8em + 8px);
 
       &:before {
         background-image: url('/wp-content/themes/sage/resources/images/i-footer3.png');
         width: 1.8em;
         height: 1.8em;
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
       }
     }
 
@@ -167,13 +187,14 @@
 
 .footer_sns_icon {
   > a:before {
-    font-size: 32px;
+    font-size: 24px;
     border-radius: 5px;
   }
 
   &.naver_post > a {
     @include icon;
 
+    column-gap: 0;
     font-size: 0;
 
     &:before {
@@ -185,6 +206,7 @@
   &.facebook > a {
     @include icon;
 
+    column-gap: 0;
     font-size: 0;
 
     &:before {
@@ -196,6 +218,7 @@
   &.youtube > a {
     @include icon;
 
+    column-gap: 0;
     font-size: 0;
 
     &:before {

@@ -16,8 +16,9 @@
       @apply text-white;
 
       display: block;
-      font-weight: bold;
+      font-weight: 500;
       margin-bottom: 20px;
+      font-size: 18px;
     }
 
     &-nav {
@@ -56,7 +57,7 @@
       }
 
       @media (min-width: theme('screens.sm')) {
-        @apply grid-cols-[190px,190px,190px] gap-x-[15px];
+        @apply grid-cols-[230px,230px,230px] gap-x-[15px];
 
         .comoany {
           order: 1;
@@ -88,7 +89,7 @@
 
       @media (min-width: theme('screens.sm')) {
         display: grid;
-        row-gap: 20px;
+        row-gap: 16px;
       }
     }
     .sub-menu {
@@ -110,7 +111,7 @@
     #{$p}-inner {
       @apply py-[28px];
       @media (min-width: theme('screens.sm')) {
-        @apply py-[60px];
+        @apply pt-[36px] pb-[18px];
       }
     }
 
@@ -155,7 +156,7 @@
   &-inner {
     @apply py-[28px];
     @media (min-width: theme('screens.sm')) {
-      @apply py-[40px];
+      @apply py-[36px];
     }
   }
 }

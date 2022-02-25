@@ -61,5 +61,8 @@
 .mainnbanner__navigation {
   --swiper-pagination-bullet-size: 12px;
   --swiper-pagination-bullet-horizontal-gap: 8px;
-  bottom: 37px !important;
+  bottom: 18px !important;
+  @media (min-width: theme('screens.lg')) {
+    bottom: 32px !important;
+  }
 }

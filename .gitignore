@@ -2,3 +2,5 @@
 # backup
 .env
 node_modules
+wp-content
+mysql

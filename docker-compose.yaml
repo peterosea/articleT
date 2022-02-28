@@ -18,8 +18,8 @@ services:
         define( 'NIUI_HOST', 'https://article.talentbank.co.kr');
     volumes:
       - wordpress:/var/www
-      - ./docker/wordpress/wp-content:/var/www/html/wp-content
-      - ./packages/theme:/var/www/html/wp-content/themes/sage
+      - ./wp-content:/var/www/html/wp-content
+      - ./src:/var/www/html/wp-content/themes/sage
     deploy:
       placement:
         constraints:

@@ -1,5 +1,5 @@
 {{--
-  Section Name: 인기포스트
+  Section Name: 인기 아티클
 --}}
 
 <section class="py-[50px] lg:py-[80px]">

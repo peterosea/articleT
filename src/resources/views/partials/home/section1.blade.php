@@ -1,5 +1,5 @@
 {{--
-  Section Name: 고정, 인기 포스트
+  Section Name: 고정, 인기 아티클
 --}}
 
 <section id="swiper-hero" class="overflow-hidden relative">

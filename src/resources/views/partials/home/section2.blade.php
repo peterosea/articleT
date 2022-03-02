@@ -1,5 +1,5 @@
 {{--
-  Section Name: 최신 포스트
+  Section Name: 최신 아티클
 --}}
 
 <section class="overflow-hidden">

@@ -74,5 +74,10 @@
     </div>
   </div>
 </footer>
+<div id="backtop" class="backtop fixed bottom-[40px] right-[24px]">
+  <a href="#page" class="btn-backtop">
+    <span class="text-[0px]">위로가기</span>
+  </a>
+</div>
 {{-- <div class="icon-label-google_play"></div>
 <div class="icon-label-app_store"></div> --}}

@@ -159,4 +159,14 @@
       @apply py-[36px];
     }
   }
+
+  + .backtop {
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.3s;
+    &.shrink {
+      visibility: visible;
+      opacity: 1;
+    }
+  }
 }

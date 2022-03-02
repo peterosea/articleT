@@ -18,15 +18,13 @@
 </div>
 @else
   @include('partials.banner.header', [
-    'label' => $title,
-    'labelBg' => $labelBg,
-    'title' => $description,
+    'title' => $title,
     'bgImg' =>  $bgImg,
-    'content' => $content ?? $obTags ?? $tags ?? '',
+    'content' => $content ?? $obTags ?? $tags ?? $description ?? '',
     'dimBg' => true
   ])
   <div class="container mx-auto py-[40px] sm:py-[100px]">
-    <div class="grid grid-cols-1 lg:grid-cols-3 gap-x-[70px] gap-y-[56px] lg:gap-y-[85px]">
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-[70px] gap-y-[56px] lg:gap-y-[85px]">
       @while(have_posts()) @php(the_post())
         <div class="!card__s2">
           @includeFirst(['partials.content-card', 'partials.content'])

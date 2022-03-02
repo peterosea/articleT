@@ -221,22 +221,10 @@ if( function_exists('acf_add_options_page') ) {
         'capability'  => 'edit_posts',
     ));
 
-    acf_add_options_sub_page(array(
-        'page_title'  => 'insight_description',
-        'menu_title'  => 'insight_description',
-        'parent_slug'   => 'edit.php?post_type=insight',
-    ));
-
-    acf_add_options_sub_page(array(
-        'page_title'  => 'tb-story_description',
-        'menu_title'  => 'tb-story_description',
-        'parent_slug'   => 'edit.php?post_type=tb-story',
-    ));
-
-    acf_add_options_sub_page(array(
-        'page_title'  => 'life_description',
-        'menu_title'  => 'life_description',
-        'parent_slug'   => 'edit.php?post_type=life',
+    acf_add_options_page(array(
+        'page_title'  => '아티클 보관함 옵션',
+        'menu_title'  => '아티클 보관함 옵션',
+        'menu_slug'   => 'all_articles',
     ));
 }
 

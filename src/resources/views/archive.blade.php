@@ -22,7 +22,7 @@
     'labelBg' => $labelBg,
     'title' => $description,
     'bgImg' =>  $bgImg,
-    'content' => $obTags ?? $tags ?? '',
+    'content' => $content ?? $obTags ?? $tags ?? '',
     'dimBg' => true
   ])
   <div class="container mx-auto py-[40px] sm:py-[100px]">

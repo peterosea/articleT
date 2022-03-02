@@ -1,17 +1,8 @@
 <div class="header__page">
   <div class="header__page-inner relative">
-    <div class="header__page-labelWrap {!! $labelBg !!}">
-      <div class="header__page-label">
-        {!! $label !!}
-      </div>
-    </div>
     <div class="header__page-main">
-      <div class="text-center">
-        <h1 class="header__page-title">{!! $title !!}</h1>
-        <div class="header__page-subtitle">
-          {!! $content !!}
-        </div>
-      </div>
+      <h1 class="header__page-title">{!! $title !!}</h1>
+      <div class="header__page-subtitle">{!! $content !!}</div>
     </div>
     <div class="absolute w-full h-full left-0 top-0 right-0 bottom-0">
       @if(empty($bgImg) || is_null($bgImg))
@@ -22,7 +13,7 @@
         {!! $bgImg !!}
       @endif
       @isset($dimBg)
-        <div class="{!! $labelBg !!} @if($labelBg === 'bg-black') bg-opacity-60 @else bg-opacity-80 @endif brightness-[0.6] absolute w-full h-full left-0 top-0 right-0 bottom-0"></div>
+        <div class="bg-black bg-opacity-[0.55] absolute w-full h-full left-0 top-0 right-0 bottom-0"></div>
       @endisset
     </div>
   </div>

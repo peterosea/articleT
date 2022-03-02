@@ -1,66 +1,39 @@
 &__page {
-  --h-pageheader: 460px;
-  @apply h-[var(--h-pageheader)];
+  @apply h-[var(--h-pageheader)] lg:container mx-auto relative overflow-hidden mt-[31px] lg:mt-[45px];
 
+  --h-pageheader: 248px;
+  @media (min-width: theme('screens.sm')) {
+    --h-pageheader: 234px;
+  }
   @media (min-width: theme('screens.lg')) {
-    --h-pageheader: 280px;
+    --h-pageheader: 220px;
   }
 
   &-inner {
-    @apply mx-auto xl:max-w-desktop text-white relative overflow-hidden h-full px-container-x;
+    @apply text-white h-full;
 
-    @apply flex flex-wrap items-center justify-center;
+    @apply flex flex-wrap items-center;
   }
-  &-labelWrap {
-    @apply absolute top-0 left-0;
-    @apply z-20 py-[44px] px-[20px] bg-blackOut flex items-center justify-center w-[180px];
-
-    @media (min-width: theme('screens.xl')) {
-      @apply w-[360px] h-full py-0;
-    }
+  &-main {
+    @apply relative z-10 w-full px-[40px];
   }
-  &-label {
-    @apply text-[18px] relative;
+  &-title {
+    @apply text-[26px] mb-[28px] font-bold;
 
-    @media (min-width: theme('screens.xl')) {
-      @apply text-[26px];
-    }
-
-    margin-bottom: 0.2em;
+    position: relative;
 
     &:after {
       content: '';
-      position: absolute;
-      top: calc(100% + 0.4em);
       display: block;
-      width: calc(100% + 2 * 20px);
-      min-width: 180px;
+      width: 32px;
       height: 2px;
       background-color: #fff;
-
-      @media (min-width: theme('screens.xl')) {
-        width: calc(100% + 2 * 80px);
-        height: 4px;
-      }
-    }
-  }
-  &-main {
-    @apply relative z-10 flex justify-center;
-    @apply pt-[100px];
-
-    @media (min-width: theme('screens.lg')) {
-      @apply pt-0;
+      position: absolute;
+      bottom: -9px;
     }
 
     @media (min-width: theme('screens.lg')) {
-      max-width: 50%;
-    }
-  }
-  &-title {
-    @apply text-[22px] mb-[17px] font-medium;
-
-    @media (min-width: theme('screens.lg')) {
-      @apply text-[26px];
+      @apply text-[28px];
     }
 
     @media (max-width: theme('screens.lg')) {
@@ -70,7 +43,12 @@
     }
   }
   &-subtitle {
-    @apply text-[16px] opacity-50;
+    @apply text-[18px];
+    font-weight: normal;
+
+    @media (min-width: theme('screens.lg')) {
+      @apply text-[21px];
+    }
   }
   &-bg {
     @apply absolute w-full h-full object-cover top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2;

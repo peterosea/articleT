@@ -38,6 +38,7 @@ class Archive extends Composer
             'bgImg' => $this->bgImg(),
             'tags' => $this->getTags(),
             'obTags' => $this->getObTags(),
+            'content' => $this->content(),
         ];
     }
 
@@ -61,6 +62,12 @@ class Archive extends Composer
             return get_the_post_type_description();
         }
         return get_the_archive_description();
+    }
+
+    public function content() {
+        if (is_post_type_archive() && $description = get_field(get_post_type().'_description', 'option')) {
+            return $description;
+        }
     }
 
     public function labelBg()

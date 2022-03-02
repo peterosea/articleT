@@ -213,12 +213,30 @@ add_action('widgets_init', function () {
  * @copyright    Hansanghyeon <999@hyeon.pro>
  **/
 
-if (function_exists('acf_add_options_sub_page')) {
-    acf_add_options_sub_page(array(
+if( function_exists('acf_add_options_page') ) {
+    acf_add_options_page(array(
         'page_title'  => 'main',
         'menu_title'  => 'main',
         'menu_slug'   => 'main',
         'capability'  => 'edit_posts',
+    ));
+
+    acf_add_options_sub_page(array(
+        'page_title'  => 'insight_description',
+        'menu_title'  => 'insight_description',
+        'parent_slug'   => 'edit.php?post_type=insight',
+    ));
+
+    acf_add_options_sub_page(array(
+        'page_title'  => 'tb-story_description',
+        'menu_title'  => 'tb-story_description',
+        'parent_slug'   => 'edit.php?post_type=tb-story',
+    ));
+
+    acf_add_options_sub_page(array(
+        'page_title'  => 'life_description',
+        'menu_title'  => 'life_description',
+        'parent_slug'   => 'edit.php?post_type=life',
     ));
 }
 

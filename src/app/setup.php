@@ -226,6 +226,12 @@ if( function_exists('acf_add_options_page') ) {
         'menu_title'  => '아티클 보관함 옵션',
         'menu_slug'   => 'all_articles',
     ));
+
+    acf_add_options_page(array(
+        'page_title'  => '사이트 아이덴티티',
+        'menu_title'  => '사이트 아이덴티티',
+        'menu_slug'   => 'site_identity',
+    ));
 }
 
 add_action('init', function () {

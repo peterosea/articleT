@@ -8,7 +8,7 @@
       </div>
       <div class="text-davyGrey text-[24px] mb-[60px]">
         이용에 불편을 드려 죄송합니다.<br/>
-        페이지에 아티클가 존재하지 않습니다.
+        페이지에 아티클이 존재하지 않습니다.
       </div>
       <div class="my-[80px] w-[64px] h-[2px] rounded-full bg-davyGrey mx-auto"></div>
       <h2 class="text-center text-[24px] sm:text-[34px] font-bold mb-[28px] sm:mb-[48px] leading-none">추천 아티클</h2>

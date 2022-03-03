@@ -9,7 +9,7 @@
   </div>
   <div class="text-davyGrey text-[24px] mb-[60px]">
     이용에 불편을 드려 죄송합니다.<br/>
-    페이지에 아티클가 존재하지 않습니다.
+    페이지에 아티클이 존재하지 않습니다.
   </div>
   <div class="flex flex-wrap gap-[24px] justify-center">
     <a href="javascript:history.back();" class="btn-black w-[300px] py-[24px] font-normal text-[26px]">이전 페이지</a>

@@ -1,0 +1,1 @@
+.htaccess는 docker volume으로 마운트해서 사용할 수 없다.

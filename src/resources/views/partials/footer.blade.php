@@ -74,7 +74,7 @@
     </div>
   </div>
 </footer>
-<div id="backtop" class="backtop fixed bottom-[40px] right-[24px]">
+<div id="backtop" class="backtop fixed bottom-[40px] right-[24px] z-[9000]">
   <a href="#page" class="btn-backtop">
     <span class="text-[0px]">위로가기</span>
   </a>

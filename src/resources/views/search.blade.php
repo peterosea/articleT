@@ -2,11 +2,11 @@
 
 @section('content')
   @if (!have_posts())
-    <div class="container mx-auto py-[120px] flex flex-col justify-center items-center text-center">
+    <div class="container mx-auto py-[120px] flex flex-col justify-center items-center">
       <div class="mb-[28px]">
         <img src="{!! get_theme_file_uri('resources/images/not-found.jpg') !!}" alt="" class="max-w-[600px]">
       </div>
-      <div class="text-davyGrey text-[24px] mb-[60px]">
+      <div class="text-davyGrey text-[24px] mb-[60px] text-center">
         이용에 불편을 드려 죄송합니다.<br/>
         페이지에 아티클이 존재하지 않습니다.
       </div>

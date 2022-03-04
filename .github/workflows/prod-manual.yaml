@@ -37,9 +37,10 @@ jobs:
 
       - name: 🔨 yarn install & build
         run: |
+          cd ${{ secrets.SRC }}
           yarn set version berry
-          yarn workspace theme install
-          yarn workspace theme build:production
+          yarn install
+          yarn build:production
 
       - name: 📂 Sync files to Server
         uses: AEnterprise/rsync-deploy@v1.0
@@ -48,9 +49,9 @@ jobs:
           SERVER_PORT: ${{ secrets.DEPLOYSERVER_RSYNC_PORT }}
           SERVER_IP: ${{ secrets.DEPLOYSERVER_HOST }}
           USERNAME: ${{ secrets.DEPLOYSERVER_USERNAME }}
-          FOLDER: "./packages/theme/public"
+          FOLDER: "./${{ secrets.SRC }}/public"
           ARGS: "-rltgoDzvO --ignore-times"
-          SERVER_DESTINATION: "${{ secrets.PROJECT_DIR }}/packages/theme"
+          SERVER_DESTINATION: "${{ secrets.PROJECT_DIR }}/${{ secrets.SRC }}"
 
       - name: 🛎 슬랙알림
         uses: 8398a7/action-slack@v3

@@ -22,10 +22,10 @@
     'content' => $content ?? $obTags ?? $tags ?? $description ?? '',
     'dimBg' => true
   ])
-  <div class="container mx-auto py-[40px] sm:py-[100px]">
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-[70px] gap-y-[56px] lg:gap-y-[85px]">
+  <div class="container mx-auto py-[50px] sm:py-[60px]">
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-[26px] lg:gap-x-[50px] gap-y-[50px]">
       @while(have_posts()) @php(the_post())
-        <div class="!card__s2">
+        <div class="!card__s2 h-full">
           @includeFirst(['partials.content-card', 'partials.content'])
         </div>
         @php( $tags = get_the_tags( get_the_ID() ) )

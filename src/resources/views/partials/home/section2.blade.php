@@ -39,7 +39,7 @@
               </div>
               <div id="swiper-hashtagChildPost-pagination-{!! $tag !!}" class="hashtagPost__pagination swiper-pagination !relative !bottom-auto"></div>
             </div>
-            <div class="hidden lg:grid grid-cols-1 lg:grid-cols-3 gap-x-[32px] gap-y-[71px]">
+            <div class="hidden lg:grid grid-cols-1 lg:grid-cols-3 gap-x-[32px] gap-y-[50px]">
               @foreach ($posts as $key => $post)
                 <div class="!card__s2 lg:after:hidden">
                   @include('partials.card.template', [

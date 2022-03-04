@@ -12,5 +12,6 @@ export default () => {
   }
   $(window).scroll(function () {
     classAddandRemove('header#header__main');
+    classAddandRemove('#backtop');
   });
 };

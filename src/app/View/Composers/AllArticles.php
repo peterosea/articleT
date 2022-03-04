@@ -29,6 +29,7 @@ class AllArticles extends Composer
             'pagination' => (new Pagination())->render(),
             'title' => get_the_title(),
             'description' => get_the_excerpt(),
+            'excerpt' => $this->getExcerpt()
         ];
     }
 
@@ -41,5 +42,10 @@ class AllArticles extends Composer
             'posts_per_page' => 15,
             'paged' => (get_query_var('paged')) ? get_query_var('paged') : 1,
         ));
+    }
+
+    public function getExcerpt()
+    {
+        return get_field('all_description', 'option');
     }
 }

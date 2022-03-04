@@ -8,12 +8,11 @@
       </div>
       <div class="text-davyGrey text-[24px] mb-[60px]">
         이용에 불편을 드려 죄송합니다.<br/>
-        페이지에 포스트가 존재하지 않습니다.
+        페이지에 아티클이 존재하지 않습니다.
       </div>
-      <div class="flex flex-wrap gap-[24px] justify-center">
-        <a href="javascript:history.back();" class="btn-black w-[300px] py-[24px] font-normal text-[26px]">이전 페이지</a>
-        <a href="/" class="btn-black w-[300px] py-[24px] font-normal text-[26px]">홈페이지</a>
-      </div>
+      <div class="my-[80px] w-[64px] h-[2px] rounded-full bg-davyGrey mx-auto"></div>
+      <h2 class="text-center text-[24px] sm:text-[34px] font-bold mb-[28px] sm:mb-[48px] leading-none">추천 아티클</h2>
+      <x-PostsRecommendation />
     </div>
   @else
     <div class="container mx-auto pt-[41px] lg:pt-[80px] pb-[52px] lg:pb-[120px]">

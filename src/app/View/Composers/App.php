@@ -43,7 +43,7 @@ class App extends Composer
 
     public function siteLogo()
     {
-        return get_theme_file_uri('resources/images/logo-01.svg');
+        return get_field('logo', 'options');
     }
 
     public function getLink($id)

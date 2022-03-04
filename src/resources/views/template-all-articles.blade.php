@@ -5,10 +5,9 @@
 @extends('layouts.app')
 @section('content')
   @include('partials.banner.header', [
-    'label' => $title,
     'labelBg' => null,
-    'title' => $description,
-    'content' => <<<EOD
+    'title' => $title,
+    'content' => $excerpt ?? $description ?? <<<EOD
     #탤런트뱅크 #신고용플랫폼 #긱-이코노미
 EOD,
   ])

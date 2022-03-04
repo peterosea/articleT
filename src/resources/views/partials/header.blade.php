@@ -2,15 +2,26 @@
   <div id="headroom" :class="{'transform-none': menuSelected === 'menu'}">
     <header id="header__top" class="header__top" :class="{'sm:pr-[15px]': menuSelected === 'menu' || widget}">
       <div class="header__top-inner">
-        {!! $tnb !!}
+        <div class="listDivider__cols2 text-[14px] text-[#8b8b8b]">
+          <div>아티클T는 탤런트뱅크의 검증된 전문가 콘텐츠 플랫폼입니다.</div>
+          <a class="text-[#1973b9] flex items-center font-medium" href="https://www.talentbank.co.kr/" target="_blank" rel="noopener noreferrer">탤런트뱅크 바로가기 <i class="icon-right-open"></i></a>
+        </div>
       </div>
     </header>
     <header class="header__main" :class="{'menu-open sm:pr-[15px]': menuSelected === 'menu' || widget}">
       <div class="header__main-inner">
         <div class="flex items-center gap-x-[81px] h-full">
-          <a class="homepage logo" href="/">
-            <img src="{!! $siteLogo !!}" alt="homepage logo">
-          </a>
+          <div class="flex gap-x-[7px] items-end">
+            <a class="homepage logo hidden lg:inline" href="/">
+              <img src="{!! $siteLogo !!}" alt="homepage logo">
+            </a>
+            <button aria-label="로고 홈으로가기" class="homepage logo inline lg:hidden" @click.prevent="$store.modal.familySite.open()">
+              <img src="{!! $siteLogo !!}" alt="homepage logo" >
+            </button>
+            <button class="w-[16px] h-[16px] lg:hidden" aria-label="패밀리 사이트 메뉴 열기" @click.prevent="$store.modal.familySite.open()">
+              @include('partials.img', ['ex' => 'png', 'name' => 'icon-circle-down'])
+            </button>
+          </div>
           <div class="hidden lg:block h-full">
             {!! $gnb !!}
           </div>

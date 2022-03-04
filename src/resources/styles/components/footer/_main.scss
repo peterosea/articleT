@@ -57,7 +57,7 @@
       }
 
       @media (min-width: theme('screens.sm')) {
-        @apply grid-cols-[230px,230px,230px] gap-x-[15px];
+        @apply grid-cols-[minmax(auto,230px),minmax(auto,230px),minmax(auto,230px)] gap-x-[15px];
 
         .comoany {
           order: 1;
@@ -157,6 +157,16 @@
     @apply py-[28px];
     @media (min-width: theme('screens.sm')) {
       @apply py-[36px];
+    }
+  }
+
+  + .backtop {
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.3s;
+    &.shrink {
+      visibility: visible;
+      opacity: 1;
     }
   }
 }

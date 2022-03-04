@@ -213,12 +213,24 @@ add_action('widgets_init', function () {
  * @copyright    Hansanghyeon <999@hyeon.pro>
  **/
 
-if (function_exists('acf_add_options_sub_page')) {
-    acf_add_options_sub_page(array(
+if( function_exists('acf_add_options_page') ) {
+    acf_add_options_page(array(
         'page_title'  => 'main',
         'menu_title'  => 'main',
         'menu_slug'   => 'main',
         'capability'  => 'edit_posts',
+    ));
+
+    acf_add_options_page(array(
+        'page_title'  => '아티클 보관함 옵션',
+        'menu_title'  => '아티클 보관함 옵션',
+        'menu_slug'   => 'all_articles',
+    ));
+
+    acf_add_options_page(array(
+        'page_title'  => '사이트 아이덴티티',
+        'menu_title'  => '사이트 아이덴티티',
+        'menu_slug'   => 'site_identity',
     ));
 }
 
@@ -250,3 +262,26 @@ add_action('pre_get_posts', function ($query) {
 
     return $query;
 });
+
+if (get_home_url() === 'https://article.talentbank.co.kr') {
+    add_action('wp_head', function() {
+        ?>
+        <!-- Google Tag Manager -->
+        <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-MGPP4LS');</script>
+        <!-- End Google Tag Manager -->
+        <?php
+    });
+
+    add_action('wp_body_open', function() {
+    ?>
+        <!-- Google Tag Manager (noscript) -->
+        <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MGPP4LS"
+        height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+        <!-- End Google Tag Manager (noscript) -->
+    <?php
+    });
+}

@@ -20,6 +20,7 @@ services:
       - wordpress:/var/www/html
       - ./wp-content:/var/www/html/wp-content
       - ./src:/var/www/html/wp-content/themes/sage
+      - ./config/seo/naver138091948bf59c797e6a55792f0ab49c.html:/var/www/html/naver138091948bf59c797e6a55792f0ab49c.html
       - ./config/seo/naver441aa518f2e7c0fe40520e8943e8472b.html:/var/www/html/naver441aa518f2e7c0fe40520e8943e8472b.html
       - ./config/seo/googlee65576a4948e959b.html:/var/www/html/googlee65576a4948e959b.html
       - ./config/seo/x8xhnp11ujyfybkgn4o9js26xwsuf7.html:/var/www/html/x8xhnp11ujyfybkgn4o9js26xwsuf7.html

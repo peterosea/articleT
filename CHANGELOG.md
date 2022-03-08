@@ -3,6 +3,13 @@
 이 프로젝트에서 주목할만한 모든 변경 사항이이 파일에 문서화됩니다.
 [Keep a Changelog](https://keepachangelog.com/ko/1.0.0/)의 형식을 기본으로 구성됩니다.
 
+## [v3.0.8] 2022-03-08
+
+### Changed
+
+- TOP 배너내용 field 적용
+- 메인 hero 포스트 acf 사용하지 않아서 제거
+
 ## [v3.0.7] 2022-03-07
 
 ### Added

@@ -12,15 +12,15 @@
       </div>
       <div class="order-1 sm:order-2">
         <h2 class="h2">Help & Support</h2>
-        <div class="grid grid-cols-3 sm:grid-cols-[123px,1fr] gap-[12px] items-center">
-          <a href="http://talentbank.co.kr/common/faq" target="_blank" rel="noopener noreferrer" class="gap-x-[14px] text-[14px] lg:text-[16px] gap-y-[12px] flex items-center text-seaSerpent">
+        <div class="grid grid-cols-3 sm:grid-cols-[auto,auto] gap-[12px] items-center">
+          <a href="http://talentbank.co.kr/common/faq" target="_blank" rel="noopener noreferrer" class="gap-x-[14px] text-[14px] lg:text-[16px] gap-y-[12px] flex items-center text-seaSerpent font-bold">
             <i class="icon-faq text-[40px] sm:text-[24px] leading-none"></i>
             FAQ
           </a>
           <div class="hidden sm:block text-right">
             가장 많이 문의 주셨던 사항을 정리했습니다.
           </div>
-          <div class="gap-x-[14px] text-[14px] lg:text-[16px] gap-y-[12px] flex items-center text-seaSerpent">
+          <div class="gap-x-[14px] text-[14px] lg:text-[16px] gap-y-[12px] flex items-center text-seaSerpent font-bold">
             <i class="icon-phone text-[40px] sm:text-[24px] leading-none"></i>
             1833-4730
           </div>
@@ -33,7 +33,7 @@
   </div>
   <div class="footer__main-2">
     <div class="footer__main-inner container mx-auto grid grid-cols-1 gap-x-[40px] lg:grid-cols-[auto,auto]">
-      <div class="grid gap-y-[20px] sm:gap-y-[24px]">
+      <div class="grid gap-y-[20px]">
         {!! wp_nav_menu([
           'menu' => 11,
           'container' => false,

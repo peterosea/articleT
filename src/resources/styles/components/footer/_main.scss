@@ -94,10 +94,7 @@
     }
     .sub-menu {
       display: grid;
-      row-gap: 18px;
-      @media (min-width: theme('screens.sm')) {
-        row-gap: 20px;
-      }
+      row-gap: 16px;
     }
 
     .h2 {
@@ -122,7 +119,7 @@
       position: relative;
 
       @media (min-width: theme('screens.sm')) {
-        gap: 12px 16px;
+        gap: 6px 16px;
       }
 
       &:after {

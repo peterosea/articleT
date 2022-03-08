@@ -31,7 +31,6 @@ class RSS extends Composer
     public function getPost()
     {
         $posts = get_field('main-popularity_post', 'option');
-        array_push($posts, get_field('main-hero_post', 'option')[0]);
         $ids = [];
         foreach ($posts as $post) {
             $ids[] = $post->ID;

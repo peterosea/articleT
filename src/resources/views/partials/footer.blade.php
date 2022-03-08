@@ -57,8 +57,8 @@
       <div class="block lg:hidden h-px w-full bg-[color:#4c4c4c] my-[16px]"></div>
       <div class="grid gap-y-[30px]">
         <div class="flex flex-col gap-y-[10px]">
-          <div class="icon-label text-[#bebebe] icon-label-award2 font-light">모바일 어워드 코리아 2019 구인플랫폼 부문 대상</div>
           <div class="icon-label text-[#bebebe] icon-label-award1 font-light">제8회 모바일브랜드대상 인재매칭 플랫폼 부문 수상</div>
+          <div class="icon-label text-[#bebebe] icon-label-award2 font-light">모바일 어워드 코리아 2019 구인플랫폼 부문 대상</div>
           <div class="icon-label text-[#bebebe] icon-label-award3 font-light">2019 소비자의 선택 인재매칭 플랫폼 부문 수상</div>
         </div>
         <div class="flex justify-center lg:hidden">

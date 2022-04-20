@@ -4,3 +4,5 @@
 node_modules
 wp-content
 mysql
+## Icon 파일 무시
+Icon

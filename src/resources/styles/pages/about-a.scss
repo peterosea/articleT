@@ -5,8 +5,19 @@
   justify-content: center;
   height: 792px;
   background-image: url(#{$imgURL}/about_a-sec01-bg.png);
+  position: relative;
+  @media (min-width: theme('screens.sm')) {
+    height: 600px;
+  }
   h2 {
     color: #fff;
+    font-size: 38px;
+    font-weight: 500;
+    line-height: 1.2;
+    text-align: center;
+    @media (min-width: theme('screens.sm')) {
+      font-size: 45px;
+    }
     span{
       color: #bbcbff;
     }
@@ -17,23 +28,29 @@
     font-weight: 300;
     line-height: 1.6;
     color: #fff;
+    padding-bottom: 100px;
   }
   /* Scroll Down */
   .scrolldown-wrapper {
-    left: 50%;
     position: absolute;
-    text-align: center;
-    bottom: 0;
-    transform: translate(-50%, -50%);
+    bottom: 70px;
   }
     
   .scrolldown {
-    border: 2px solid #FFFFFF;
+    border: 1px solid #FFFFFF;
     border-radius: 30px;
-    height: 46px;
+    height: 40px;
     margin: 0 auto 8px;
     text-align: center;
-    width: 30px;
+    width: 24px;
+    svg {
+      margin: 0 auto;
+    }
+    p {
+      color: #FFFFFF;
+      font-size: 16px;
+      font-weight: 300;
+    }
   }
 
   .scrolldown-p1,

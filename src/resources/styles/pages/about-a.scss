@@ -4,7 +4,7 @@
   align-items: center;
   justify-content: center;
   height: 792px;
-  background-image: url("{$imgURL}/about_a-sec01-bg.png");
+  background-image: url(#{$imgURL}/about_a-sec01-bg.png);
   h2 {
     color: #fff;
     span{

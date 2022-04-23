@@ -9,5 +9,6 @@
     "**/.hg": true,
     "**/CVS": true,
     "**/.DS_Store": true
-  }
+  },
+  "liveSassCompile.settings.generateMap": false
 }

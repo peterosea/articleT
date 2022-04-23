@@ -8,7 +8,7 @@
   <div id="KeyVisual" class="keyvisual-abouta scrollmargintop">
     @include('partials.img', ['ex' => 'png', 'name' => 'about_a-logo-articlet', 'class' => 'kv_logo mb-[80px] max-w-[160px] lg:max-w-[310px]'])
     <h2 class="text-[45px] font-bold mb-[40px]">
-    기업의 세상을 확장하는 연결점, 아티클T
+    기업의 세상을 확장하는 연결점, <span>아티클T</span>
     </h2>
     <div class="prose">
       <p>
@@ -16,6 +16,15 @@
       현장 노하우와 비즈니스 트렌드 정보,<br>
       오직 아티클T에서만 만날 수 있습니다.
       </p>
+    </div>
+    <div class="scrolldown-wrapper">
+      <div class="scrolldown">
+        <svg height="30" width="10">
+          <circle class="scrolldown-p1" cx="5" cy="15" r="2" />
+          <circle class="scrolldown-p2" cx="5" cy="15" r="2" />
+        </svg>
+      </div>
+      <p>scroll</p>
     </div>
   </div>
   <section class="pt-[40px] lg:pt-[86px] pb-[52px] lg:pb-[120px]">

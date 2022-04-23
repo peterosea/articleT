@@ -5,8 +5,18 @@
 @extends('layouts.app')
 
 @section('content')
-  <div id="KeyVisual" class="scrollmargintop">
-    
+  <div id="KeyVisual" class="keyvisual-abouta scrollmargintop">
+    @include('partials.img', ['ex' => 'png', 'name' => 'about_a-logo-articlet', 'class' => 'kv_logo mb-[80px] max-w-[160px] lg:max-w-[310px]'])
+    <h2 class="text-[45px] font-bold mb-[40px]">
+    기업의 세상을 확장하는 연결점, 아티클T
+    </h2>
+    <div class="prose">
+      <p>
+      자신의 비즈니스 영역에서 성공을 거둔 검증된 전문가의<br>
+      현장 노하우와 비즈니스 트렌드 정보,<br>
+      오직 아티클T에서만 만날 수 있습니다.
+      </p>
+    </div>
   </div>
   <section class="pt-[40px] lg:pt-[86px] pb-[52px] lg:pb-[120px]">
     <div class="container mx-auto">

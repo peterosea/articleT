@@ -14,7 +14,7 @@ require('@tinypixelco/laravel-mix-wp-blocks');
 
 mix
   .setPublicPath('./public')
-  .browserSync('https://articlet.demo.beeclover.pro');
+  .browserSync('http://localhost:10003');
 
 mix
   .sass('resources/styles/app.scss', 'styles')

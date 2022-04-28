@@ -1,5 +1,5 @@
-<button id="prev" @click.prevent="widget = true" class="btn fixed hidden sm:block right-[20px] top-3/4 transform -translate-y-1/2 scale-x-[-1] z-[8000]">
-  <img src="{!! get_theme_file_uri('resources/images/btn-80.svg') !!}" alt="">
+<button id="prev" @click.prevent="widget = true" class="btn fixed hidden sm:block right-[20px] top-3/4 z-[8000]">
+  <span class="btn-more">더보기</span>
 </button>
 <nav 
     id="sidebar-widget"

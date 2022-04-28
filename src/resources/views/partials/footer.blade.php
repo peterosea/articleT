@@ -42,8 +42,8 @@
           'menu_class' => 'footer__main-2-nav text-[#bebebe] font-extralight',
           ]) !!}
           <div class="hidden lg:flex mt-[4px] gap-x-[40px]">
-            <a href="http://talentbank.co.kr" target="_blank" rel="noopener noreferrer">
-              <img src="{!! get_theme_file_uri('resources/images/logo-02.svg') !!}" alt="">
+            <a href="//talentbank.co.kr" target="_blank" rel="noopener noreferrer">
+              @include('partials.img', ['ex' => 'png', 'name' => 'logo_tb-footer', 'class' => '', 'alt' => 'Talentbank'])
             </a>
             {!! wp_nav_menu([
               'menu' => 26,

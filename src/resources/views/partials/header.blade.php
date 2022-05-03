@@ -52,7 +52,7 @@
           </div>
           <div class="flex gap-x-[10px]">
             <a href="{!! $articleRecruitmentBtn['url'] !!}" target="{!! $articleRecruitmentBtn['target'] !!}" class="hidden lg:block py-[10px] px-[20px] btn-white font-normal text-[14px]">
-              아티클 모집
+              집필진 지원
             </a>
             <a href="{!! $newsletterLink !!}" class="hidden lg:block py-[10px] px-[20px] btn-blackOut font-normal text-[14px]">
               뉴스레터 구독

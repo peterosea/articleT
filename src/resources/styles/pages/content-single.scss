@@ -98,7 +98,8 @@
 button.btn .btn-more {
   background-color: var(--black-out);
   color: #fff;
-  font-size: 16px;
+  font-size: 13px;
+  line-height: 1.1em;
   border-radius: 100px;
   width: 90px;
   height: 90px;
@@ -109,13 +110,13 @@ button.btn .btn-more {
   box-shadow: 2px 4px 4px rgb(0 0 0 / 20%);
   transition: .3s ease-out;
   background: linear-gradient(to left, #e9e9e9 50%, #000 50%) left;
-  background-size: 200%;
+  background-size: 300%;
   &:before {
     content:'+';
     display: block;
-    font-size: 27px;
+    font-size: 24px;
     font-weight: 100;
-    margin-right: 5px;
+    margin-right: 3px;
   }
   &:hover {
     background-position: right;

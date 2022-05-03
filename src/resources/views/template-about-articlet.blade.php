@@ -165,7 +165,7 @@
         <h2 class="abouta-title-w font-bold mb-[40px] lg:mb-[60px]">
           아티클T에서 인사이트를 나누고 싶다면, 여기로
         </h2>
-        <a href="https://www.talentbank.co.kr/" target="_blank" class="btn btn-border-w with_arrow">
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSc3XyKD_LJk7n8ESncV0brfd4fZHX8HBn6AtUNj9LgEoTpWsQ/viewform" target="_blank" class="btn btn-border-w with_arrow">
           집필진 지원 <svg xmlns="http://www.w3.org/2000/svg" width="53" height="20"><path stroke="#FFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none" d="M1.999 16.999h47l-15-15"/></svg>
         </a>
       </div>

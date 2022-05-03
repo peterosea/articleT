@@ -1,5 +1,5 @@
 <button id="prev" @click.prevent="widget = true" class="btn fixed hidden sm:block right-[20px] top-3/4 z-[8000]">
-  <span class="btn-more">더보기</span>
+  <span class="btn-more">프로젝트<br>의뢰하기</span>
 </button>
 <nav 
     id="sidebar-widget"

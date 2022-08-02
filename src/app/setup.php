@@ -262,7 +262,7 @@ add_action('pre_get_posts', function ($query) {
 
     return $query;
 });
-/*----- 2022.08.02 GTM 태그 교체요청 : 유효상, 최정윤
+//*----- 개발자 모니터링용 추적코드 : peter@peterosea.com --*//
 if (get_home_url() === 'https://article.talentbank.co.kr') {
     add_action('wp_head', function () {
 ?>
@@ -295,4 +295,3 @@ if (get_home_url() === 'https://article.talentbank.co.kr') {
 <?php
     });
 }
------*/
